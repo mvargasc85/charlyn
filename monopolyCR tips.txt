@@ -1,0 +1,1 @@
+frm.Controls.Find("controlName",true)[0]).Text = "yay"; 
