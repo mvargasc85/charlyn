@@ -61,6 +61,10 @@
       <DependentUpon>Recursos.resx</DependentUpon>
       <AutoGen>True</AutoGen>
     </Compile>
+    <Compile Include="UI\AcercadeFrm.cs" />
+    <Compile Include="UI\AcercadeFrm.Designer.cs">
+      <DependentUpon>AcercadeFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\MonopolyCRFrm.cs" />
     <Compile Include="UI\MonopolyCRFrm.Designer.cs">
       <DependentUpon>MonopolyCRFrm.cs</DependentUpon>
@@ -81,6 +85,9 @@
     <EmbeddedResource Include="Recursos.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Recursos.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\AcercadeFrm.resx">
+      <DependentUpon>AcercadeFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\MonopolyCRFrm.resx">
       <DependentUpon>MonopolyCRFrm.cs</DependentUpon>

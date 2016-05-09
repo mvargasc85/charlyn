@@ -230,6 +230,7 @@ namespace MonopolyCR.UI
 			this.prop4nameLbl = new System.Windows.Forms.Label();
 			this.panel6 = new System.Windows.Forms.Panel();
 			this.panel7 = new System.Windows.Forms.Panel();
+			this.panel8 = new System.Windows.Forms.Panel();
 			this.panel9 = new System.Windows.Forms.Panel();
 			this.prop1HeaderPnl = new System.Windows.Forms.Panel();
 			this.prop2HeaderPnl = new System.Windows.Forms.Panel();
@@ -244,7 +245,6 @@ namespace MonopolyCR.UI
 			this.dado2Pbx = new System.Windows.Forms.PictureBox();
 			this.dado1Pbx = new System.Windows.Forms.PictureBox();
 			this.avanzaPosicionLbl = new System.Windows.Forms.Label();
-			this.panel8 = new System.Windows.Forms.Panel();
 			this.menuStrip1.SuspendLayout();
 			this.panel1.SuspendLayout();
 			this.panel69.SuspendLayout();
@@ -377,6 +377,7 @@ namespace MonopolyCR.UI
 			this.acerdaDeToolStripMenuItem.Name = "acerdaDeToolStripMenuItem";
 			this.acerdaDeToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
 			this.acerdaDeToolStripMenuItem.Text = "Acerda de...";
+			this.acerdaDeToolStripMenuItem.Click += new System.EventHandler(this.AcerdaDeToolStripMenuItemClick);
 			// 
 			// panel1
 			// 
@@ -1142,6 +1143,16 @@ namespace MonopolyCR.UI
 			this.panel7.Size = new System.Drawing.Size(62, 62);
 			this.panel7.TabIndex = 5;
 			// 
+			// panel8
+			// 
+			this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.panel8.Location = new System.Drawing.Point(372, 0);
+			this.panel8.Margin = new System.Windows.Forms.Padding(0);
+			this.panel8.Name = "panel8";
+			this.panel8.Size = new System.Drawing.Size(62, 62);
+			this.panel8.TabIndex = 6;
+			this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel8Paint);
+			// 
 			// panel9
 			// 
 			this.panel9.BackgroundImage = global::MonopolyCR.Recursos.alajuelaPoas;
@@ -1281,20 +1292,11 @@ namespace MonopolyCR.UI
 			this.avanzaPosicionLbl.TabIndex = 13;
 			this.avanzaPosicionLbl.Text = "Jugador X ¡Avanzas 0 posiciones!";
 			// 
-			// panel8
-			// 
-			this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.panel8.Location = new System.Drawing.Point(372, 0);
-			this.panel8.Margin = new System.Windows.Forms.Padding(0);
-			this.panel8.Name = "panel8";
-			this.panel8.Size = new System.Drawing.Size(62, 62);
-			this.panel8.TabIndex = 6;
-			this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel8Paint);
-			// 
 			// MonopolyCRFrm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.AutoSize = true;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.ClientSize = new System.Drawing.Size(1065, 741);
 			this.Controls.Add(this.avanzaPosicionLbl);
@@ -1303,7 +1305,9 @@ namespace MonopolyCR.UI
 			this.Controls.Add(this.menuStrip1);
 			this.MainMenuStrip = this.menuStrip1;
 			this.Name = "MonopolyCRFrm";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "MonopolyCR";
+			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
 			this.Load += new System.EventHandler(this.MonopolyCRFrmLoad);
 			this.menuStrip1.ResumeLayout(false);
 			this.menuStrip1.PerformLayout();

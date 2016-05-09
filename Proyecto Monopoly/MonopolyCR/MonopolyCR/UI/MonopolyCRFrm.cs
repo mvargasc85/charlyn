@@ -91,5 +91,12 @@ namespace MonopolyCR.UI
 		{
 	
 		}
+		void AcerdaDeToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			var acercadefrm = new AcercadeFrm();
+			acercadefrm.Show();
+			
+			
+		}
 	}
 }

@@ -11,3 +11,14 @@ C:\Users\Charlyn Avila\Desktop\Proyecto Monopoly\MonopolyCR\MonopolyCR\obj\Debug
 C:\Users\Magally Vargas\Desktop\Charlyn\Proyecto Monopoly\MonopolyCR\MonopolyCR\bin\Debug\MonopolyCR.exe.config
 C:\Users\Magally Vargas\Desktop\Charlyn\Proyecto Monopoly\MonopolyCR\MonopolyCR\obj\Debug\MonopolyCR.exe
 C:\Users\Magally Vargas\Desktop\Charlyn\Proyecto Monopoly\MonopolyCR\MonopolyCR\obj\Debug\MonopolyCR.pdb
+C:\Users\Charlyn Avila\Documents\GitHub\charlyn\Proyecto Monopoly\MonopolyCR\MonopolyCR\bin\Debug\MonopolyCR.exe.config
+C:\Users\Charlyn Avila\Documents\GitHub\charlyn\Proyecto Monopoly\MonopolyCR\MonopolyCR\bin\Debug\MonopolyCR.exe
+C:\Users\Charlyn Avila\Documents\GitHub\charlyn\Proyecto Monopoly\MonopolyCR\MonopolyCR\bin\Debug\MonopolyCR.pdb
+C:\Users\Charlyn Avila\Documents\GitHub\charlyn\Proyecto Monopoly\MonopolyCR\MonopolyCR\obj\Debug\MonopolyCR.csprojResolveAssemblyReference.cache
+C:\Users\Charlyn Avila\Documents\GitHub\charlyn\Proyecto Monopoly\MonopolyCR\MonopolyCR\obj\Debug\MonopolyCR.Recursos.resources
+C:\Users\Charlyn Avila\Documents\GitHub\charlyn\Proyecto Monopoly\MonopolyCR\MonopolyCR\obj\Debug\MonopolyCR.UI.MonopolyCRFrm.resources
+C:\Users\Charlyn Avila\Documents\GitHub\charlyn\Proyecto Monopoly\MonopolyCR\MonopolyCR\obj\Debug\MonopolyCR.UI.RegistroJugadorFrm.resources
+C:\Users\Charlyn Avila\Documents\GitHub\charlyn\Proyecto Monopoly\MonopolyCR\MonopolyCR\obj\Debug\MonopolyCR.csproj.GenerateResource.Cache
+C:\Users\Charlyn Avila\Documents\GitHub\charlyn\Proyecto Monopoly\MonopolyCR\MonopolyCR\obj\Debug\MonopolyCR.exe
+C:\Users\Charlyn Avila\Documents\GitHub\charlyn\Proyecto Monopoly\MonopolyCR\MonopolyCR\obj\Debug\MonopolyCR.pdb
+C:\Users\Charlyn Avila\Documents\GitHub\charlyn\Proyecto Monopoly\MonopolyCR\MonopolyCR\obj\Debug\MonopolyCR.UI.AcercadeFrm.resources
