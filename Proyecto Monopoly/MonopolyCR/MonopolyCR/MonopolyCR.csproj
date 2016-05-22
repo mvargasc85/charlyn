@@ -65,6 +65,10 @@
     <Compile Include="UI\AcercadeFrm.Designer.cs">
       <DependentUpon>AcercadeFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\ConfigurarPartidaForm.cs" />
+    <Compile Include="UI\ConfigurarPartidaForm.Designer.cs">
+      <DependentUpon>ConfigurarPartidaForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\MonopolyCRFrm.cs" />
     <Compile Include="UI\MonopolyCRFrm.Designer.cs">
       <DependentUpon>MonopolyCRFrm.cs</DependentUpon>
@@ -88,6 +92,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\AcercadeFrm.resx">
       <DependentUpon>AcercadeFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ConfigurarPartidaForm.resx">
+      <DependentUpon>ConfigurarPartidaForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\MonopolyCRFrm.resx">
       <DependentUpon>MonopolyCRFrm.cs</DependentUpon>

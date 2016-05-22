@@ -294,6 +294,7 @@ namespace MonopolyCR.UI
 			this.nuevaPartidaToolStripMenuItem.Name = "nuevaPartidaToolStripMenuItem";
 			this.nuevaPartidaToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
 			this.nuevaPartidaToolStripMenuItem.Text = "Nueva Partida";
+			this.nuevaPartidaToolStripMenuItem.Click += new System.EventHandler(this.NuevaPartidaToolStripMenuItemClick);
 			// 
 			// abrirPartidaToolStripMenuItem
 			// 
@@ -335,7 +336,7 @@ namespace MonopolyCR.UI
 			this.nuevoJugadorToolStripMenuItem,
 			this.historialJugadoresToolStripMenuItem});
 			this.jugadorToolStripMenuItem1.Name = "jugadorToolStripMenuItem1";
-			this.jugadorToolStripMenuItem1.Size = new System.Drawing.Size(150, 22);
+			this.jugadorToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
 			this.jugadorToolStripMenuItem1.Text = "Jugador";
 			// 
 			// nuevoJugadorToolStripMenuItem
@@ -354,8 +355,9 @@ namespace MonopolyCR.UI
 			// configuraciónToolStripMenuItem
 			// 
 			this.configuraciónToolStripMenuItem.Name = "configuraciónToolStripMenuItem";
-			this.configuraciónToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+			this.configuraciónToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
 			this.configuraciónToolStripMenuItem.Text = "Configuración";
+			this.configuraciónToolStripMenuItem.Click += new System.EventHandler(this.ConfiguraciónToolStripMenuItemClick);
 			// 
 			// ayudaToolStripMenuItem
 			// 
@@ -369,13 +371,13 @@ namespace MonopolyCR.UI
 			// comoJugarToolStripMenuItem
 			// 
 			this.comoJugarToolStripMenuItem.Name = "comoJugarToolStripMenuItem";
-			this.comoJugarToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+			this.comoJugarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
 			this.comoJugarToolStripMenuItem.Text = "Como Jugar...";
 			// 
 			// acerdaDeToolStripMenuItem
 			// 
 			this.acerdaDeToolStripMenuItem.Name = "acerdaDeToolStripMenuItem";
-			this.acerdaDeToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+			this.acerdaDeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
 			this.acerdaDeToolStripMenuItem.Text = "Acerda de...";
 			this.acerdaDeToolStripMenuItem.Click += new System.EventHandler(this.AcerdaDeToolStripMenuItemClick);
 			// 

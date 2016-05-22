@@ -7,6 +7,7 @@
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
@@ -113,9 +114,51 @@ public String InsertarJugador(Jugador jugador){
             }finally{
                 closeCon();
             }
+        }        
+
+        
+        public List<Jugador> ObtenerJugadores(){
+        	
+        	var jugadores = new List<Jugador>();
+        try {
+        		openCon();
+				const string query = "SELECT idjugador, nombre FROM jugador";
+        		comando = new MySqlCommand(query,conexion);
+        		var reader = comando.ExecuteReader();
+        		
+        		while (reader.Read()) {
+        			jugadores.Add(ConvertirJugador(reader));
+        		}	
+        		
+        		return jugadores;
+        		
+        } catch (Exception ex) {
+        	
+		MessageBox.Show("Error al obtener jugadores. Error: "+ex.Message);
+		return null;
+		}finally{
+		closeCon();
+	}
+	
         }
+	
+        
+        private Jugador ConvertirJugador(IDataReader reader){
+        	
+        		var jugador = new Jugador();
+        		jugador.Nombre = Convert.ToString(reader["nombre"]);
+        		jugador.IdJugador = Convert.ToInt32(reader["idjugador"]);       		 	
+        	
+        	return jugador;
+        }
+      
+        
+        }
+        
+        
        
         }
-}
+        
+
 
 

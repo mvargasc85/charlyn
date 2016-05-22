@@ -52,7 +52,7 @@ namespace MonopolyCR.UI
 			// 
 			// label1
 			// 
-			this.label1.Location = new System.Drawing.Point(13, 29);
+			this.label1.Location = new System.Drawing.Point(18, 64);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(100, 23);
 			this.label1.TabIndex = 0;
@@ -60,7 +60,7 @@ namespace MonopolyCR.UI
 			// 
 			// txtNombreJugador
 			// 
-			this.txtNombreJugador.Location = new System.Drawing.Point(68, 71);
+			this.txtNombreJugador.Location = new System.Drawing.Point(124, 67);
 			this.txtNombreJugador.Name = "txtNombreJugador";
 			this.txtNombreJugador.Size = new System.Drawing.Size(161, 20);
 			this.txtNombreJugador.TabIndex = 1;
@@ -82,7 +82,7 @@ namespace MonopolyCR.UI
 			// 
 			// btnRegistraJugador
 			// 
-			this.btnRegistraJugador.Location = new System.Drawing.Point(93, 212);
+			this.btnRegistraJugador.Location = new System.Drawing.Point(86, 212);
 			this.btnRegistraJugador.Name = "btnRegistraJugador";
 			this.btnRegistraJugador.Size = new System.Drawing.Size(75, 23);
 			this.btnRegistraJugador.TabIndex = 4;
@@ -104,7 +104,7 @@ namespace MonopolyCR.UI
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(284, 261);
+			this.ClientSize = new System.Drawing.Size(461, 353);
 			this.Controls.Add(this.btnCancaleRegJugador);
 			this.Controls.Add(this.btnRegistraJugador);
 			this.Controls.Add(this.txtColor);
@@ -113,6 +113,7 @@ namespace MonopolyCR.UI
 			this.Controls.Add(this.label1);
 			this.Name = "RegistroJugadorFrm";
 			this.Text = "RegistroUsuario";
+			this.Load += new System.EventHandler(this.RegistroJugadorFrmLoad);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

@@ -38,5 +38,9 @@ namespace MonopolyCR.UI
 			this.Close();
 	
 		}
+		void RegistroJugadorFrmLoad(object sender, EventArgs e)
+		{
+	
+		}
 	}
 }

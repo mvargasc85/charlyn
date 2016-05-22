@@ -7,7 +7,9 @@
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 using System;
+using System.Collections.Generic;
 using MonopolyCR.Datos;
+using System.Data;
 
 namespace MonopolyCR
 {
@@ -46,6 +48,11 @@ namespace MonopolyCR
 				return "Error al registrar al jugador";
 			}
 			
+		}
+		
+		public List<Jugador> CargarJugadoresCbx(){
+			return conexion.ObtenerJugadores();
+		
 		}
 	}
 }
