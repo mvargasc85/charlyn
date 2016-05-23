@@ -25,7 +25,7 @@ namespace MonopolyCR.Datos
 
 
         //connect c# to Mysql database
-        readonly MySqlConnection conexion = new MySqlConnection("datasource=localhost;port=3306;username=root;password=1234;database=monopoly");
+        readonly MySqlConnection conexion = new MySqlConnection("datasource=localhost;port=3306;username=root;password=Admin;database=monopoly");
         MySqlCommand comando;
         public Conexion()
         {

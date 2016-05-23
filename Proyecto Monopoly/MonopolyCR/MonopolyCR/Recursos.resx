@@ -13717,4 +13717,50 @@
         N8NsAAAAAElFTkSuQmCC
 </value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="dados" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Media\dados.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="fichaAzul" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Imagenes\fichas\fichaAzul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fichaAzul___copia" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Imagenes\fichas\fichaAzul - copia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fichaMorada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Imagenes\fichas\fichaMorada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fichaMorada___copia" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Imagenes\fichas\fichaMorada - copia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fichaNaranja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Imagenes\fichas\fichaNaranja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fichaNaranja___copia" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Imagenes\fichas\fichaNaranja - copia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fichaRoja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Imagenes\fichas\fichaRoja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fichaRoja___copia" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Imagenes\fichas\fichaRoja - copia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fichaTurqueza" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Imagenes\fichas\fichaTurqueza.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fichaTurqueza___copia" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Imagenes\fichas\fichaTurqueza - copia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fichaVerde" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Imagenes\fichas\fichaVerde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fichaVerde___copia" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Imagenes\fichas\fichaVerde - copia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="salidadinero" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Media\salidadinero.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="sonido_ficha" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Media\sonido_ficha.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

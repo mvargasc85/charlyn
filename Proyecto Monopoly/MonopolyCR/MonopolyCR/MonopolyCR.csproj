@@ -58,27 +58,39 @@
     <Compile Include="Partida.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Propiedad.cs" />
     <Compile Include="Recursos.Designer.cs">
       <DependentUpon>Recursos.resx</DependentUpon>
       <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="UI\AcercadeFrm.cs" />
+    <Compile Include="UI\AcercadeFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UI\AcercadeFrm.Designer.cs">
       <DependentUpon>AcercadeFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\ConfigurarPartidaForm.cs" />
+    <Compile Include="UI\ConfigurarPartidaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UI\ConfigurarPartidaForm.Designer.cs">
       <DependentUpon>ConfigurarPartidaForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\HistorialFrm.cs" />
+    <Compile Include="UI\HistorialFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UI\HistorialFrm.Designer.cs">
       <DependentUpon>HistorialFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\MonopolyCRFrm.cs" />
+    <Compile Include="UI\MonopolyCRFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UI\MonopolyCRFrm.Designer.cs">
       <DependentUpon>MonopolyCRFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\RegistroJugadorFrm.cs" />
+    <Compile Include="UI\RegistroJugadorFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UI\RegistroJugadorFrm.Designer.cs">
       <DependentUpon>RegistroJugadorFrm.cs</DependentUpon>
     </Compile>
@@ -86,10 +98,7 @@
   <ItemGroup>
     <None Include="app.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Datos" />
-    <Folder Include="UI" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Recursos.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -110,6 +119,76 @@
     <EmbeddedResource Include="UI\RegistroJugadorFrm.resx">
       <DependentUpon>RegistroJugadorFrm.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Imagenes\dado1.PNG" />
+    <Content Include="Imagenes\dado2.PNG" />
+    <Content Include="Imagenes\dado3.PNG" />
+    <Content Include="Imagenes\dado4.PNG" />
+    <Content Include="Imagenes\dado5.PNG" />
+    <Content Include="Imagenes\dado6.PNG" />
+    <Content Include="Imagenes\fichas\fichaAzul - copia.png" />
+    <Content Include="Imagenes\fichas\fichaAzul.png" />
+    <Content Include="Imagenes\fichas\fichaMorada - copia.png" />
+    <Content Include="Imagenes\fichas\fichaMorada.png" />
+    <Content Include="Imagenes\fichas\fichaNaranja - copia.png" />
+    <Content Include="Imagenes\fichas\fichaNaranja.png" />
+    <Content Include="Imagenes\fichas\fichaRoja - copia.png" />
+    <Content Include="Imagenes\fichas\fichaRoja.png" />
+    <Content Include="Imagenes\fichas\fichaTurqueza - copia.png" />
+    <Content Include="Imagenes\fichas\fichaTurqueza.png" />
+    <Content Include="Imagenes\fichas\fichaVerde - copia.png" />
+    <Content Include="Imagenes\fichas\fichaVerde.png" />
+    <Content Include="Imagenes\tablero\alajuela.jpg" />
+    <Content Include="Imagenes\tablero\alajuelaGrecia.jpg" />
+    <Content Include="Imagenes\tablero\alajuelaGuacima.jpg" />
+    <Content Include="Imagenes\tablero\alajuelaJuan santa maria.jpg" />
+    <Content Include="Imagenes\tablero\alajuelaPoas.jpg" />
+    <Content Include="Imagenes\tablero\bandera.jpg" />
+    <Content Include="Imagenes\tablero\cartago.png" />
+    <Content Include="Imagenes\tablero\CartagoGuarco.JPG" />
+    <Content Include="Imagenes\tablero\cartagoOrosi.jpg" />
+    <Content Include="Imagenes\tablero\cartagoRuina.jpg" />
+    <Content Include="Imagenes\tablero\cartagoTren.jpg" />
+    <Content Include="Imagenes\tablero\compAyA.jpg" />
+    <Content Include="Imagenes\tablero\compIce.jpg" />
+    <Content Include="Imagenes\tablero\compINTEL.jpg" />
+    <Content Include="Imagenes\tablero\compsky.jpg" />
+    <Content Include="Imagenes\tablero\costa_rica.jpg" />
+    <Content Include="Imagenes\tablero\guanacasteLiberia.jpg" />
+    <Content Include="Imagenes\tablero\guanacasteNicoya.jpg" />
+    <Content Include="Imagenes\tablero\guanacasteOduber.jpg" />
+    <Content Include="Imagenes\tablero\guanacasteTempisque.jpg" />
+    <Content Include="Imagenes\tablero\guanacasteTurrialba.JPG" />
+    <Content Include="Imagenes\tablero\heredia.jpg" />
+    <Content Include="Imagenes\tablero\herediaBelen.jpg" />
+    <Content Include="Imagenes\tablero\herediaSanRafael.jpg" />
+    <Content Include="Imagenes\tablero\ima.png" />
+    <Content Include="Imagenes\tablero\Ima2.png" />
+    <Content Include="Imagenes\tablero\Imagen1.png" />
+    <Content Include="Imagenes\tablero\images.jpg" />
+    <Content Include="Imagenes\tablero\imagesDev.png" />
+    <Content Include="Imagenes\tablero\Jugador1.png" />
+    <Content Include="Imagenes\tablero\Jugador2.png" />
+    <Content Include="Imagenes\tablero\limonAeropuerto .jpg" />
+    <Content Include="Imagenes\tablero\limonRuta.jpg" />
+    <Content Include="Imagenes\tablero\limonTortuguero.jpg" />
+    <Content Include="Imagenes\tablero\LosSuenosJaco.jpg" />
+    <Content Include="Imagenes\tablero\mapa.png" />
+    <Content Include="Imagenes\tablero\monopoly-run.png" />
+    <Content Include="Imagenes\tablero\poas_volcano.jpg" />
+    <Content Include="Imagenes\tablero\puerto Limon.jpg" />
+    <Content Include="Imagenes\tablero\puertoLimon.jpg" />
+    <Content Include="Imagenes\tablero\puntarenas.jpg" />
+    <Content Include="Imagenes\tablero\puntarenasJaco.jpg" />
+    <Content Include="Imagenes\tablero\sanJose.png" />
+    <Content Include="Imagenes\tablero\sanJoseSantaAna.jpg" />
+    <Content Include="Imagenes\tablero\SanJoseTobias.jpg" />
+    <Content Include="Imagenes\tablero\SanJoseTurrialba.JPG" />
+    <Content Include="Imagenes\tablero\volcanArenal.jpg" />
+    <Content Include="Media\dados.wav" />
+    <Content Include="Media\salidadinero.wav" />
+    <Content Include="Media\sonido_ficha.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
