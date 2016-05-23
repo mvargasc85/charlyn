@@ -27,9 +27,9 @@ namespace MonopolyCR
 		
 		}
 		
-		public Jugador(String nombre,String color){
+		public Jugador(String nombre){
 			Nombre = nombre;
-			Color = color;
+			
 		}
 		
 		

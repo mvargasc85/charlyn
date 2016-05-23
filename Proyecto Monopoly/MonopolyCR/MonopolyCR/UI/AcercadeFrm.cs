@@ -36,5 +36,9 @@ namespace MonopolyCR.UI
 		{
 			this.Close();
 		}
+		void Panel1Paint(object sender, PaintEventArgs e)
+		{
+	
+		}
 	}
 }

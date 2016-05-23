@@ -107,5 +107,14 @@ namespace MonopolyCR.UI
 			var configurarPartidafrm = new ConfigurarPartidaForm();
 			configurarPartidafrm.Show();
 		}
+		void SalirToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			this.Close();
+		}
+		void HistorialJugadoresToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			var historialfrm = new HistorialFrm();
+			historialfrm.Show();
+		}
 	}
 }

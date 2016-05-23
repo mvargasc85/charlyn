@@ -27,8 +27,8 @@ namespace MonopolyCR
 		}
 		
 		
-		public String CrearNuevoJugador(String nombre, String color){
-			jugador = new Jugador(nombre,color);
+		public String CrearNuevoJugador(String nombre){
+			jugador = new Jugador(nombre);
 			var result = RegistrarJugador(jugador);
 			return result;	
 			
@@ -53,6 +53,10 @@ namespace MonopolyCR
 		public List<Jugador> CargarJugadoresCbx(){
 			return conexion.ObtenerJugadores();
 		
+		}
+		
+		public List<Partida> CargarHistorialList(){
+			return conexion.ObtenerHistorial();
 		}
 	}
 }

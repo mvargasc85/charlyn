@@ -28,8 +28,8 @@ namespace MonopolyCR.UI
 		void BtnRegistraJugadorClick(object sender, EventArgs e)
 		{
 			var nombre = txtNombreJugador.Text;
-			var color = txtColor.Text;
-			var mensaje =	juego.CrearNuevoJugador(nombre,color);
+//			var color = txtColor.Text;
+			var mensaje =	juego.CrearNuevoJugador(nombre);
 			MessageBox.Show(mensaje);
 	
 		}

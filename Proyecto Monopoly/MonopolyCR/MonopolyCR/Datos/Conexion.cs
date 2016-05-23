@@ -152,6 +152,49 @@ public String InsertarJugador(Jugador jugador){
         	return jugador;
         }
       
+         
+        public List<Partida> ObtenerHistorial(){
+        	
+        	var partidas = new List<Partida>();
+        try {
+        		openCon();
+				const string query = "select j.nombre,p.fecha,h.puntuacion,p.ganador " +
+					"from jugador j inner join historicopartida h " +
+					"on j.idjugador= h.idjugador " +
+					"inner join partida p " +
+					"on h.idpartida = p.idpartida" ;
+				
+        		comando = new MySqlCommand(query,conexion);
+        		var reader = comando.ExecuteReader();
+        		
+        		while (reader.Read()) {
+        			partidas.Add(ConvertirHistorial(reader));
+        		}	
+        		
+        		return partidas;
+        		
+        } catch (Exception ex) {
+        	
+		MessageBox.Show("Error al obtener historial. Error: "+ex.Message);
+		return null;
+		}finally{
+		closeCon();
+	}
+	
+        }
+	
+    
+	private Partida ConvertirHistorial(IDataReader reader){
+        	
+        		var Partidas = new Partida();
+        		Partidas.Nombre = Convert.ToString(reader["nombre"]);
+        		Partidas.Fecha = Convert.ToDateTime(reader["fecha"]);
+        		Partidas.Puntuacion= Convert.ToInt32(reader["puntuacion"]);
+        		Partidas.Ganador= Convert.ToInt32(reader["ganador"]);
+        	
+        	return Partidas;
+        }
+      
         
         }
         

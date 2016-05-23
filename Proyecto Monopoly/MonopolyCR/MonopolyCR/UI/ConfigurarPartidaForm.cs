@@ -70,6 +70,14 @@ namespace MonopolyCR.UI
 		{
 	
 		}
+		void BtnJugarClick(object sender, EventArgs e)
+		{
+	
+		}
+		void NumericUpDown1ValueChanged(object sender, EventArgs e)
+		{
+	
+		}
 		
 	}
 }
