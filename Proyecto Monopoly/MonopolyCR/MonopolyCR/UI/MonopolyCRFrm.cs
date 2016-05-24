@@ -173,5 +173,9 @@ namespace MonopolyCR.UI
             }
 
         }
+		void Prop32HdrPnlPaint(object sender, PaintEventArgs e)
+		{
+	
+		}
 	}
 }
