@@ -252,6 +252,7 @@ namespace MonopolyCR.UI
 			this.prop22HdrPnl = new System.Windows.Forms.Panel();
 			this.prop23HdrPnl = new System.Windows.Forms.Panel();
 			this.prop24HdrPnl = new System.Windows.Forms.Panel();
+			this.button1 = new System.Windows.Forms.Button();
 			this.menuStrip1.SuspendLayout();
 			this.groupBox2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dado2Pbx)).BeginInit();
@@ -1358,6 +1359,16 @@ namespace MonopolyCR.UI
 			this.prop24HdrPnl.Size = new System.Drawing.Size(62, 19);
 			this.prop24HdrPnl.TabIndex = 10;
 			// 
+			// button1
+			// 
+			this.button1.Location = new System.Drawing.Point(1208, 113);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(87, 69);
+			this.button1.TabIndex = 16;
+			this.button1.Text = "button1";
+			this.button1.UseVisualStyleBackColor = true;
+			this.button1.Click += new System.EventHandler(this.Button1Click);
+			// 
 			// MonopolyCRFrm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1366,6 +1377,7 @@ namespace MonopolyCR.UI
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.ClientSize = new System.Drawing.Size(1328, 733);
+			this.Controls.Add(this.button1);
 			this.Controls.Add(this.label8);
 			this.Controls.Add(this.label7);
 			this.Controls.Add(this.avanzaPosicionLbl);
@@ -1403,5 +1415,6 @@ namespace MonopolyCR.UI
 		}
 
         private System.Windows.Forms.PictureBox ficha1Pbx;
+        private System.Windows.Forms.Button button1;
 }
 }

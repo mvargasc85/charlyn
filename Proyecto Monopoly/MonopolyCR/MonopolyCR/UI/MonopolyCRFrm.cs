@@ -177,5 +177,12 @@ namespace MonopolyCR.UI
 		{
 	
 		}
+		void Button1Click(object sender, EventArgs e)
+		{
+				var Ganadorfrm = new GanadorFrm();
+			
+			Ganadorfrm.Show();
+						
+		}
 	}
 }

@@ -31,6 +31,7 @@ C:\Users\Charlyn Avila\Documents\GitHub\charlyn\Proyecto Monopoly\MonopolyCR\Mon
 C:\Users\Charlyn Avila\Documents\GitHub\charlyn\Proyecto Monopoly\MonopolyCR\MonopolyCR\obj\Debug\MonopolyCR.Recursos.resources
 C:\Users\Charlyn Avila\Documents\GitHub\charlyn\Proyecto Monopoly\MonopolyCR\MonopolyCR\obj\Debug\MonopolyCR.UI.AcercadeFrm.resources
 C:\Users\Charlyn Avila\Documents\GitHub\charlyn\Proyecto Monopoly\MonopolyCR\MonopolyCR\obj\Debug\MonopolyCR.UI.ConfigurarPartidaForm.resources
+C:\Users\Charlyn Avila\Documents\GitHub\charlyn\Proyecto Monopoly\MonopolyCR\MonopolyCR\obj\Debug\MonopolyCR.UI.GanadorFrm.resources
 C:\Users\Charlyn Avila\Documents\GitHub\charlyn\Proyecto Monopoly\MonopolyCR\MonopolyCR\obj\Debug\MonopolyCR.UI.HistorialFrm.resources
 C:\Users\Charlyn Avila\Documents\GitHub\charlyn\Proyecto Monopoly\MonopolyCR\MonopolyCR\obj\Debug\MonopolyCR.UI.MonopolyCRFrm.resources
 C:\Users\Charlyn Avila\Documents\GitHub\charlyn\Proyecto Monopoly\MonopolyCR\MonopolyCR\obj\Debug\MonopolyCR.UI.RegistroJugadorFrm.resources

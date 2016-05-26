@@ -76,6 +76,10 @@
     <Compile Include="UI\ConfigurarPartidaForm.Designer.cs">
       <DependentUpon>ConfigurarPartidaForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\GanadorFrm.cs" />
+    <Compile Include="UI\GanadorFrm.Designer.cs">
+      <DependentUpon>GanadorFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\HistorialFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\ConfigurarPartidaForm.resx">
       <DependentUpon>ConfigurarPartidaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\GanadorFrm.resx">
+      <DependentUpon>GanadorFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\HistorialFrm.resx">
       <DependentUpon>HistorialFrm.cs</DependentUpon>
