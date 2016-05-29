@@ -38,3 +38,4 @@ C:\Users\Charlyn Avila\Documents\GitHub\charlyn\Proyecto Monopoly\MonopolyCR\Mon
 C:\Users\Charlyn Avila\Documents\GitHub\charlyn\Proyecto Monopoly\MonopolyCR\MonopolyCR\obj\Debug\MonopolyCR.csproj.GenerateResource.Cache
 C:\Users\Charlyn Avila\Documents\GitHub\charlyn\Proyecto Monopoly\MonopolyCR\MonopolyCR\obj\Debug\MonopolyCR.exe
 C:\Users\Charlyn Avila\Documents\GitHub\charlyn\Proyecto Monopoly\MonopolyCR\MonopolyCR\obj\Debug\MonopolyCR.pdb
+C:\Users\Magally Vargas\Documents\charlyn\charlyn\Proyecto Monopoly\MonopolyCR\MonopolyCR\obj\Debug\MonopolyCR.UI.GanadorFrm.resources

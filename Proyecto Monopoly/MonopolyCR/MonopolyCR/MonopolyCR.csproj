@@ -76,7 +76,9 @@
     <Compile Include="UI\ConfigurarPartidaForm.Designer.cs">
       <DependentUpon>ConfigurarPartidaForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\GanadorFrm.cs" />
+    <Compile Include="UI\GanadorFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UI\GanadorFrm.Designer.cs">
       <DependentUpon>GanadorFrm.cs</DependentUpon>
     </Compile>
