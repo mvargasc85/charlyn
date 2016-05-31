@@ -15,7 +15,8 @@ namespace MonopolyCR
 	/// </summary>
 	public class Partida
 	{
-		public int Idjugador { get; set; }
+		public Jugador jugador1 { get; set; }
+        public Jugador jugador2 { get; set; }
 		public int Idpartida{get; set; }
 		public String Nombre { get; set; }
 		public DateTime Fecha { get; set; }

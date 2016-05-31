@@ -34,6 +34,12 @@
     <Reference Include="Microsoft.CSharp">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
+    <Reference Include="Microsoft.DirectX">
+      <HintPath>..\..\dlls\Microsoft.DirectX.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.DirectX.DirectSound">
+      <HintPath>..\..\dlls\Microsoft.DirectX.DirectSound.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data" />
     <Reference Include="System" />
     <Reference Include="System.Core">
@@ -77,7 +83,9 @@
     <Compile Include="UI\ConfigurarPartidaForm.Designer.cs">
       <DependentUpon>ConfigurarPartidaForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\GanadorFrm.cs" />
+    <Compile Include="UI\GanadorFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UI\GanadorFrm.Designer.cs">
       <DependentUpon>GanadorFrm.cs</DependentUpon>
     </Compile>
