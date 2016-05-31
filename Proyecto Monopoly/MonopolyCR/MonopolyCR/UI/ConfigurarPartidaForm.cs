@@ -21,6 +21,7 @@ namespace MonopolyCR.UI
 	{
 		Juego juego;
 		List<Jugador> jugadores;
+      
 		
 		public ConfigurarPartidaForm()
 		{
@@ -71,6 +72,8 @@ namespace MonopolyCR.UI
 		void BtnJugarClick(object sender, EventArgs e)
 		{
             ConfigurarPartida();
+            this.DialogResult = DialogResult.OK;
+            this.Close();
 	
 		}
 		void NumericUpDown1ValueChanged(object sender, EventArgs e)

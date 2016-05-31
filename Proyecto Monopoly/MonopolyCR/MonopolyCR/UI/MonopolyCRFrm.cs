@@ -29,7 +29,7 @@ namespace MonopolyCR.UI
 
         private SecondaryBuffer sound;
         private BufferDescription d;
-
+        public static Partida partida;
        
 
         public MonopolyCRFrm()
@@ -146,7 +146,15 @@ namespace MonopolyCR.UI
         void ConfiguraciónToolStripMenuItemClick(object sender, EventArgs e)
         {
             var configurarPartidafrm = new ConfigurarPartidaForm();
-            configurarPartidafrm.Show();
+          
+            configurarPartidafrm.ShowDialog();
+
+            
+
+            if (configurarPartidafrm.DialogResult == DialogResult.OK)
+            {
+
+            }
         }
         void SalirToolStripMenuItemClick(object sender, EventArgs e)
         {
