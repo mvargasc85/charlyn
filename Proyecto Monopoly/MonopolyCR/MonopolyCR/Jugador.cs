@@ -20,6 +20,8 @@ namespace MonopolyCR
 		public DateTime Fecha { get; set; }
 		public int Puntuacion  { get; set; }
 		public String Color { get; set; }
+        public int PosicionActual { get; set; }
+        public int Saldo { get; set; }
 
 	
 		public Jugador()

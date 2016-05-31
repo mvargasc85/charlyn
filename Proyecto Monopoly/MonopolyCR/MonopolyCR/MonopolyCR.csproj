@@ -107,7 +107,9 @@
     <Compile Include="UI\RegistroJugadorFrm.Designer.cs">
       <DependentUpon>RegistroJugadorFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\RegistroPropFrm.cs" />
+    <Compile Include="UI\RegistroPropFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UI\RegistroPropFrm.Designer.cs">
       <DependentUpon>RegistroPropFrm.cs</DependentUpon>
     </Compile>
