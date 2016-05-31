@@ -42,11 +42,17 @@ namespace MonopolyCR.Datos
          
 public String InsertarJugador(Jugador jugador){
 	var fechaActual = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-	String q = string.Format("INSERT INTO Jugador (nombre,fecha,puntuacion, color) values ('{0}','{1}',{2},'{3}')",
+	String q = string.Format("INSERT INTO Jugador (nombre,fecha,puntuacion,color) values ('{0}','{1}',{2},'{3}')",
 	                         jugador.Nombre,fechaActual,0,jugador.Color);
 	return ExecuteQuery(q);
 }
 
+
+public String InsertarPropiedad(Propiedad propiedad){
+	String q = string.Format("INSERT INTO Propiedad (nombre,valorCompra,valorPeaje,propietario) values ('{0}','{1}',{2},'{3}')",
+	                         propiedad.Nombre,propiedad.ValorCompra,propiedad.ValorPeaje);
+	return ExecuteQuery(q);
+}
 
 //        //button update data from mysql database
 //        private void btnUpdate_Click(object sender, EventArgs e)

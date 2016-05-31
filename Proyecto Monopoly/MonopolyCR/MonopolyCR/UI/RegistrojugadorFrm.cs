@@ -13,7 +13,7 @@ using System.Windows.Forms;
 namespace MonopolyCR.UI
 {
 	/// <summary>
-	/// Description of RegistroUsuario.
+	/// Description of RegistroUsuario
 	/// </summary>
 	public partial class RegistroJugadorFrm : Form
 	{

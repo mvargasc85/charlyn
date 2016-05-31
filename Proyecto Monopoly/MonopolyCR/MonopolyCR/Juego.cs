@@ -19,6 +19,7 @@ namespace MonopolyCR
 	public class Juego
 	{
 		public Jugador jugador { get; set; }
+		public Propiedad propiedad { get; set; }
 		private Conexion conexion;
 		
 		public Juego()
@@ -31,6 +32,28 @@ namespace MonopolyCR
 			jugador = new Jugador(nombre);
 			var result = RegistrarJugador(jugador);
 			return result;	
+			
+		}
+		public String CrearNuevaPropiedad(){
+			propiedad = new Propiedad();
+			var result = RegistrarPropiedad(propiedad);
+			return result;
+			
+		
+		}
+		public String RegistrarPropiedad(Propiedad propiedad){
+			try{
+			var result = conexion.InsertarPropiedad(propiedad);
+			if(result=="0")
+				return "Propiedad registrado con exito";
+			else if (result =="-1") {
+				return "Error al registrar la propiedad";
+			}
+			else
+				return "Error al registrar la propiedad. Detalle: " + result;
+			}catch (Exception e){
+				return "Error al registrar la propiedad";
+			}
 			
 		}
 		
