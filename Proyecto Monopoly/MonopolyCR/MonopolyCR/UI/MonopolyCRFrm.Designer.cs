@@ -253,19 +253,20 @@ namespace MonopolyCR.UI
             this.prop23HdrPnl = new System.Windows.Forms.Panel();
             this.prop24HdrPnl = new System.Windows.Forms.Panel();
             this.fichaPropiedadPnl = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.valorHipotecaLbl = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.precioCasaLbl = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.peajeLbl = new System.Windows.Forms.Label();
             this.imagenCiudadPbx = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.nombrePropiedadLbl = new System.Windows.Forms.Label();
-            this.peajeLbl = new System.Windows.Forms.Label();
-            this.precioCasaLbl = new System.Windows.Forms.Label();
-            this.valorHipotecaLbl = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.ficha2Pbx = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dado2Pbx)).BeginInit();
@@ -288,6 +289,7 @@ namespace MonopolyCR.UI
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imagenCiudadPbx)).BeginInit();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ficha2Pbx)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -534,6 +536,7 @@ namespace MonopolyCR.UI
             // prop0MainPnl
             // 
             this.prop0MainPnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.prop0MainPnl.Controls.Add(this.ficha2Pbx);
             this.prop0MainPnl.Controls.Add(this.ficha1Pbx);
             this.prop0MainPnl.Controls.Add(this.label4);
             this.prop0MainPnl.Controls.Add(this.label3);
@@ -547,7 +550,7 @@ namespace MonopolyCR.UI
             // 
             this.ficha1Pbx.BackColor = System.Drawing.Color.Transparent;
             this.ficha1Pbx.BackgroundImage = global::MonopolyCR.Recursos.fichaVerde;
-            this.ficha1Pbx.Location = new System.Drawing.Point(17, 31);
+            this.ficha1Pbx.Location = new System.Drawing.Point(17, 25);
             this.ficha1Pbx.Name = "ficha1Pbx";
             this.ficha1Pbx.Size = new System.Drawing.Size(28, 24);
             this.ficha1Pbx.TabIndex = 3;
@@ -1387,40 +1390,6 @@ namespace MonopolyCR.UI
             this.fichaPropiedadPnl.TabIndex = 16;
             this.fichaPropiedadPnl.Visible = false;
             // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Gray;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(138, 246);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 39);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Subastar";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Gray;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(25, 246);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 39);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Comprar";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(1208, 113);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(87, 69);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1Click);
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.GhostWhite;
@@ -1439,6 +1408,57 @@ namespace MonopolyCR.UI
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(247, 299);
             this.panel3.TabIndex = 16;
+            // 
+            // valorHipotecaLbl
+            // 
+            this.valorHipotecaLbl.AutoSize = true;
+            this.valorHipotecaLbl.Location = new System.Drawing.Point(165, 219);
+            this.valorHipotecaLbl.Name = "valorHipotecaLbl";
+            this.valorHipotecaLbl.Size = new System.Drawing.Size(36, 13);
+            this.valorHipotecaLbl.TabIndex = 7;
+            this.valorHipotecaLbl.Text = "₡0.00";
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Gray;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(138, 246);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 39);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "Subastar";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // precioCasaLbl
+            // 
+            this.precioCasaLbl.AutoSize = true;
+            this.precioCasaLbl.Location = new System.Drawing.Point(165, 192);
+            this.precioCasaLbl.Name = "precioCasaLbl";
+            this.precioCasaLbl.Size = new System.Drawing.Size(36, 13);
+            this.precioCasaLbl.TabIndex = 6;
+            this.precioCasaLbl.Text = "₡0.00";
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Gray;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(25, 246);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 39);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "Comprar";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // peajeLbl
+            // 
+            this.peajeLbl.AutoSize = true;
+            this.peajeLbl.Location = new System.Drawing.Point(165, 163);
+            this.peajeLbl.Name = "peajeLbl";
+            this.peajeLbl.Size = new System.Drawing.Size(36, 13);
+            this.peajeLbl.TabIndex = 5;
+            this.peajeLbl.Text = "₡0.00";
             // 
             // imagenCiudadPbx
             // 
@@ -1501,32 +1521,25 @@ namespace MonopolyCR.UI
             this.nombrePropiedadLbl.TabIndex = 0;
             this.nombrePropiedadLbl.Text = "nombre propiedad";
             // 
-            // peajeLbl
+            // button1
             // 
-            this.peajeLbl.AutoSize = true;
-            this.peajeLbl.Location = new System.Drawing.Point(165, 163);
-            this.peajeLbl.Name = "peajeLbl";
-            this.peajeLbl.Size = new System.Drawing.Size(36, 13);
-            this.peajeLbl.TabIndex = 5;
-            this.peajeLbl.Text = "₡0.00";
+            this.button1.Location = new System.Drawing.Point(1208, 113);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(87, 69);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1Click);
             // 
-            // precioCasaLbl
+            // ficha2Pbx
             // 
-            this.precioCasaLbl.AutoSize = true;
-            this.precioCasaLbl.Location = new System.Drawing.Point(165, 192);
-            this.precioCasaLbl.Name = "precioCasaLbl";
-            this.precioCasaLbl.Size = new System.Drawing.Size(36, 13);
-            this.precioCasaLbl.TabIndex = 6;
-            this.precioCasaLbl.Text = "₡0.00";
-            // 
-            // valorHipotecaLbl
-            // 
-            this.valorHipotecaLbl.AutoSize = true;
-            this.valorHipotecaLbl.Location = new System.Drawing.Point(165, 219);
-            this.valorHipotecaLbl.Name = "valorHipotecaLbl";
-            this.valorHipotecaLbl.Size = new System.Drawing.Size(36, 13);
-            this.valorHipotecaLbl.TabIndex = 7;
-            this.valorHipotecaLbl.Text = "₡0.00";
+            this.ficha2Pbx.BackColor = System.Drawing.Color.Transparent;
+            this.ficha2Pbx.BackgroundImage = global::MonopolyCR.Recursos.fichaNaranja;
+            this.ficha2Pbx.Location = new System.Drawing.Point(45, 52);
+            this.ficha2Pbx.Name = "ficha2Pbx";
+            this.ficha2Pbx.Size = new System.Drawing.Size(28, 24);
+            this.ficha2Pbx.TabIndex = 4;
+            this.ficha2Pbx.TabStop = false;
             // 
             // MonopolyCRFrm
             // 
@@ -1574,6 +1587,7 @@ namespace MonopolyCR.UI
             ((System.ComponentModel.ISupportInitialize)(this.imagenCiudadPbx)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ficha2Pbx)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1594,5 +1608,6 @@ namespace MonopolyCR.UI
         private System.Windows.Forms.Label valorHipotecaLbl;
         private System.Windows.Forms.Label precioCasaLbl;
         private System.Windows.Forms.Label peajeLbl;
+        private System.Windows.Forms.PictureBox ficha2Pbx;
 }
 }

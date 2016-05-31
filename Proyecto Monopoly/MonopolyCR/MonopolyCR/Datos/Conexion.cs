@@ -30,7 +30,7 @@ namespace MonopolyCR.Datos
 
 
 
-         //abre la conexion
+        //abre la conexion
         public void openCon()
         {
             if (conexion.State == ConnectionState.Closed)
@@ -175,7 +175,7 @@ namespace MonopolyCR.Datos
 
             return Partidas;
         }
-        
+
         public Jugador ObtenerJugador(int jugadorId)
         {
             Jugador jugador = null;
@@ -206,11 +206,12 @@ namespace MonopolyCR.Datos
             }
 
         }
-        public String InsertarPropiedad(Propiedad propiedad){
-	String q = string.Format("INSERT INTO Propiedad (nombre,valorCompra,valorPeaje,propietario) values ('{0}','{1}',{2},'{3}')",
-	                         propiedad.Nombre,propiedad.ValorCompra,propiedad.ValorPeaje);
-	return ExecuteQuery(q);
-}
+        public String InsertarPropiedad(Propiedad propiedad)
+        {
+            String q = string.Format("INSERT INTO Propiedad (nombre,valorCompra,valorPeaje,propietario) values ('{0}','{1}',{2},'{3}')",
+                                     propiedad.Nombre, propiedad.ValorCompra, propiedad.ValorPeaje);
+            return ExecuteQuery(q);
+        }
 
     }
 }
