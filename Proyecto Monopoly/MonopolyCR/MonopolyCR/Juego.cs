@@ -58,5 +58,11 @@ namespace MonopolyCR
 		public List<Partida> CargarHistorialList(){
 			return conexion.ObtenerHistorial();
 		}
+
+
+        public Jugador ObtenerJugador(int jugadorId)
+        {
+            return conexion.ObtenerJugador(jugadorId);
+        }
 	}
 }

@@ -34,6 +34,12 @@
     <Reference Include="Microsoft.CSharp">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
+    <Reference Include="Microsoft.DirectX">
+      <HintPath>..\..\dlls\Microsoft.DirectX.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.DirectX.DirectSound">
+      <HintPath>..\..\dlls\Microsoft.DirectX.DirectSound.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data" />
     <Reference Include="System" />
     <Reference Include="System.Core">

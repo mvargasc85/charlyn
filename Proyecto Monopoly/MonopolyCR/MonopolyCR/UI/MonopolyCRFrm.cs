@@ -11,6 +11,8 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Media;
 using System.Collections.Generic;
+using Microsoft.DirectX;
+using Microsoft.DirectX.DirectSound;
 
 namespace MonopolyCR.UI
 {
@@ -21,25 +23,21 @@ namespace MonopolyCR.UI
     {
         Juego juego;
         Dado dado;
-        int Direccion;
         List<Propiedad> propiedades;
         int posActual = 0;
+        private Device dSound;
 
+        private SecondaryBuffer sound;
+        private BufferDescription d;
 
-        enum Rumbo
-        {
-            Izquierda,
-            Arriba,
-            Derecha,
-            Abajo
-        }
+       
 
         public MonopolyCRFrm()
         {
-            Direccion = (int)Rumbo.Izquierda;
             juego = new Juego();
             InitializeComponent();
             CargarPropiedades();
+           
         }
 
         public void CargarPropiedades()
@@ -95,6 +93,18 @@ namespace MonopolyCR.UI
         void LanzarDadosBtnClick(object sender, EventArgs e)
         {
             playSimpleSound(Recursos.dados);
+            //d = new BufferDescription();
+            //dSound = new Device();
+            //dSound.SetCooperativeLevel(this.Handle, CooperativeLevel.Normal);
+            //// Set descriptor’s flags
+            //d.ControlPan = true;
+            //d.ControlVolume = true;
+            //d.ControlFrequency = true;
+            //d.ControlEffects = true;
+            //sound = new SecondaryBuffer(Recursos.dados, d, dSound);
+
+            //sound.Play(0, BufferPlayFlags.Default);
+
             dado = new Dado();
             dado.LanzarDados(dado1Pbx, dado2Pbx);
 
