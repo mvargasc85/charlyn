@@ -103,8 +103,8 @@ namespace MonopolyCR.UI
             {
                 Nombre = "Partida de prueba",
                 Fecha = DateTime.Now,
-                jugador1 = jugador1,
-                jugador2 = jugador2
+                Jugador1 = jugador1,
+                Jugador2 = jugador2,               
             };
 
         }

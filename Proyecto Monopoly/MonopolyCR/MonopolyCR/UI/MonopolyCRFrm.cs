@@ -13,6 +13,7 @@ using System.Media;
 using System.Collections.Generic;
 using Microsoft.DirectX;
 using Microsoft.DirectX.DirectSound;
+using System.Threading;
 
 namespace MonopolyCR.UI
 {
@@ -30,6 +31,9 @@ namespace MonopolyCR.UI
         private SecondaryBuffer sound;
         private BufferDescription d;
         public  Partida partidaActual;
+        int jugadorEnTurno = 0;
+        Panel panelFinal;
+        Propiedad propiedadActual;
        
 
         public MonopolyCRFrm()
@@ -92,25 +96,7 @@ namespace MonopolyCR.UI
         }
         void LanzarDadosBtnClick(object sender, EventArgs e)
         {
-            playSimpleSound(Recursos.dados);
-            //d = new BufferDescription();
-            //dSound = new Device();
-            //dSound.SetCooperativeLevel(this.Handle, CooperativeLevel.Normal);
-            //// Set descriptor’s flags
-            //d.ControlPan = true;
-            //d.ControlVolume = true;
-            //d.ControlFrequency = true;
-            //d.ControlEffects = true;
-            //sound = new SecondaryBuffer(Recursos.dados, d, dSound);
-
-            //sound.Play(0, BufferPlayFlags.Default);
-
-            dado = new Dado();
-            dado.LanzarDados(dado1Pbx, dado2Pbx);
-
-            var posiciones = dado.SumaDados;
-            avanzaPosicionLbl.Text = String.Format("Jugador {0} ¡Avanza {1} posiones!", "Charlyn", posiciones);
-            MoverFicha2();
+          
 
         }
         void Panel4Paint(object sender, PaintEventArgs e)
@@ -129,13 +115,11 @@ namespace MonopolyCR.UI
         {
             var acercadefrm = new AcercadeFrm();
             acercadefrm.Show();
-
-
         }
 
-        private void playSimpleSound(System.IO.UnmanagedMemoryStream sonido)
+        private static void PlaySimpleSound(System.IO.UnmanagedMemoryStream sonido)
         {
-            SoundPlayer simpleSound = new SoundPlayer(sonido);
+            var simpleSound = new SoundPlayer(sonido);
             simpleSound.Play();
         }
 
@@ -148,12 +132,12 @@ namespace MonopolyCR.UI
             var configurarPartidafrm = new ConfigurarPartidaForm();
           
             configurarPartidafrm.ShowDialog();
-
-            
-
+                       
             if (configurarPartidafrm.DialogResult == DialogResult.OK)
             {
                 partidaActual = configurarPartidafrm.PartidaActual;
+                DefinirTurnoInicial();
+                
             }
         }
         void SalirToolStripMenuItemClick(object sender, EventArgs e)
@@ -166,32 +150,51 @@ namespace MonopolyCR.UI
             historialfrm.Show();
         }
 
-        public void MoverFicha2()
-        {
-            playSimpleSound(Recursos.sonido_ficha);
-
-            int sumaDados = dado.SumaDados;
+             
+        public void MoverFicha() {
+                   
+            var ficha = jugadorEnTurno == 2 ? ficha1Pbx : ficha2Pbx;
+            var posicion = ObtenerPosicionActual();
+            var sumaDados = dado.SumaDados;
             if (sumaDados > 2) sumaDados = 2;
-            for (int i = 0; i < sumaDados; i++)
+            if (posActual < sumaDados)
             {
-                var panelActual = (Panel)propiedades[posActual].MainPanel;
-                var ficha = ficha1Pbx;
-                panelActual.Controls.Remove(ficha1Pbx);
-                var panelSgte = (Panel)propiedades[posActual + 1].MainPanel;
-                panelSgte.Controls.Add(ficha1Pbx);
-                posActual = posActual + 1;
-            }
+                PlaySimpleSound(Recursos.sonido_ficha);
 
-            var propiedad = propiedades[posActual];
-            MostrarFichaPropiedad(propiedad);
+                var panelActual = (Panel)propiedades[posicion].MainPanel;
+
+                panelActual.Controls.Remove(ficha);
+                var panelSgte = (Panel)propiedades[posicion + 1].MainPanel;
+                panelSgte.Controls.Add(ficha);
+                ficha.Location = jugadorEnTurno == 1 ? new Point(17, 5) : new Point(4, 33);
+                EstablecerPosicionActual(posicion + 1);
+                posActual += 1;
+            }
+            else
+            {                               
+                var propiedad = propiedades[posicion];
+                MostrarFichaPropiedad(propiedad);
+                propiedadActual = propiedad;
+                timerMueveFicha.Stop();
+                posActual = 0;
+            } 
+            //jugadorEnTurno = jugadorEnTurno == 1 ? 2 : 1;
+            //AsignarTurno();
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            MoverFicha();
+        }
+
+
 
         public void MostrarFichaPropiedad(Propiedad propiedad)
         {
             nombrePropiedadLbl.Text = propiedad.Nombre;
-            precioCasaLbl.Text = propiedad.ValorCompra.ToString();
-            peajeLbl.Text = propiedad.ValorPeaje.ToString();
-            valorHipotecaLbl.Text = propiedad.ValorHipoteca.ToString();
+            precioCasaLbl.Text = string.Format("₡{0}", propiedad.ValorCompra);
+            peajeLbl.Text = string.Format("₡{0}", propiedad.ValorPeaje);
+            valorHipotecaLbl.Text = string.Format("₡{0}", propiedad.ValorHipoteca);
             imagenCiudadPbx.Image = propiedad.ImagenCiudad;
 
             fichaPropiedadPnl.Visible = true;
@@ -203,11 +206,123 @@ namespace MonopolyCR.UI
         }
         void Button1Click(object sender, EventArgs e)
         {
-            var Ganadorfrm = new GanadorFrm();
+            var ganadorfrm = new GanadorFrm();
+            ganadorfrm.Show();
+        }
 
-            Ganadorfrm.Show();
+        public void DefinirTurnoInicial()
+        {
+            var p = new Random();
+            jugadorEnTurno = p.Next(1, 2);
+            AsignarTurno();
+        }
+
+        public int ObtenerPosicionActual()
+        {
+            return jugadorEnTurno == 1 ? partidaActual.Jugador1.PosicionActual : partidaActual.Jugador2.PosicionActual;
+        }
+
+        public void EstablecerPosicionActual(int posicion)
+        {
+            if (jugadorEnTurno == 1)
+                partidaActual.Jugador1.PosicionActual = posicion;
+            else
+                partidaActual.Jugador2.PosicionActual = posicion;
+        }
+
+        
+        public void AsignarTurno()
+        {  
+            jugador1gbx.Text = partidaActual.Jugador1.Nombre; 
+            jugador2gbx.Text = partidaActual.Jugador2.Nombre;
+            saldoJug1lbl.Text = partidaActual.Jugador1.Saldo.ToString();
+            saldoJug2lbl.Text = partidaActual.Jugador2.Saldo.ToString();
+
+            if (jugadorEnTurno == 1)
+            {
+              
+                lanzaJgdr1btn.Enabled = true;
+                lanzaJgdr2btn.Enabled = false;
+                lanzaJgdr1btn.Visible = true;
+                lanzaJgdr2btn.Visible = false;
+                
+            }
+            else
+            {               
+                lanzaJgdr2btn.Enabled = true;
+                lanzaJgdr1btn.Enabled = false;
+                lanzaJgdr2btn.Visible = true;
+                lanzaJgdr1btn.Visible = false;
+            }
+
+          
+        }
+
+        private void LanzarDados()
+        {
+            PlaySimpleSound(Recursos.dados);
+            dado = new Dado();
+            dado.LanzarDados(dado1Pbx, dado2Pbx);
+
+            var posiciones = dado.SumaDados;
+            avanzaPosicionLbl.Text = String.Format("Jugador {0} ¡Avanza {1} posiones!", "Charlyn", posiciones);
+            //MoverFicha2();
+            timerMueveFicha.Interval = 1000;
+            timerMueveFicha.Start();
+        }
+
+        private void lanzaJgdr1btn_Click(object sender, EventArgs e)
+        {
+            LanzarDados();
+        }
+
+        private void lanzaJgdr2btn_Click(object sender, EventArgs e)
+        {
+            LanzarDados();
+        }
+
+        private void comprarBtn_Click(object sender, EventArgs e)
+        {
+
+            if (jugadorEnTurno == 1)
+                ComprarPropiedad(partidaActual.Jugador1);
+            else
+                ComprarPropiedad(partidaActual.Jugador2);
 
         }
+
+        public void ComprarPropiedad(Jugador jugador)
+        {
+            var precioProp = propiedadActual.ValorCompra;
+            if (precioProp <= jugador.Saldo)
+            {
+                PlaySimpleSound(Recursos.compra_propiedad);
+                jugador.Saldo -= precioProp;
+                operacioneslbl.Text = string.Format("₡{0}", precioProp);
+                operacioneslbl.ForeColor = Color.Red;
+                
+               
+                if (jugadorEnTurno == 1) saldoJug1lbl.Text = string.Format("₡{0}", jugador.Saldo);
+                else saldoJug1lbl.Text = string.Format("₡{0}", jugador.Saldo);
+                var panel = propiedadActual.MainPanel as Panel;
+                panel.BackColor = jugadorEnTurno == 1 ? Color.Orange : Color.LimeGreen;
+                operacioneslbl.Visible = true;                
+              
+            }
+            operacioneslbl.Visible = false;
+            fichaPropiedadPnl.Visible = false;
+            jugadorEnTurno = jugadorEnTurno == 1 ? 2 : 1;
+            AsignarTurno();
+        }
+
+    
+
+
+
+
+       
+
+
 
 
     }

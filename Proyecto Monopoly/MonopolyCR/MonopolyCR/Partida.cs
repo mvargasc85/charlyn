@@ -15,13 +15,13 @@ namespace MonopolyCR
 	/// </summary>
 	public class Partida
 	{
-		public Jugador jugador1 { get; set; }
-        public Jugador jugador2 { get; set; }
+		public Jugador Jugador1 { get; set; }
+        public Jugador Jugador2 { get; set; }
 		public int Idpartida{get; set; }
 		public String Nombre { get; set; }
 		public DateTime Fecha { get; set; }
 		public int Puntuacion  { get; set; }
-		public	int Ganador { get; set; } 
+		public	int Ganador { get; set; }
 
 
 		public Partida()

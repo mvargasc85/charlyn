@@ -198,6 +198,7 @@
     <Content Include="Imagenes\tablero\limonAeropuerto .jpg" />
     <Content Include="Imagenes\tablero\limonRuta.jpg" />
     <Content Include="Imagenes\tablero\limonTortuguero.jpg" />
+    <None Include="Imagenes\tablero\LosSuenosJaco - copia.jpg" />
     <Content Include="Imagenes\tablero\LosSuenosJaco.jpg" />
     <Content Include="Imagenes\tablero\mapa.png" />
     <Content Include="Imagenes\tablero\monopoly-run.png" />
@@ -205,14 +206,18 @@
     <Content Include="Imagenes\tablero\puerto Limon.jpg" />
     <Content Include="Imagenes\tablero\puertoLimon.jpg" />
     <Content Include="Imagenes\tablero\puntarenas.jpg" />
+    <None Include="Imagenes\tablero\puntarenasJaco - copia.jpg" />
     <Content Include="Imagenes\tablero\puntarenasJaco.jpg" />
     <Content Include="Imagenes\tablero\sanJose.png" />
     <Content Include="Imagenes\tablero\sanJoseSantaAna.jpg" />
     <Content Include="Imagenes\tablero\SanJoseTobias.jpg" />
     <Content Include="Imagenes\tablero\SanJoseTurrialba.JPG" />
     <Content Include="Imagenes\tablero\volcanArenal.jpg" />
+    <None Include="Media\compra_propiedad.wav" />
     <Content Include="Media\dados.wav" />
+    <None Include="Media\ingreso_dinero.wav" />
     <Content Include="Media\salidadinero.wav" />
+    <None Include="Media\salida_dinero.wav" />
     <Content Include="Media\sonido_ficha.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
