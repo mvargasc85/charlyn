@@ -12,21 +12,28 @@ using MonopolyCR.UI;
 
 namespace MonopolyCR
 {
-	/// <summary>
-	/// Class with program entry point.
-	/// </summary>
-	internal sealed class Program
-	{
-		/// <summary>
-		/// Program entry point.
-		/// </summary>
-		[STAThread]
-		private static void Main(string[] args)
-		{
-			Application.EnableVisualStyles();
-			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new MonopolyCRFrm());
-		}
-		
-	}
+    /// <summary>
+    /// Class with program entry point.
+    /// </summary>
+    internal sealed class Program
+    {
+        /// <summary>
+        /// Program entry point.
+        /// </summary>
+        [STAThread]
+        private static void Main(string[] args)
+        {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            var configurarPartidaFrm = new ConfigurarPartidaForm();
+
+            if (configurarPartidaFrm.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                var partida = configurarPartidaFrm.PartidaActual;
+                configurarPartidaFrm.Close();
+                Application.Run(new MonopolyCRFrm(partida));
+            }
+        }
+
+    }
 }

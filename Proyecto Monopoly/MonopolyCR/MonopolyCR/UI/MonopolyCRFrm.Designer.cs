@@ -160,11 +160,12 @@ namespace MonopolyCR.UI
             this.acerdaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.avanzaPosicionLbl = new System.Windows.Forms.Label();
             this.jugador1gbx = new System.Windows.Forms.GroupBox();
-            this.operacioneslbl = new System.Windows.Forms.Label();
+            this.operacionesJug1lbl = new System.Windows.Forms.Label();
             this.lanzaJgdr1btn = new System.Windows.Forms.Button();
             this.saldoJug1lbl = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.jugador2gbx = new System.Windows.Forms.GroupBox();
+            this.operacionesJug2lbl = new System.Windows.Forms.Label();
             this.lanzaJgdr2btn = new System.Windows.Forms.Button();
             this.saldoJug2lbl = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -427,7 +428,7 @@ namespace MonopolyCR.UI
             // jugador1gbx
             // 
             this.jugador1gbx.BackColor = System.Drawing.Color.Transparent;
-            this.jugador1gbx.Controls.Add(this.operacioneslbl);
+            this.jugador1gbx.Controls.Add(this.operacionesJug1lbl);
             this.jugador1gbx.Controls.Add(this.lanzaJgdr1btn);
             this.jugador1gbx.Controls.Add(this.saldoJug1lbl);
             this.jugador1gbx.Controls.Add(this.label8);
@@ -438,15 +439,14 @@ namespace MonopolyCR.UI
             this.jugador1gbx.TabStop = false;
             this.jugador1gbx.Text = "Jugador1";
             // 
-            // operacioneslbl
+            // operacionesJug1lbl
             // 
-            this.operacioneslbl.AutoSize = true;
-            this.operacioneslbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.operacioneslbl.Location = new System.Drawing.Point(108, 66);
-            this.operacioneslbl.Name = "operacioneslbl";
-            this.operacioneslbl.Size = new System.Drawing.Size(36, 13);
-            this.operacioneslbl.TabIndex = 18;
-            this.operacioneslbl.Text = "₡0.00";
+            this.operacionesJug1lbl.AutoSize = true;
+            this.operacionesJug1lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.operacionesJug1lbl.Location = new System.Drawing.Point(127, 52);
+            this.operacionesJug1lbl.Name = "operacionesJug1lbl";
+            this.operacionesJug1lbl.Size = new System.Drawing.Size(0, 17);
+            this.operacionesJug1lbl.TabIndex = 18;
             // 
             // lanzaJgdr1btn
             // 
@@ -465,12 +465,13 @@ namespace MonopolyCR.UI
             // saldoJug1lbl
             // 
             this.saldoJug1lbl.AutoSize = true;
-            this.saldoJug1lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saldoJug1lbl.Location = new System.Drawing.Point(108, 44);
+            this.saldoJug1lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saldoJug1lbl.Location = new System.Drawing.Point(116, 24);
             this.saldoJug1lbl.Name = "saldoJug1lbl";
-            this.saldoJug1lbl.Size = new System.Drawing.Size(41, 13);
+            this.saldoJug1lbl.Size = new System.Drawing.Size(57, 20);
             this.saldoJug1lbl.TabIndex = 16;
             this.saldoJug1lbl.Text = "₡0.00";
+            this.saldoJug1lbl.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label8
             // 
@@ -484,6 +485,7 @@ namespace MonopolyCR.UI
             // jugador2gbx
             // 
             this.jugador2gbx.BackColor = System.Drawing.Color.Transparent;
+            this.jugador2gbx.Controls.Add(this.operacionesJug2lbl);
             this.jugador2gbx.Controls.Add(this.lanzaJgdr2btn);
             this.jugador2gbx.Controls.Add(this.saldoJug2lbl);
             this.jugador2gbx.Controls.Add(this.label7);
@@ -493,6 +495,15 @@ namespace MonopolyCR.UI
             this.jugador2gbx.TabIndex = 17;
             this.jugador2gbx.TabStop = false;
             this.jugador2gbx.Text = "Jugador2";
+            // 
+            // operacionesJug2lbl
+            // 
+            this.operacionesJug2lbl.AutoSize = true;
+            this.operacionesJug2lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.operacionesJug2lbl.Location = new System.Drawing.Point(127, 52);
+            this.operacionesJug2lbl.Name = "operacionesJug2lbl";
+            this.operacionesJug2lbl.Size = new System.Drawing.Size(0, 17);
+            this.operacionesJug2lbl.TabIndex = 19;
             // 
             // lanzaJgdr2btn
             // 
@@ -511,10 +522,10 @@ namespace MonopolyCR.UI
             // saldoJug2lbl
             // 
             this.saldoJug2lbl.AutoSize = true;
-            this.saldoJug2lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saldoJug2lbl.Location = new System.Drawing.Point(119, 44);
+            this.saldoJug2lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saldoJug2lbl.Location = new System.Drawing.Point(116, 24);
             this.saldoJug2lbl.Name = "saldoJug2lbl";
-            this.saldoJug2lbl.Size = new System.Drawing.Size(41, 13);
+            this.saldoJug2lbl.Size = new System.Drawing.Size(57, 20);
             this.saldoJug2lbl.TabIndex = 17;
             this.saldoJug2lbl.Text = "₡0.00";
             // 
@@ -1703,7 +1714,8 @@ namespace MonopolyCR.UI
         private System.Windows.Forms.Button lanzaJgdr1btn;
         private System.Windows.Forms.Button lanzaJgdr2btn;
         private System.Windows.Forms.Label saldoJug2lbl;
-        private System.Windows.Forms.Label operacioneslbl;
+        private System.Windows.Forms.Label operacionesJug1lbl;
         private System.Windows.Forms.Timer timerMueveFicha;
+        private System.Windows.Forms.Label operacionesJug2lbl;
 }
 }

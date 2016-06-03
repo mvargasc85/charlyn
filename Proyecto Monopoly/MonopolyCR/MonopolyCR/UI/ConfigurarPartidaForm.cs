@@ -75,7 +75,9 @@ namespace MonopolyCR.UI
         {
             ConfigurarPartida();
             this.DialogResult = DialogResult.OK;
-            this.Close();
+            Hide();
+            //this.Dispose();
+            //new MonopolyCRFrm(PartidaActual).Show();
 
         }
         void NumericUpDown1ValueChanged(object sender, EventArgs e)

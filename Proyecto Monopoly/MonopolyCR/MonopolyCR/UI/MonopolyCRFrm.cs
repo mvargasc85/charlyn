@@ -14,6 +14,7 @@ using System.Collections.Generic;
 using Microsoft.DirectX;
 using Microsoft.DirectX.DirectSound;
 using System.Threading;
+using System.Linq;
 
 namespace MonopolyCR.UI
 {
@@ -29,15 +30,25 @@ namespace MonopolyCR.UI
         public Partida partidaActual;
         int jugadorEnTurno = 0;
         Propiedad propiedadActual;
-        private System.Windows.Forms.Timer timerLanzaDados;
+        private System.Windows.Forms.Timer timerLanzaDados, timerOperaciones;
         int giros;
 
-
-        public MonopolyCRFrm()
+        enum Movimiento
         {
+            Compra,
+            Peaje,
+            Retribucion,
+            Penalizacion
+        }
+
+        
+        public MonopolyCRFrm(Partida partida)
+        {
+            this.partidaActual = partida;
             juego = new Juego();
             InitializeComponent();
             CargarPropiedades();
+            DefinirTurnoInicial();
         }
 
         public void CargarPropiedades()
@@ -70,7 +81,7 @@ namespace MonopolyCR.UI
             registroJugadorFrm.Show();
 
         }
-       
+
         void AcerdaDeToolStripMenuItemClick(object sender, EventArgs e)
         {
             var acercadefrm = new AcercadeFrm();
@@ -95,7 +106,7 @@ namespace MonopolyCR.UI
 
             if (configurarPartidafrm.DialogResult == DialogResult.OK)
             {
-                partidaActual = configurarPartidafrm.PartidaActual;
+                //partidaActual = configurarPartidafrm.PartidaActual;
                 DefinirTurnoInicial();
 
             }
@@ -144,7 +155,7 @@ namespace MonopolyCR.UI
                     else
                         PagarPeaje(partidaActual.Jugador1, partidaActual.Jugador2);
                 }
-              
+
                 posActual = 0;
             }
         }
@@ -176,11 +187,14 @@ namespace MonopolyCR.UI
             var ganadorfrm = new GanadorFrm();
             ganadorfrm.Show();
         }
-
+        
+        //genera un num aleatorio de 1 a 8, si es par inicia el jugador #1 de lo contrario el #2
         public void DefinirTurnoInicial()
         {
-            var p = new Random();
-            jugadorEnTurno = p.Next(1, 2);
+
+            var num = new Random().Next(1, 8);
+            jugadorEnTurno = num % 2 == 0 ? 1 : 2;
+            avanzaPosicionLbl.Text = String.Format("Inicia {0}!", jugadorEnTurno == 1 ? partidaActual.Jugador1.Nombre : partidaActual.Jugador2.Nombre);
             AsignarTurno();
         }
 
@@ -249,11 +263,11 @@ namespace MonopolyCR.UI
             }
         }
 
-       
+
 
         public void IniciarMovimiento()
         {
-            timerMueveFicha.Interval = 1000;
+            timerMueveFicha.Interval = 500;
             timerMueveFicha.Start();
         }
 
@@ -275,32 +289,27 @@ namespace MonopolyCR.UI
                     ComprarPropiedad(partidaActual.Jugador1);
                 else
                     ComprarPropiedad(partidaActual.Jugador2);
-            }          
+            }
 
         }
 
         public void ComprarPropiedad(Jugador jugador)
         {
-         
+
             var precioProp = propiedadActual.ValorCompra;
             if (precioProp <= jugador.Saldo)
             {
                 PlaySimpleSound(Recursos.compra_propiedad);
                 jugador.Saldo -= precioProp;
                 propiedadActual.IdPropietario = jugador.IdJugador;
-                avanzaPosicionLbl.Text = String.Format("{0} compra {1} por ₡{2}!", jugador.Nombre,propiedadActual.Nombre, precioProp);
-                operacioneslbl.Text = string.Format("₡{0}", precioProp);
-                operacioneslbl.ForeColor = Color.Red;
-
-
-                if (jugadorEnTurno == 1) saldoJug1lbl.Text = string.Format("₡{0}", jugador.Saldo);
-                else saldoJug1lbl.Text = string.Format("₡{0}", jugador.Saldo);
+                avanzaPosicionLbl.Text = String.Format("{0} compra {1} por ₡{2}!", jugador.Nombre, propiedadActual.Nombre, precioProp);
+                MostrarMovientoSaldo(precioProp, Color.Red, null, jugadorEnTurno == 1 ? operacionesJug1lbl : operacionesJug2lbl);
                 var panel = propiedadActual.MainPanel as Panel;
                 panel.BackColor = jugadorEnTurno == 1 ? Color.Orange : Color.LimeGreen;
-                operacioneslbl.Visible = true;
+
 
             }
-            operacioneslbl.Visible = false;
+
             fichaPropiedadPnl.Visible = false;
             jugadorEnTurno = jugadorEnTurno == 1 ? 2 : 1;
             AsignarTurno();
@@ -318,13 +327,54 @@ namespace MonopolyCR.UI
                 jugadorPaga.Saldo -= valorPeaje;
                 jugadorCobra.Saldo += valorPeaje;
                 avanzaPosicionLbl.Text = String.Format("{0} paga ₡{1} a {2}, por pasar por {3}!", jugadorPaga.Nombre, valorPeaje, jugadorCobra.Nombre, propiedadActual.Nombre);
-
-                saldoJug1lbl.Text = string.Format("₡{0}", partidaActual.Jugador1.Saldo);
-                saldoJug2lbl.Text = string.Format("₡{0}", partidaActual.Jugador2.Saldo);
+                MostrarMovientoSaldo(valorPeaje, Color.Red, jugadorEnTurno == 1 ? operacionesJug2lbl : operacionesJug1lbl, jugadorEnTurno == 1 ? operacionesJug1lbl : operacionesJug2lbl);
+                ActualizarEtiquetasdeSaldos();
             }
 
             jugadorEnTurno = jugadorEnTurno == 1 ? 2 : 1;
             AsignarTurno();
         }
+
+        public void ActualizarEtiquetasdeSaldos()
+        {
+            saldoJug1lbl.Text = string.Format("₡{0}", partidaActual.Jugador1.Saldo);
+            saldoJug2lbl.Text = string.Format("₡{0}", partidaActual.Jugador2.Saldo);
+        }        
+
+        public void MostrarMovientoSaldo(double monto, Color color, Label operacionAcredita, Label operacionDebita)
+        {
+            if (operacionAcredita != null)
+            {
+                operacionAcredita.ForeColor = Color.Green;
+                operacionAcredita.Text = string.Format("+ ₡{0}", monto);
+                operacionAcredita.Visible = true;
+            }
+
+            if (operacionDebita != null)
+            {
+                operacionDebita.ForeColor = Color.Red;
+                operacionDebita.Text = string.Format("- ₡{0}", monto);
+                operacionDebita.Visible = true;
+            }
+
+
+            timerOperaciones = new System.Windows.Forms.Timer();
+            timerOperaciones.Interval = 1000;
+            timerOperaciones.Tick += new EventHandler(TimerOperaciones_Tick);
+            timerOperaciones.Start();
+        }
+
+        private void TimerOperaciones_Tick(object sender, EventArgs e)
+        {
+            if (operacionesJug1lbl.Visible)
+                operacionesJug1lbl.Visible = false;
+
+            if (operacionesJug2lbl.Visible)
+                operacionesJug2lbl.Visible = false;
+
+            timerOperaciones.Stop();
+
+        }
+
     }
 }
