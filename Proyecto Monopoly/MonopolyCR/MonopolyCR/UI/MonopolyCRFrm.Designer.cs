@@ -307,7 +307,6 @@ namespace MonopolyCR.UI
             this.menuStrip1.Size = new System.Drawing.Size(1328, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.MenuStrip1ItemClicked);
             // 
             // archivoToolStripMenuItem
             // 
@@ -417,10 +416,11 @@ namespace MonopolyCR.UI
             // 
             // avanzaPosicionLbl
             // 
-            this.avanzaPosicionLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.avanzaPosicionLbl.Location = new System.Drawing.Point(815, 323);
+            this.avanzaPosicionLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.avanzaPosicionLbl.ForeColor = System.Drawing.Color.Yellow;
+            this.avanzaPosicionLbl.Location = new System.Drawing.Point(744, 216);
             this.avanzaPosicionLbl.Name = "avanzaPosicionLbl";
-            this.avanzaPosicionLbl.Size = new System.Drawing.Size(175, 77);
+            this.avanzaPosicionLbl.Size = new System.Drawing.Size(557, 77);
             this.avanzaPosicionLbl.TabIndex = 13;
             this.avanzaPosicionLbl.Text = "Jugador X ¡Avanzas 0 posiciones!";
             // 
@@ -450,7 +450,7 @@ namespace MonopolyCR.UI
             // 
             // lanzaJgdr1btn
             // 
-            this.lanzaJgdr1btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lanzaJgdr1btn.BackColor = System.Drawing.Color.Transparent;
             this.lanzaJgdr1btn.Enabled = false;
             this.lanzaJgdr1btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lanzaJgdr1btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -474,6 +474,7 @@ namespace MonopolyCR.UI
             // 
             // label8
             // 
+            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label8.Image = global::MonopolyCR.Recursos.Jugador2;
             this.label8.Location = new System.Drawing.Point(17, 23);
             this.label8.Name = "label8";
@@ -495,7 +496,7 @@ namespace MonopolyCR.UI
             // 
             // lanzaJgdr2btn
             // 
-            this.lanzaJgdr2btn.BackColor = System.Drawing.Color.Lime;
+            this.lanzaJgdr2btn.BackColor = System.Drawing.Color.Transparent;
             this.lanzaJgdr2btn.Enabled = false;
             this.lanzaJgdr2btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lanzaJgdr2btn.ForeColor = System.Drawing.Color.Black;
@@ -519,6 +520,7 @@ namespace MonopolyCR.UI
             // 
             // label7
             // 
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label7.Image = global::MonopolyCR.Recursos.Jugador1;
             this.label7.Location = new System.Drawing.Point(23, 24);
             this.label7.Name = "label7";
@@ -547,7 +549,6 @@ namespace MonopolyCR.UI
             this.tableroPnl.Name = "tableroPnl";
             this.tableroPnl.Size = new System.Drawing.Size(665, 663);
             this.tableroPnl.TabIndex = 1;
-            this.tableroPnl.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1Paint);
             // 
             // dado2Pbx
             // 
@@ -559,7 +560,6 @@ namespace MonopolyCR.UI
             this.dado2Pbx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dado2Pbx.TabIndex = 13;
             this.dado2Pbx.TabStop = false;
-            this.dado2Pbx.Click += new System.EventHandler(this.Dado2PbxClick);
             // 
             // label6
             // 
@@ -649,7 +649,6 @@ namespace MonopolyCR.UI
             this.label3.Size = new System.Drawing.Size(57, 39);
             this.label3.TabIndex = 1;
             this.label3.Text = "    Cobre    ₡2.000.000";
-            this.label3.Click += new System.EventHandler(this.Label3Click);
             // 
             // label2
             // 
@@ -928,7 +927,6 @@ namespace MonopolyCR.UI
             this.prop15MainPnl.Name = "prop15MainPnl";
             this.prop15MainPnl.Size = new System.Drawing.Size(62, 62);
             this.prop15MainPnl.TabIndex = 20;
-            this.prop15MainPnl.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel36Paint);
             // 
             // prop15HdrPnl
             // 
@@ -1287,7 +1285,6 @@ namespace MonopolyCR.UI
             this.prop17MainPnl.Name = "prop17MainPnl";
             this.prop17MainPnl.Size = new System.Drawing.Size(62, 62);
             this.prop17MainPnl.TabIndex = 0;
-            this.prop17MainPnl.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel2Paint);
             // 
             // prop1nameLbl
             // 
@@ -1334,7 +1331,6 @@ namespace MonopolyCR.UI
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(62, 62);
             this.panel4.TabIndex = 2;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel4Paint);
             // 
             // prop19MainPnl
             // 
@@ -1402,7 +1398,6 @@ namespace MonopolyCR.UI
             this.prop23MainPnl.Name = "prop23MainPnl";
             this.prop23MainPnl.Size = new System.Drawing.Size(62, 62);
             this.prop23MainPnl.TabIndex = 6;
-            this.prop23MainPnl.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel8Paint);
             // 
             // prop24MainPnl
             // 
@@ -1631,7 +1626,7 @@ namespace MonopolyCR.UI
             // 
             // timerMueveFicha
             // 
-            this.timerMueveFicha.Tick += new System.EventHandler(this.timer1_Tick);
+            this.timerMueveFicha.Tick += new System.EventHandler(this.TimerMueveFicha_Tick);
             // 
             // MonopolyCRFrm
             // 
