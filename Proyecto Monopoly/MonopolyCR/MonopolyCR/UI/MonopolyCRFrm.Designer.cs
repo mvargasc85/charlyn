@@ -1030,6 +1030,7 @@ namespace MonopolyCR.UI
             // 
             // prop11MainPnl
             // 
+            this.prop11MainPnl.BackgroundImage = global::MonopolyCR.Recursos.herediaBelen;
             this.prop11MainPnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.prop11MainPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.prop11MainPnl.Location = new System.Drawing.Point(0, 372);
@@ -1049,6 +1050,7 @@ namespace MonopolyCR.UI
             // 
             // prop10MainPnl
             // 
+            this.prop10MainPnl.BackgroundImage = global::MonopolyCR.Recursos.herediaSanRafael;
             this.prop10MainPnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.prop10MainPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.prop10MainPnl.Controls.Add(this.panel68);

@@ -51,65 +51,65 @@ namespace MonopolyCR.UI
             DefinirTurnoInicial();
         }
 
-        public void CargarPropiedades()
-        {
-            propiedades = new List<Propiedad>();
-            propiedades.Add(new Propiedad { IdPropiedad = 0, Nombre = "Parqueo", ValorCompra = 1000, ValorPeaje = 0, ValorHipoteca = 1000, MainPanel = prop0MainPnl, HeaderPanel = null, ImagenCiudad = null });
-            propiedades.Add(new Propiedad { IdPropiedad = 1, Nombre = "San Jose", ValorCompra = 2000, ValorPeaje = 200, ValorHipoteca = 2000, MainPanel = prop1MainPnl, HeaderPanel = prop1HdrPnl, ImagenCiudad = Recursos.sanJose });
-            propiedades.Add(new Propiedad { IdPropiedad = 2, Nombre = "Alajuela", ValorCompra = 3000, ValorPeaje = 300, ValorHipoteca = 3000, MainPanel = prop2MainPnl, HeaderPanel = prop2HdrPnl, ImagenCiudad = Recursos.alajuela });
-            propiedades.Add(new Propiedad { IdPropiedad = 3, Nombre = "Heredia", ValorCompra = 4000, ValorPeaje = 400, ValorHipoteca = 4000, MainPanel = prop3MainPnl, HeaderPanel = prop3HdrPnl, ImagenCiudad = Recursos.heredia });
-            propiedades.Add(new Propiedad { IdPropiedad = 4, Nombre = "Cartago", ValorCompra = 5000, ValorPeaje = 500, ValorHipoteca = 5000, MainPanel = prop4MainPnl, HeaderPanel = prop4HdrPnl, ImagenCiudad = Recursos.cartago });
-            propiedades.Add(new Propiedad { IdPropiedad = 5, Nombre = "Guanacaste", ValorCompra = 6000, ValorPeaje = 600, ValorHipoteca = 6000, MainPanel = prop5MainPnl, HeaderPanel = prop5HdrPnl, ImagenCiudad = Recursos.guanacasteLiberia });
-            propiedades.Add(new Propiedad { IdPropiedad = 6, Nombre = "Puntarenas", ValorCompra = 7000, ValorPeaje = 700, ValorHipoteca = 7000, MainPanel = prop6MainPnl, HeaderPanel = prop6HdrPnl, ImagenCiudad = Recursos.puntarenas });
-            propiedades.Add(new Propiedad { IdPropiedad = 7, Nombre = "Limon", ValorCompra = 8000, ValorPeaje = 800, ValorHipoteca = 8000, MainPanel = prop7MainPnl, HeaderPanel = prop7HdrPnl, ImagenCiudad = Recursos.limonRuta });
-            propiedades.Add(new Propiedad { IdPropiedad = 8, Nombre = "Guapiles", ValorCompra = 9000, ValorPeaje = 900, ValorHipoteca = 9000, MainPanel = prop8MainPnl, HeaderPanel = prop8HdrPnl, ImagenCiudad = Recursos.limonTortuguero });
-        }
-
-
         //public void CargarPropiedades()
         //{
         //    propiedades = new List<Propiedad>();
-        //    propiedades.Add(new Propiedad { IdPropiedad = 0, Nombre = "Salida", ValorCompra = 0, ValorPeaje = 0, ValorHipoteca = 0, MainPanel = prop0MainPnl, HeaderPanel = null, ImagenCiudad = null });
-        //    propiedades.Add(new Propiedad { IdPropiedad = 1, Nombre = "losSuenosJaco", ValorCompra = 15000, ValorPeaje = 1500, ValorHipoteca = 7500, MainPanel = prop1MainPnl, HeaderPanel = prop1HdrPnl, ImagenCiudad = Recursos.LosSuenosJaco });
-        //    propiedades.Add(new Propiedad { IdPropiedad = 2, Nombre = "puntarenasJaco", ValorCompra = 12000, ValorPeaje = 1200, ValorHipoteca = 6000, MainPanel = prop2MainPnl, HeaderPanel = prop2HdrPnl, ImagenCiudad = Recursos.puntarenasJaco });
-        //    propiedades.Add(new Propiedad { IdPropiedad = 3, Nombre = "puntarenas", ValorCompra = 8000, ValorPeaje = 800, ValorHipoteca = 4000, MainPanel = prop3MainPnl, HeaderPanel = prop3HdrPnl, ImagenCiudad = Recursos.puntarenas });
-        //    propiedades.Add(new Propiedad { IdPropiedad = 4, Nombre = "CompIce", ValorCompra = 20000, ValorPeaje = 2000, ValorHipoteca = 10000, MainPanel = prop4MainPnl, HeaderPanel = prop4HdrPnl, ImagenCiudad = Recursos.compIce });
-        //    propiedades.Add(new Propiedad { IdPropiedad = 5, Nombre = "limonTortuguero", ValorCompra = 5000, ValorPeaje = 500, ValorHipoteca = 2500, MainPanel = prop5MainPnl, HeaderPanel = prop5HdrPnl, ImagenCiudad = Recursos.limonTortuguero });
-        //    propiedades.Add(new Propiedad { IdPropiedad = 6, Nombre = "puertoLimon", ValorCompra = 7000, ValorPeaje = 700, ValorHipoteca = 3500, MainPanel = prop6MainPnl, HeaderPanel = prop6HdrPnl, ImagenCiudad = Recursos.puertoLimon });
-        //    propiedades.Add(new Propiedad { IdPropiedad = 7, Nombre = "limonRuta", ValorCompra = 3500, ValorPeaje = 300, ValorHipoteca = 1700, MainPanel = prop7MainPnl, HeaderPanel = prop7HdrPnl, ImagenCiudad = Recursos.limonRuta });
-        //    propiedades.Add(new Propiedad { IdPropiedad = 8, Nombre = "limonAeropuerto", ValorCompra = 4000, ValorPeaje = 400, ValorHipoteca = 2000, MainPanel = prop8MainPnl, HeaderPanel = prop8HdrPnl, ImagenCiudad = Recursos.limonAeropuerto });
-
-        //    propiedades.Add(new Propiedad { IdPropiedad = 9, Nombre = "Carcel", ValorCompra = 0, ValorPeaje = 0, ValorHipoteca = 0, MainPanel = prop90MainPnl, HeaderPanel = null, ImagenCiudad = null });
-        //    propiedades.Add(new Propiedad { IdPropiedad = 10, Nombre = "herediaSanRafael", ValorCompra = 2000, ValorPeaje = 200, ValorHipoteca = 1000, MainPanel = prop100MainPnl, HeaderPanel = prop100HdrPnl, ImagenCiudad = Recursos.herediaSanRafael });
-        //    propiedades.Add(new Propiedad { IdPropiedad = 11, Nombre = "herediaBelen", ValorCompra = 4000, ValorPeaje = 400, ValorHipoteca = 2000, MainPanel = prop11MainPnl, HeaderPanel = prop11HdrPnl, ImagenCiudad = Recursos.herediaBelen });
-        //    propiedades.Add(new Propiedad { IdPropiedad = 12, Nombre = "heredia", ValorCompra = 3000, ValorPeaje = 300, ValorHipoteca = 1500, MainPanel = prop12MainPnl, HeaderPanel = prop12HdrPnl, ImagenCiudad = Recursos.heredia });
-        //    propiedades.Add(new Propiedad { IdPropiedad = 13, Nombre = "", ValorCompra = 0, ValorPeaje = 0, ValorHipoteca = 0, MainPanel = prop13MainPnl, HeaderPanel = prop13HdrPnl, ImagenCiudad = Recursos.compIce });
-        //    propiedades.Add(new Propiedad { IdPropiedad = 14, Nombre = "guanacasteLiberia", ValorCompra = 5000, ValorPeaje = 500, ValorHipoteca = 2500, MainPanel = prop14MainPnl, HeaderPanel = prop14HdrPnl, ImagenCiudad = Recursos.guanacasteLiberia });
-        //    propiedades.Add(new Propiedad { IdPropiedad = 15, Nombre = "guanacasteTempisque", ValorCompra = 6000, ValorPeaje = 600, ValorHipoteca = 6000, MainPanel = prop15MainPnl, HeaderPanel = prop15HdrPnl, ImagenCiudad = Recursos.guanacasteTempisque });
-        //    propiedades.Add(new Propiedad { IdPropiedad = 16, Nombre = "guanacasteNicoya", ValorCompra = 7000, ValorPeaje = 700, ValorHipoteca = 7000, MainPanel = prop16MainPnl, HeaderPanel = prop16HdrPnl, ImagenCiudad = Recursos.guanacasteNicoya });
-        //    propiedades.Add(new Propiedad { IdPropiedad = 17, Nombre = "guanacasteOdube", ValorCompra = 2000, ValorPeaje = 200, ValorHipoteca = 2000, MainPanel = prop17MainPnl, HeaderPanel = prop17HdrPnl, ImagenCiudad = Recursos.guanacasteOduber });
-
-        //    propiedades.Add(new Propiedad { IdPropiedad = 18, Nombre = "NULL", ValorCompra = 0, ValorPeaje = 0, ValorHipoteca = 0, MainPanel = prop18MainPnl, HeaderPanel = null, ImagenCiudad = null });
-        //    propiedades.Add(new Propiedad { IdPropiedad = 19, Nombre = "sanJose", ValorCompra = 2000, ValorPeaje = 200, ValorHipoteca = 1000, MainPanel = prop19MainPnl, HeaderPanel = prop19HdrPnl, ImagenCiudad = Recursos.sanJose });
-        //    propiedades.Add(new Propiedad { IdPropiedad = 20, Nombre = "sanJoseSantaAna", ValorCompra = 4000, ValorPeaje = 400, ValorHipoteca = 2000, MainPanel = prop20MainPnl, HeaderPanel = prop20HdrPnl, ImagenCiudad = Recursos.sanJoseSantaAna });
-        //    propiedades.Add(new Propiedad { IdPropiedad = 21, Nombre = "sanJoseTobias", ValorCompra = 9000, ValorPeaje = 900, ValorHipoteca = 4500, MainPanel = prop21MainPnl, HeaderPanel = prop21HdrPnl, ImagenCiudad = Recursos.SanJoseTobias });
-        //    propiedades.Add(new Propiedad { IdPropiedad = 22, Nombre = "sanJoseTurrialba", ValorCompra = 3000, ValorPeaje = 300, ValorHipoteca = 1500, MainPanel = prop22MainPnl, HeaderPanel = prop22HdrPnl, ImagenCiudad = Recursos.SanJoseTurrialba });
-        //    propiedades.Add(new Propiedad { IdPropiedad = 23, Nombre = "compAyA", ValorCompra = 20000, ValorPeaje = 2000, ValorHipoteca = 10000, MainPanel = prop23MainPnl, HeaderPanel = prop23HdrPnl, ImagenCiudad = Recursos.compAyA });
-        //    propiedades.Add(new Propiedad { IdPropiedad = 24, Nombre = "alajuelaJuanSantaMaria", ValorCompra = 5000, ValorPeaje = 500, ValorHipoteca = 2500, MainPanel = prop24MainPnl, HeaderPanel = prop24HdrPnl, ImagenCiudad = Recursos.alajuelaJuan_santa_maria });
-        //    propiedades.Add(new Propiedad { IdPropiedad = 25, Nombre = "alajuelaGuacima", ValorCompra = 6000, ValorPeaje = 600, ValorHipoteca = 3000, MainPanel = prop25MainPnl, HeaderPanel = prop25HdrPnl, ImagenCiudad = Recursos.alajuelaGuacima });
-        //    propiedades.Add(new Propiedad { IdPropiedad = 26, Nombre = "alajuela", ValorCompra = 7000, ValorPeaje = 700, ValorHipoteca = 3500, MainPanel = prop26MainPnl, HeaderPanel = prop26HdrPnl, ImagenCiudad = Recursos.alajuela });
-
-        //    propiedades.Add(new Propiedad { IdPropiedad = 27, Nombre = "NULL", ValorCompra = 0, ValorPeaje = 0, ValorHipoteca = 0, MainPanel = prop27MainPnl, HeaderPanel = null, ImagenCiudad = null });
-        //    propiedades.Add(new Propiedad { IdPropiedad = 28, Nombre = "alajuelaGrecia", ValorCompra = 7000, ValorPeaje = 700, ValorHipoteca = 3500, MainPanel = prop28MainPnl, HeaderPanel = prop28HdrPnl, ImagenCiudad = Recursos.alajuelaGrecia });
-        //    propiedades.Add(new Propiedad { IdPropiedad = 29, Nombre = "alajuelaPoas", ValorCompra = 15000, ValorPeaje = 1500, ValorHipoteca = 7500, MainPanel = prop30MainPnl, HeaderPanel = prop29HdrPnl, ImagenCiudad = Recursos.alajuelaPoas });
-        //    propiedades.Add(new Propiedad { IdPropiedad = 30, Nombre = "cartago", ValorCompra = 4000, ValorPeaje = 400, ValorHipoteca = 2000, MainPanel = prop30MainPnl, HeaderPanel = prop30HdrPnl, ImagenCiudad = Recursos.cartago });
-        //    propiedades.Add(new Propiedad { IdPropiedad = 31, Nombre = "cartagoRuinas", ValorCompra = 5000, ValorPeaje = 500, ValorHipoteca = 2500, MainPanel = prop31MainPnl, HeaderPanel = prop31HdrPnl, ImagenCiudad = Recursos.cartagoRuina });
-        //    propiedades.Add(new Propiedad { IdPropiedad = 32, Nombre = "compSKY", ValorCompra = 15000, ValorPeaje = 1500, ValorHipoteca = 7500, MainPanel = prop32MainPnl, HeaderPanel = prop32HdrPnl, ImagenCiudad = Recursos.compsky  });
-        //    propiedades.Add(new Propiedad { IdPropiedad = 33, Nombre = "cartagoGuarco", ValorCompra = 7000, ValorPeaje = 700, ValorHipoteca = 3500, MainPanel = prop33MainPnl, HeaderPanel = prop30HdrPnl, ImagenCiudad = Recursos.CartagoGuarco });
-        //    propiedades.Add(new Propiedad { IdPropiedad = 34, Nombre = "cartagoSanatorio", ValorCompra = 10000, ValorPeaje = 1000, ValorHipoteca = 5000, MainPanel = prop34MainPnl, HeaderPanel = prop31HdrPnl, ImagenCiudad = Recursos.cartagoTren});
-        //    propiedades.Add(new Propiedad { IdPropiedad = 35, Nombre = "cartagoOrosi", ValorCompra = 12000, ValorPeaje = 1200, ValorHipoteca = 6000, MainPanel = prop35MainPnl, HeaderPanel = prop32HdrPnl, ImagenCiudad = Recursos.cartagoOrosi });
-
+        //    propiedades.Add(new Propiedad { IdPropiedad = 0, Nombre = "Parqueo", ValorCompra = 1000, ValorPeaje = 0, ValorHipoteca = 1000, MainPanel = prop0MainPnl, HeaderPanel = null, ImagenCiudad = null });
+        //    propiedades.Add(new Propiedad { IdPropiedad = 1, Nombre = "San Jose", ValorCompra = 2000, ValorPeaje = 200, ValorHipoteca = 2000, MainPanel = prop1MainPnl, HeaderPanel = prop1HdrPnl, ImagenCiudad = Recursos.sanJose });
+        //    propiedades.Add(new Propiedad { IdPropiedad = 2, Nombre = "Alajuela", ValorCompra = 3000, ValorPeaje = 300, ValorHipoteca = 3000, MainPanel = prop2MainPnl, HeaderPanel = prop2HdrPnl, ImagenCiudad = Recursos.alajuela });
+        //    propiedades.Add(new Propiedad { IdPropiedad = 3, Nombre = "Heredia", ValorCompra = 4000, ValorPeaje = 400, ValorHipoteca = 4000, MainPanel = prop3MainPnl, HeaderPanel = prop3HdrPnl, ImagenCiudad = Recursos.heredia });
+        //    propiedades.Add(new Propiedad { IdPropiedad = 4, Nombre = "Cartago", ValorCompra = 5000, ValorPeaje = 500, ValorHipoteca = 5000, MainPanel = prop4MainPnl, HeaderPanel = prop4HdrPnl, ImagenCiudad = Recursos.cartago });
+        //    propiedades.Add(new Propiedad { IdPropiedad = 5, Nombre = "Guanacaste", ValorCompra = 6000, ValorPeaje = 600, ValorHipoteca = 6000, MainPanel = prop5MainPnl, HeaderPanel = prop5HdrPnl, ImagenCiudad = Recursos.guanacasteLiberia });
+        //    propiedades.Add(new Propiedad { IdPropiedad = 6, Nombre = "Puntarenas", ValorCompra = 7000, ValorPeaje = 700, ValorHipoteca = 7000, MainPanel = prop6MainPnl, HeaderPanel = prop6HdrPnl, ImagenCiudad = Recursos.puntarenas });
+        //    propiedades.Add(new Propiedad { IdPropiedad = 7, Nombre = "Limon", ValorCompra = 8000, ValorPeaje = 800, ValorHipoteca = 8000, MainPanel = prop7MainPnl, HeaderPanel = prop7HdrPnl, ImagenCiudad = Recursos.limonRuta });
+        //    propiedades.Add(new Propiedad { IdPropiedad = 8, Nombre = "Guapiles", ValorCompra = 9000, ValorPeaje = 900, ValorHipoteca = 9000, MainPanel = prop8MainPnl, HeaderPanel = prop8HdrPnl, ImagenCiudad = Recursos.limonTortuguero });
         //}
+
+
+        public void CargarPropiedades()
+        {
+            propiedades = new List<Propiedad>();
+            propiedades.Add(new Propiedad { IdPropiedad = 0, Nombre = "Salida", ValorCompra = 0, ValorPeaje = 0, ValorHipoteca = 0, MainPanel = prop0MainPnl, HeaderPanel = null, ImagenCiudad = null });
+            propiedades.Add(new Propiedad { IdPropiedad = 1, Nombre = "Los Sueños", ValorCompra = 15000, ValorPeaje = 1500, ValorHipoteca = 7500, MainPanel = prop1MainPnl, HeaderPanel = prop1HdrPnl, ImagenCiudad = Recursos.LosSuenosJaco });
+            propiedades.Add(new Propiedad { IdPropiedad = 2, Nombre = "Jacó", ValorCompra = 12000, ValorPeaje = 1200, ValorHipoteca = 6000, MainPanel = prop2MainPnl, HeaderPanel = prop2HdrPnl, ImagenCiudad = Recursos.puntarenasJaco });
+            propiedades.Add(new Propiedad { IdPropiedad = 3, Nombre = "Puntarenas", ValorCompra = 8000, ValorPeaje = 800, ValorHipoteca = 4000, MainPanel = prop3MainPnl, HeaderPanel = prop3HdrPnl, ImagenCiudad = Recursos.puntarenas });
+            propiedades.Add(new Propiedad { IdPropiedad = 4, Nombre = "ICE", ValorCompra = 20000, ValorPeaje = 2000, ValorHipoteca = 10000, MainPanel = prop4MainPnl, HeaderPanel = prop4HdrPnl, ImagenCiudad = Recursos.compIce });
+            propiedades.Add(new Propiedad { IdPropiedad = 5, Nombre = "Tortuguero", ValorCompra = 5000, ValorPeaje = 500, ValorHipoteca = 2500, MainPanel = prop5MainPnl, HeaderPanel = prop5HdrPnl, ImagenCiudad = Recursos.limonTortuguero });
+            propiedades.Add(new Propiedad { IdPropiedad = 6, Nombre = "Puerto Limón", ValorCompra = 7000, ValorPeaje = 700, ValorHipoteca = 3500, MainPanel = prop6MainPnl, HeaderPanel = prop6HdrPnl, ImagenCiudad = Recursos.puertoLimon });
+            propiedades.Add(new Propiedad { IdPropiedad = 7, Nombre = "Braulio Carrillo", ValorCompra = 3500, ValorPeaje = 300, ValorHipoteca = 1700, MainPanel = prop7MainPnl, HeaderPanel = prop7HdrPnl, ImagenCiudad = Recursos.limonRuta });
+            propiedades.Add(new Propiedad { IdPropiedad = 8, Nombre = "Aeropuerto Limón", ValorCompra = 4000, ValorPeaje = 400, ValorHipoteca = 2000, MainPanel = prop8MainPnl, HeaderPanel = prop8HdrPnl, ImagenCiudad = Recursos.limonAeropuerto });
+
+            propiedades.Add(new Propiedad { IdPropiedad = 9, Nombre = "Carcel", ValorCompra = 0, ValorPeaje = 0, ValorHipoteca = 0, MainPanel = prop9MainPnl, HeaderPanel = null, ImagenCiudad = null });
+            propiedades.Add(new Propiedad { IdPropiedad = 10, Nombre = "San Rafael", ValorCompra = 2000, ValorPeaje = 200, ValorHipoteca = 1000, MainPanel = prop10MainPnl, HeaderPanel = prop10HdrPnl, ImagenCiudad = Recursos.herediaSanRafael });
+            propiedades.Add(new Propiedad { IdPropiedad = 11, Nombre = "Belen", ValorCompra = 4000, ValorPeaje = 400, ValorHipoteca = 2000, MainPanel = prop11MainPnl, HeaderPanel = prop11HdrPnl, ImagenCiudad = Recursos.herediaBelen });
+            propiedades.Add(new Propiedad { IdPropiedad = 12, Nombre = "Heredia", ValorCompra = 3000, ValorPeaje = 300, ValorHipoteca = 1500, MainPanel = prop12MainPnl, HeaderPanel = prop12HdrPnl, ImagenCiudad = Recursos.heredia });
+            propiedades.Add(new Propiedad { IdPropiedad = 13, Nombre = "Intel", ValorCompra = 0, ValorPeaje = 0, ValorHipoteca = 0, MainPanel = prop13MainPnl, HeaderPanel = prop13HdrPnl, ImagenCiudad = Recursos.compIce });
+            propiedades.Add(new Propiedad { IdPropiedad = 14, Nombre = "Liberia", ValorCompra = 5000, ValorPeaje = 500, ValorHipoteca = 2500, MainPanel = prop14MainPnl, HeaderPanel = prop14HdrPnl, ImagenCiudad = Recursos.guanacasteLiberia });
+            propiedades.Add(new Propiedad { IdPropiedad = 15, Nombre = "Tempisque", ValorCompra = 6000, ValorPeaje = 600, ValorHipoteca = 6000, MainPanel = prop15MainPnl, HeaderPanel = prop15HdrPnl, ImagenCiudad = Recursos.guanacasteTempisque });
+            propiedades.Add(new Propiedad { IdPropiedad = 16, Nombre = "Nicoya", ValorCompra = 7000, ValorPeaje = 700, ValorHipoteca = 7000, MainPanel = prop16MainPnl, HeaderPanel = prop16HdrPnl, ImagenCiudad = Recursos.guanacasteNicoya });
+            propiedades.Add(new Propiedad { IdPropiedad = 17, Nombre = "Odube", ValorCompra = 2000, ValorPeaje = 200, ValorHipoteca = 2000, MainPanel = prop17MainPnl, HeaderPanel = prop17HdrPnl, ImagenCiudad = Recursos.guanacasteOduber });
+
+            propiedades.Add(new Propiedad { IdPropiedad = 18, Nombre = "Parqueo Libre", ValorCompra = 0, ValorPeaje = 0, ValorHipoteca = 0, MainPanel = prop18MainPnl, HeaderPanel = null, ImagenCiudad = null });
+            propiedades.Add(new Propiedad { IdPropiedad = 19, Nombre = "San José", ValorCompra = 2000, ValorPeaje = 200, ValorHipoteca = 1000, MainPanel = prop19MainPnl, HeaderPanel = prop19HdrPnl, ImagenCiudad = Recursos.sanJose });
+            propiedades.Add(new Propiedad { IdPropiedad = 20, Nombre = "Santa Ana", ValorCompra = 4000, ValorPeaje = 400, ValorHipoteca = 2000, MainPanel = prop20MainPnl, HeaderPanel = prop20HdrPnl, ImagenCiudad = Recursos.sanJoseSantaAna });
+            propiedades.Add(new Propiedad { IdPropiedad = 21, Nombre = "Aeropuerto T. B.", ValorCompra = 9000, ValorPeaje = 900, ValorHipoteca = 4500, MainPanel = prop21MainPnl, HeaderPanel = prop21HdrPnl, ImagenCiudad = Recursos.SanJoseTobias });
+            propiedades.Add(new Propiedad { IdPropiedad = 22, Nombre = "Turrialba", ValorCompra = 3000, ValorPeaje = 300, ValorHipoteca = 1500, MainPanel = prop22MainPnl, HeaderPanel = prop22HdrPnl, ImagenCiudad = Recursos.SanJoseTurrialba });
+            propiedades.Add(new Propiedad { IdPropiedad = 23, Nombre = "AyA", ValorCompra = 20000, ValorPeaje = 2000, ValorHipoteca = 10000, MainPanel = prop23MainPnl, HeaderPanel = prop23HdrPnl, ImagenCiudad = Recursos.compAyA });
+            propiedades.Add(new Propiedad { IdPropiedad = 24, Nombre = "Aeropuerto J.S.M", ValorCompra = 5000, ValorPeaje = 500, ValorHipoteca = 2500, MainPanel = prop24MainPnl, HeaderPanel = prop24HdrPnl, ImagenCiudad = Recursos.alajuelaJuan_santa_maria });
+            propiedades.Add(new Propiedad { IdPropiedad = 25, Nombre = "La Guacima", ValorCompra = 6000, ValorPeaje = 600, ValorHipoteca = 3000, MainPanel = prop25MainPnl, HeaderPanel = prop25HdrPnl, ImagenCiudad = Recursos.alajuelaGuacima });
+            propiedades.Add(new Propiedad { IdPropiedad = 26, Nombre = "Alajuela", ValorCompra = 7000, ValorPeaje = 700, ValorHipoteca = 3500, MainPanel = prop26MainPnl, HeaderPanel = prop26HdrPnl, ImagenCiudad = Recursos.alajuela });
+
+            propiedades.Add(new Propiedad { IdPropiedad = 27, Nombre = "Carcel", ValorCompra = 0, ValorPeaje = 0, ValorHipoteca = 0, MainPanel = prop27MainPnl, HeaderPanel = null, ImagenCiudad = null });
+            propiedades.Add(new Propiedad { IdPropiedad = 28, Nombre = "Grecia", ValorCompra = 7000, ValorPeaje = 700, ValorHipoteca = 3500, MainPanel = prop28MainPnl, HeaderPanel = prop28HdrPnl, ImagenCiudad = Recursos.alajuelaGrecia });
+            propiedades.Add(new Propiedad { IdPropiedad = 29, Nombre = "Poás", ValorCompra = 15000, ValorPeaje = 1500, ValorHipoteca = 7500, MainPanel = prop30MainPnl, HeaderPanel = prop29HdrPnl, ImagenCiudad = Recursos.alajuelaPoas });
+            propiedades.Add(new Propiedad { IdPropiedad = 30, Nombre = "Cartago", ValorCompra = 4000, ValorPeaje = 400, ValorHipoteca = 2000, MainPanel = prop30MainPnl, HeaderPanel = prop30HdrPnl, ImagenCiudad = Recursos.cartago });
+            propiedades.Add(new Propiedad { IdPropiedad = 31, Nombre = "Las Ruinas", ValorCompra = 5000, ValorPeaje = 500, ValorHipoteca = 2500, MainPanel = prop31MainPnl, HeaderPanel = prop31HdrPnl, ImagenCiudad = Recursos.cartagoRuina });
+            propiedades.Add(new Propiedad { IdPropiedad = 32, Nombre = "SKY", ValorCompra = 15000, ValorPeaje = 1500, ValorHipoteca = 7500, MainPanel = prop32MainPnl, HeaderPanel = prop32HdrPnl, ImagenCiudad = Recursos.compsky });
+            propiedades.Add(new Propiedad { IdPropiedad = 33, Nombre = "El Guarco", ValorCompra = 7000, ValorPeaje = 700, ValorHipoteca = 3500, MainPanel = prop33MainPnl, HeaderPanel = prop30HdrPnl, ImagenCiudad = Recursos.CartagoGuarco });
+            propiedades.Add(new Propiedad { IdPropiedad = 34, Nombre = "El Sanatorio", ValorCompra = 10000, ValorPeaje = 1000, ValorHipoteca = 5000, MainPanel = prop34MainPnl, HeaderPanel = prop31HdrPnl, ImagenCiudad = Recursos.cartagoTren });
+            propiedades.Add(new Propiedad { IdPropiedad = 35, Nombre = "Orosi", ValorCompra = 12000, ValorPeaje = 1200, ValorHipoteca = 6000, MainPanel = prop35MainPnl, HeaderPanel = prop32HdrPnl, ImagenCiudad = Recursos.cartagoOrosi });
+
+        }
 
 
         void MonopolyCRFrmLoad(object sender, EventArgs e)
@@ -175,7 +175,7 @@ namespace MonopolyCR.UI
             var ficha = jugadorEnTurno == 2 ? ficha1Pbx : ficha2Pbx;
             var posicion = ObtenerPosicionActual();
             var sumaDados = dado.SumaDados;
-            if (sumaDados > 2) sumaDados = 2;
+            //if (sumaDados > 2) sumaDados = 2;
             if (posActual < sumaDados)
             {
                 PlaySimpleSound(Recursos.sonido_ficha);
@@ -183,6 +183,8 @@ namespace MonopolyCR.UI
                 var panelActual = (Panel)propiedades[posicion].MainPanel;
 
                 panelActual.Controls.Remove(ficha);
+                if (posicion + 1 > 35)
+                    posicion = -1;
                 var panelSgte = (Panel)propiedades[posicion + 1].MainPanel;
                 panelSgte.Controls.Add(ficha);
                 ficha.Location = jugadorEnTurno == 1 ? new Point(17, 5) : new Point(4, 33);

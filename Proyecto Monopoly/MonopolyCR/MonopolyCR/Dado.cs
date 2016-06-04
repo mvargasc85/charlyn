@@ -32,8 +32,8 @@ namespace MonopolyCR
             var p = new Random();
             Dado1 = p.Next(1, 7);
             Dado2 = p.Next(1, 7);
-            //SumaDados=Dado1+Dado2;
-            SumaDados = Dado1;
+            SumaDados = Dado1 + Dado2;
+            //SumaDados = Dado1;
             dado1pbx.Image = CargarImageDado(Dado1);
             dado2pbx.Image = CargarImageDado(Dado2);
             return SumaDados;
