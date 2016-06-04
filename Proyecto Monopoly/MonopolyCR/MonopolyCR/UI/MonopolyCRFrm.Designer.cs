@@ -31,40 +31,42 @@ namespace MonopolyCR.UI
 		private System.Windows.Forms.ToolStripMenuItem acerdaDeToolStripMenuItem;
 		private System.Windows.Forms.Panel tableroPnl;
 		private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-		private System.Windows.Forms.Panel prop25HdrPnl;
-		private System.Windows.Forms.Panel prop25MainPnl;
-		private System.Windows.Forms.Panel prop26HdrPnl;
-		private System.Windows.Forms.Panel prop26MainPnl;
-		private System.Windows.Forms.Panel prop27HdrPnl;
-		private System.Windows.Forms.Panel prop27MainPnl;
 		private System.Windows.Forms.Panel prop28HdrPnl;
 		private System.Windows.Forms.Panel prop28MainPnl;
-		private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-		private System.Windows.Forms.Panel prop18MainPnl;
-		private System.Windows.Forms.Panel panel4;
-		private System.Windows.Forms.Panel prop20MainPnl;
-		private System.Windows.Forms.Panel prop21MainPnl;
-		private System.Windows.Forms.Panel prop22MainPnl;
-		private System.Windows.Forms.Panel prop23MainPnl;
-		private System.Windows.Forms.Panel prop24MainPnl;
-		private System.Windows.Forms.Panel prop24HdrPnl;
-		private System.Windows.Forms.Panel prop18HdrPnl;
-		private System.Windows.Forms.Panel panel13;
-		private System.Windows.Forms.Panel prop19HdrPnl;
-		private System.Windows.Forms.Panel prop20HdrPnl;
-		private System.Windows.Forms.Panel prop21HdrPnl;
-		private System.Windows.Forms.Panel prop22HdrPnl;
-		private System.Windows.Forms.Panel prop23HdrPnl;
-		private System.Windows.Forms.Label prop1nameLbl;
 		private System.Windows.Forms.Panel prop29HdrPnl;
 		private System.Windows.Forms.Panel prop29MainPnl;
 		private System.Windows.Forms.Panel prop30HdrPnl;
 		private System.Windows.Forms.Panel prop30MainPnl;
 		private System.Windows.Forms.Panel prop31HdrPnl;
 		private System.Windows.Forms.Panel prop31MainPnl;
+		private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+		private System.Windows.Forms.Panel prop20MainPnl;
+		private System.Windows.Forms.Panel prop21MainPnl;
+		private System.Windows.Forms.Panel prop22MainPnl;
+		private System.Windows.Forms.Panel prop23MainPnl;
+		private System.Windows.Forms.Panel prop24MainPnl;
+		private System.Windows.Forms.Panel prop25MainPnl;
+		private System.Windows.Forms.Panel prop26MainPnl;
+		private System.Windows.Forms.Panel prop26HdrPnl;
+		private System.Windows.Forms.Panel prop20HdrPnl;
+		private System.Windows.Forms.Panel panel13;
+		private System.Windows.Forms.Panel prop21HdrPnl;
+		private System.Windows.Forms.Panel prop22HdrPnl;
+		private System.Windows.Forms.Panel prop23HdrPnl;
+		private System.Windows.Forms.Panel prop24HdrPnl;
+		private System.Windows.Forms.Panel prop25HdrPnl;
+		private System.Windows.Forms.Label prop1nameLbl;
 		private System.Windows.Forms.Panel prop32HdrPnl;
 		private System.Windows.Forms.Panel prop32MainPnl;
+		private System.Windows.Forms.Panel prop33HdrPnl;
+		private System.Windows.Forms.Panel prop33MainPnl;
+		private System.Windows.Forms.Panel prop34HdrPnl;
+		private System.Windows.Forms.Panel prop34MainPnl;
+		private System.Windows.Forms.Panel prop35HdrPnl;
+		private System.Windows.Forms.Panel prop35MainPnl;
 		private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+		private System.Windows.Forms.Panel prop17MainPnl;
+		private System.Windows.Forms.Panel prop17HdrPnl;
 		private System.Windows.Forms.Panel prop16MainPnl;
 		private System.Windows.Forms.Panel prop16HdrPnl;
 		private System.Windows.Forms.Panel prop15MainPnl;
@@ -79,8 +81,6 @@ namespace MonopolyCR.UI
 		private System.Windows.Forms.Panel prop11HdrPnl;
 		private System.Windows.Forms.Panel prop10MainPnl;
 		private System.Windows.Forms.Panel prop10HdrPnl;
-		private System.Windows.Forms.Panel prop9MainPnl;
-		private System.Windows.Forms.Panel prop9HdrPnl;
 		private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
 		private System.Windows.Forms.Panel prop8HdrPnl;
 		private System.Windows.Forms.Panel prop7HdrPnl;
@@ -98,15 +98,15 @@ namespace MonopolyCR.UI
 		private System.Windows.Forms.Panel prop3MainPnl;
 		private System.Windows.Forms.Panel prop2MainPnl;
 		private System.Windows.Forms.Panel prop1MainPnl;
-		private System.Windows.Forms.Panel prop17MainPnl;
-		private System.Windows.Forms.Panel prop17HdrPnl;
-		private System.Windows.Forms.Panel panel69;
+		private System.Windows.Forms.Panel prop19MainPnl;
+		private System.Windows.Forms.Panel prop19HdrPnl;
+		private System.Windows.Forms.Panel prop9MainPnl;
 		private System.Windows.Forms.Panel prop0MainPnl;
-		private System.Windows.Forms.Panel panel66;
-		private System.Windows.Forms.Panel panel2;
+		private System.Windows.Forms.Panel prop18MainPnl;
+		private System.Windows.Forms.Panel prop27MainPnl;
 		private System.Windows.Forms.Panel panel68;
 		private System.Windows.Forms.Label prop2nameLbl;
-		private System.Windows.Forms.Label prop19MainPnl;
+		private System.Windows.Forms.Label prop20nameLbl;
 		private System.Windows.Forms.Label prop4nameLbl;
         private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.PictureBox dado2Pbx;
@@ -173,7 +173,7 @@ namespace MonopolyCR.UI
             this.dado2Pbx = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.dado1Pbx = new System.Windows.Forms.PictureBox();
-            this.panel69 = new System.Windows.Forms.Panel();
+            this.prop9MainPnl = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.prop0MainPnl = new System.Windows.Forms.Panel();
             this.ficha2Pbx = new System.Windows.Forms.PictureBox();
@@ -181,9 +181,9 @@ namespace MonopolyCR.UI
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel66 = new System.Windows.Forms.Panel();
+            this.prop18MainPnl = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.prop27MainPnl = new System.Windows.Forms.Panel();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.prop8HdrPnl = new System.Windows.Forms.Panel();
             this.prop7HdrPnl = new System.Windows.Forms.Panel();
@@ -202,6 +202,8 @@ namespace MonopolyCR.UI
             this.prop2MainPnl = new System.Windows.Forms.Panel();
             this.prop1MainPnl = new System.Windows.Forms.Panel();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.prop17MainPnl = new System.Windows.Forms.Panel();
+            this.prop17HdrPnl = new System.Windows.Forms.Panel();
             this.prop16MainPnl = new System.Windows.Forms.Panel();
             this.prop16HdrPnl = new System.Windows.Forms.Panel();
             this.prop15MainPnl = new System.Windows.Forms.Panel();
@@ -215,17 +217,9 @@ namespace MonopolyCR.UI
             this.prop11MainPnl = new System.Windows.Forms.Panel();
             this.prop11HdrPnl = new System.Windows.Forms.Panel();
             this.prop10MainPnl = new System.Windows.Forms.Panel();
-            this.prop10HdrPnl = new System.Windows.Forms.Panel();
-            this.prop9MainPnl = new System.Windows.Forms.Panel();
             this.panel68 = new System.Windows.Forms.Panel();
-            this.prop9HdrPnl = new System.Windows.Forms.Panel();
+            this.prop10HdrPnl = new System.Windows.Forms.Panel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.prop25HdrPnl = new System.Windows.Forms.Panel();
-            this.prop25MainPnl = new System.Windows.Forms.Panel();
-            this.prop26HdrPnl = new System.Windows.Forms.Panel();
-            this.prop26MainPnl = new System.Windows.Forms.Panel();
-            this.prop27HdrPnl = new System.Windows.Forms.Panel();
-            this.prop27MainPnl = new System.Windows.Forms.Panel();
             this.prop28HdrPnl = new System.Windows.Forms.Panel();
             this.prop28MainPnl = new System.Windows.Forms.Panel();
             this.prop29HdrPnl = new System.Windows.Forms.Panel();
@@ -236,27 +230,33 @@ namespace MonopolyCR.UI
             this.prop31MainPnl = new System.Windows.Forms.Panel();
             this.prop32HdrPnl = new System.Windows.Forms.Panel();
             this.prop32MainPnl = new System.Windows.Forms.Panel();
+            this.prop33HdrPnl = new System.Windows.Forms.Panel();
+            this.prop33MainPnl = new System.Windows.Forms.Panel();
+            this.prop34HdrPnl = new System.Windows.Forms.Panel();
+            this.prop34MainPnl = new System.Windows.Forms.Panel();
+            this.prop35HdrPnl = new System.Windows.Forms.Panel();
+            this.prop35MainPnl = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.prop17MainPnl = new System.Windows.Forms.Panel();
+            this.prop19MainPnl = new System.Windows.Forms.Panel();
             this.prop1nameLbl = new System.Windows.Forms.Label();
-            this.prop18MainPnl = new System.Windows.Forms.Panel();
-            this.prop2nameLbl = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.prop19MainPnl = new System.Windows.Forms.Label();
             this.prop20MainPnl = new System.Windows.Forms.Panel();
-            this.prop4nameLbl = new System.Windows.Forms.Label();
+            this.prop2nameLbl = new System.Windows.Forms.Label();
             this.prop21MainPnl = new System.Windows.Forms.Panel();
+            this.prop20nameLbl = new System.Windows.Forms.Label();
             this.prop22MainPnl = new System.Windows.Forms.Panel();
+            this.prop4nameLbl = new System.Windows.Forms.Label();
             this.prop23MainPnl = new System.Windows.Forms.Panel();
             this.prop24MainPnl = new System.Windows.Forms.Panel();
-            this.prop17HdrPnl = new System.Windows.Forms.Panel();
-            this.prop18HdrPnl = new System.Windows.Forms.Panel();
+            this.prop25MainPnl = new System.Windows.Forms.Panel();
+            this.prop26MainPnl = new System.Windows.Forms.Panel();
             this.prop19HdrPnl = new System.Windows.Forms.Panel();
             this.prop20HdrPnl = new System.Windows.Forms.Panel();
             this.prop21HdrPnl = new System.Windows.Forms.Panel();
             this.prop22HdrPnl = new System.Windows.Forms.Panel();
             this.prop23HdrPnl = new System.Windows.Forms.Panel();
             this.prop24HdrPnl = new System.Windows.Forms.Panel();
+            this.prop25HdrPnl = new System.Windows.Forms.Panel();
+            this.prop26HdrPnl = new System.Windows.Forms.Panel();
             this.fichaPropiedadPnl = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.valorHipotecaLbl = new System.Windows.Forms.Label();
@@ -277,20 +277,20 @@ namespace MonopolyCR.UI
             this.tableroPnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dado2Pbx)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dado1Pbx)).BeginInit();
-            this.panel69.SuspendLayout();
+            this.prop9MainPnl.SuspendLayout();
             this.prop0MainPnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ficha2Pbx)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ficha1Pbx)).BeginInit();
-            this.panel66.SuspendLayout();
+            this.prop18MainPnl.SuspendLayout();
             this.flowLayoutPanel4.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
-            this.prop9MainPnl.SuspendLayout();
+            this.prop10MainPnl.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
-            this.prop17MainPnl.SuspendLayout();
-            this.prop18MainPnl.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.prop19MainPnl.SuspendLayout();
             this.prop20MainPnl.SuspendLayout();
+            this.prop21MainPnl.SuspendLayout();
+            this.prop22MainPnl.SuspendLayout();
             this.fichaPropiedadPnl.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imagenCiudadPbx)).BeginInit();
@@ -547,10 +547,10 @@ namespace MonopolyCR.UI
             this.tableroPnl.Controls.Add(this.dado2Pbx);
             this.tableroPnl.Controls.Add(this.label6);
             this.tableroPnl.Controls.Add(this.dado1Pbx);
-            this.tableroPnl.Controls.Add(this.panel69);
+            this.tableroPnl.Controls.Add(this.prop9MainPnl);
             this.tableroPnl.Controls.Add(this.prop0MainPnl);
-            this.tableroPnl.Controls.Add(this.panel66);
-            this.tableroPnl.Controls.Add(this.panel2);
+            this.tableroPnl.Controls.Add(this.prop18MainPnl);
+            this.tableroPnl.Controls.Add(this.prop27MainPnl);
             this.tableroPnl.Controls.Add(this.flowLayoutPanel4);
             this.tableroPnl.Controls.Add(this.flowLayoutPanel3);
             this.tableroPnl.Controls.Add(this.flowLayoutPanel2);
@@ -591,13 +591,13 @@ namespace MonopolyCR.UI
             this.dado1Pbx.TabIndex = 14;
             this.dado1Pbx.TabStop = false;
             // 
-            // panel69
+            // prop9MainPnl
             // 
-            this.panel69.Controls.Add(this.label5);
-            this.panel69.Location = new System.Drawing.Point(2, 581);
-            this.panel69.Name = "panel69";
-            this.panel69.Size = new System.Drawing.Size(79, 79);
-            this.panel69.TabIndex = 7;
+            this.prop9MainPnl.Controls.Add(this.label5);
+            this.prop9MainPnl.Location = new System.Drawing.Point(2, 581);
+            this.prop9MainPnl.Name = "prop9MainPnl";
+            this.prop9MainPnl.Size = new System.Drawing.Size(79, 79);
+            this.prop9MainPnl.TabIndex = 7;
             // 
             // label5
             // 
@@ -671,14 +671,14 @@ namespace MonopolyCR.UI
             this.label2.TabIndex = 0;
             this.label2.Text = "Salida";
             // 
-            // panel66
+            // prop18MainPnl
             // 
-            this.panel66.Controls.Add(this.label1);
-            this.panel66.Location = new System.Drawing.Point(2, 1);
-            this.panel66.Margin = new System.Windows.Forms.Padding(0);
-            this.panel66.Name = "panel66";
-            this.panel66.Size = new System.Drawing.Size(79, 79);
-            this.panel66.TabIndex = 5;
+            this.prop18MainPnl.Controls.Add(this.label1);
+            this.prop18MainPnl.Location = new System.Drawing.Point(2, 1);
+            this.prop18MainPnl.Margin = new System.Windows.Forms.Padding(0);
+            this.prop18MainPnl.Name = "prop18MainPnl";
+            this.prop18MainPnl.Size = new System.Drawing.Size(79, 79);
+            this.prop18MainPnl.TabIndex = 5;
             // 
             // label1
             // 
@@ -689,14 +689,14 @@ namespace MonopolyCR.UI
             this.label1.TabIndex = 0;
             this.label1.Text = "Parqueo  Gratuito";
             // 
-            // panel2
+            // prop27MainPnl
             // 
-            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Location = new System.Drawing.Point(582, 1);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(79, 79);
-            this.panel2.TabIndex = 4;
+            this.prop27MainPnl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("prop27MainPnl.BackgroundImage")));
+            this.prop27MainPnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.prop27MainPnl.Location = new System.Drawing.Point(582, 1);
+            this.prop27MainPnl.Name = "prop27MainPnl";
+            this.prop27MainPnl.Size = new System.Drawing.Size(79, 79);
+            this.prop27MainPnl.TabIndex = 4;
             // 
             // flowLayoutPanel4
             // 
@@ -887,6 +887,8 @@ namespace MonopolyCR.UI
             // flowLayoutPanel3
             // 
             this.flowLayoutPanel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flowLayoutPanel3.Controls.Add(this.prop17MainPnl);
+            this.flowLayoutPanel3.Controls.Add(this.prop17HdrPnl);
             this.flowLayoutPanel3.Controls.Add(this.prop16MainPnl);
             this.flowLayoutPanel3.Controls.Add(this.prop16HdrPnl);
             this.flowLayoutPanel3.Controls.Add(this.prop15MainPnl);
@@ -901,164 +903,160 @@ namespace MonopolyCR.UI
             this.flowLayoutPanel3.Controls.Add(this.prop11HdrPnl);
             this.flowLayoutPanel3.Controls.Add(this.prop10MainPnl);
             this.flowLayoutPanel3.Controls.Add(this.prop10HdrPnl);
-            this.flowLayoutPanel3.Controls.Add(this.prop9MainPnl);
-            this.flowLayoutPanel3.Controls.Add(this.prop9HdrPnl);
             this.flowLayoutPanel3.Location = new System.Drawing.Point(0, 81);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
             this.flowLayoutPanel3.Size = new System.Drawing.Size(83, 498);
             this.flowLayoutPanel3.TabIndex = 2;
+            // 
+            // prop17MainPnl
+            // 
+            this.prop17MainPnl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("prop17MainPnl.BackgroundImage")));
+            this.prop17MainPnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.prop17MainPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.prop17MainPnl.Location = new System.Drawing.Point(0, 0);
+            this.prop17MainPnl.Margin = new System.Windows.Forms.Padding(0);
+            this.prop17MainPnl.Name = "prop17MainPnl";
+            this.prop17MainPnl.Size = new System.Drawing.Size(62, 62);
+            this.prop17MainPnl.TabIndex = 18;
+            // 
+            // prop17HdrPnl
+            // 
+            this.prop17HdrPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.prop17HdrPnl.Location = new System.Drawing.Point(62, 0);
+            this.prop17HdrPnl.Margin = new System.Windows.Forms.Padding(0);
+            this.prop17HdrPnl.Name = "prop17HdrPnl";
+            this.prop17HdrPnl.Size = new System.Drawing.Size(19, 62);
+            this.prop17HdrPnl.TabIndex = 19;
             // 
             // prop16MainPnl
             // 
             this.prop16MainPnl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("prop16MainPnl.BackgroundImage")));
             this.prop16MainPnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.prop16MainPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.prop16MainPnl.Location = new System.Drawing.Point(0, 0);
+            this.prop16MainPnl.Location = new System.Drawing.Point(0, 62);
             this.prop16MainPnl.Margin = new System.Windows.Forms.Padding(0);
             this.prop16MainPnl.Name = "prop16MainPnl";
             this.prop16MainPnl.Size = new System.Drawing.Size(62, 62);
-            this.prop16MainPnl.TabIndex = 18;
+            this.prop16MainPnl.TabIndex = 20;
             // 
             // prop16HdrPnl
             // 
             this.prop16HdrPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.prop16HdrPnl.Location = new System.Drawing.Point(62, 0);
+            this.prop16HdrPnl.Location = new System.Drawing.Point(62, 62);
             this.prop16HdrPnl.Margin = new System.Windows.Forms.Padding(0);
             this.prop16HdrPnl.Name = "prop16HdrPnl";
             this.prop16HdrPnl.Size = new System.Drawing.Size(19, 62);
-            this.prop16HdrPnl.TabIndex = 19;
+            this.prop16HdrPnl.TabIndex = 21;
             // 
             // prop15MainPnl
             // 
             this.prop15MainPnl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("prop15MainPnl.BackgroundImage")));
             this.prop15MainPnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.prop15MainPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.prop15MainPnl.Location = new System.Drawing.Point(0, 62);
+            this.prop15MainPnl.Location = new System.Drawing.Point(0, 124);
             this.prop15MainPnl.Margin = new System.Windows.Forms.Padding(0);
             this.prop15MainPnl.Name = "prop15MainPnl";
             this.prop15MainPnl.Size = new System.Drawing.Size(62, 62);
-            this.prop15MainPnl.TabIndex = 20;
+            this.prop15MainPnl.TabIndex = 22;
             // 
             // prop15HdrPnl
             // 
             this.prop15HdrPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.prop15HdrPnl.Location = new System.Drawing.Point(62, 62);
+            this.prop15HdrPnl.Location = new System.Drawing.Point(62, 124);
             this.prop15HdrPnl.Margin = new System.Windows.Forms.Padding(0);
             this.prop15HdrPnl.Name = "prop15HdrPnl";
             this.prop15HdrPnl.Size = new System.Drawing.Size(19, 62);
-            this.prop15HdrPnl.TabIndex = 21;
+            this.prop15HdrPnl.TabIndex = 23;
             // 
             // prop14MainPnl
             // 
             this.prop14MainPnl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("prop14MainPnl.BackgroundImage")));
             this.prop14MainPnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.prop14MainPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.prop14MainPnl.Location = new System.Drawing.Point(0, 124);
+            this.prop14MainPnl.Location = new System.Drawing.Point(0, 186);
             this.prop14MainPnl.Margin = new System.Windows.Forms.Padding(0);
             this.prop14MainPnl.Name = "prop14MainPnl";
             this.prop14MainPnl.Size = new System.Drawing.Size(62, 62);
-            this.prop14MainPnl.TabIndex = 22;
+            this.prop14MainPnl.TabIndex = 24;
             // 
             // prop14HdrPnl
             // 
             this.prop14HdrPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.prop14HdrPnl.Location = new System.Drawing.Point(62, 124);
+            this.prop14HdrPnl.Location = new System.Drawing.Point(62, 186);
             this.prop14HdrPnl.Margin = new System.Windows.Forms.Padding(0);
             this.prop14HdrPnl.Name = "prop14HdrPnl";
             this.prop14HdrPnl.Size = new System.Drawing.Size(19, 62);
-            this.prop14HdrPnl.TabIndex = 23;
+            this.prop14HdrPnl.TabIndex = 25;
             // 
             // prop13MainPnl
             // 
             this.prop13MainPnl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("prop13MainPnl.BackgroundImage")));
             this.prop13MainPnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.prop13MainPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.prop13MainPnl.Location = new System.Drawing.Point(0, 186);
+            this.prop13MainPnl.Location = new System.Drawing.Point(0, 248);
             this.prop13MainPnl.Margin = new System.Windows.Forms.Padding(0);
             this.prop13MainPnl.Name = "prop13MainPnl";
             this.prop13MainPnl.Size = new System.Drawing.Size(62, 62);
-            this.prop13MainPnl.TabIndex = 24;
+            this.prop13MainPnl.TabIndex = 26;
             // 
             // prop13HdrPnl
             // 
             this.prop13HdrPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.prop13HdrPnl.Location = new System.Drawing.Point(62, 186);
+            this.prop13HdrPnl.Location = new System.Drawing.Point(62, 248);
             this.prop13HdrPnl.Margin = new System.Windows.Forms.Padding(0);
             this.prop13HdrPnl.Name = "prop13HdrPnl";
             this.prop13HdrPnl.Size = new System.Drawing.Size(19, 62);
-            this.prop13HdrPnl.TabIndex = 25;
+            this.prop13HdrPnl.TabIndex = 27;
             // 
             // prop12MainPnl
             // 
             this.prop12MainPnl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("prop12MainPnl.BackgroundImage")));
             this.prop12MainPnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.prop12MainPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.prop12MainPnl.Location = new System.Drawing.Point(0, 248);
+            this.prop12MainPnl.Location = new System.Drawing.Point(0, 310);
             this.prop12MainPnl.Margin = new System.Windows.Forms.Padding(0);
             this.prop12MainPnl.Name = "prop12MainPnl";
             this.prop12MainPnl.Size = new System.Drawing.Size(62, 62);
-            this.prop12MainPnl.TabIndex = 26;
+            this.prop12MainPnl.TabIndex = 28;
             // 
             // prop12HdrPnl
             // 
             this.prop12HdrPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.prop12HdrPnl.Location = new System.Drawing.Point(62, 248);
+            this.prop12HdrPnl.Location = new System.Drawing.Point(62, 310);
             this.prop12HdrPnl.Margin = new System.Windows.Forms.Padding(0);
             this.prop12HdrPnl.Name = "prop12HdrPnl";
             this.prop12HdrPnl.Size = new System.Drawing.Size(19, 62);
-            this.prop12HdrPnl.TabIndex = 27;
+            this.prop12HdrPnl.TabIndex = 29;
             // 
             // prop11MainPnl
             // 
-            this.prop11MainPnl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("prop11MainPnl.BackgroundImage")));
             this.prop11MainPnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.prop11MainPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.prop11MainPnl.Location = new System.Drawing.Point(0, 310);
+            this.prop11MainPnl.Location = new System.Drawing.Point(0, 372);
             this.prop11MainPnl.Margin = new System.Windows.Forms.Padding(0);
             this.prop11MainPnl.Name = "prop11MainPnl";
             this.prop11MainPnl.Size = new System.Drawing.Size(62, 62);
-            this.prop11MainPnl.TabIndex = 28;
+            this.prop11MainPnl.TabIndex = 30;
             // 
             // prop11HdrPnl
             // 
             this.prop11HdrPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.prop11HdrPnl.Location = new System.Drawing.Point(62, 310);
+            this.prop11HdrPnl.Location = new System.Drawing.Point(62, 372);
             this.prop11HdrPnl.Margin = new System.Windows.Forms.Padding(0);
             this.prop11HdrPnl.Name = "prop11HdrPnl";
             this.prop11HdrPnl.Size = new System.Drawing.Size(19, 62);
-            this.prop11HdrPnl.TabIndex = 29;
+            this.prop11HdrPnl.TabIndex = 31;
             // 
             // prop10MainPnl
             // 
-            this.prop10MainPnl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("prop10MainPnl.BackgroundImage")));
             this.prop10MainPnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.prop10MainPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.prop10MainPnl.Location = new System.Drawing.Point(0, 372);
+            this.prop10MainPnl.Controls.Add(this.panel68);
+            this.prop10MainPnl.Location = new System.Drawing.Point(0, 434);
             this.prop10MainPnl.Margin = new System.Windows.Forms.Padding(0);
             this.prop10MainPnl.Name = "prop10MainPnl";
             this.prop10MainPnl.Size = new System.Drawing.Size(62, 62);
-            this.prop10MainPnl.TabIndex = 30;
-            // 
-            // prop10HdrPnl
-            // 
-            this.prop10HdrPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.prop10HdrPnl.Location = new System.Drawing.Point(62, 372);
-            this.prop10HdrPnl.Margin = new System.Windows.Forms.Padding(0);
-            this.prop10HdrPnl.Name = "prop10HdrPnl";
-            this.prop10HdrPnl.Size = new System.Drawing.Size(19, 62);
-            this.prop10HdrPnl.TabIndex = 31;
-            // 
-            // prop9MainPnl
-            // 
-            this.prop9MainPnl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("prop9MainPnl.BackgroundImage")));
-            this.prop9MainPnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.prop9MainPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.prop9MainPnl.Controls.Add(this.panel68);
-            this.prop9MainPnl.Location = new System.Drawing.Point(0, 434);
-            this.prop9MainPnl.Margin = new System.Windows.Forms.Padding(0);
-            this.prop9MainPnl.Name = "prop9MainPnl";
-            this.prop9MainPnl.Size = new System.Drawing.Size(62, 62);
-            this.prop9MainPnl.TabIndex = 32;
+            this.prop10MainPnl.TabIndex = 32;
             // 
             // panel68
             // 
@@ -1067,24 +1065,18 @@ namespace MonopolyCR.UI
             this.panel68.Size = new System.Drawing.Size(79, 79);
             this.panel68.TabIndex = 7;
             // 
-            // prop9HdrPnl
+            // prop10HdrPnl
             // 
-            this.prop9HdrPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.prop9HdrPnl.Location = new System.Drawing.Point(62, 434);
-            this.prop9HdrPnl.Margin = new System.Windows.Forms.Padding(0);
-            this.prop9HdrPnl.Name = "prop9HdrPnl";
-            this.prop9HdrPnl.Size = new System.Drawing.Size(19, 62);
-            this.prop9HdrPnl.TabIndex = 33;
+            this.prop10HdrPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.prop10HdrPnl.Location = new System.Drawing.Point(62, 434);
+            this.prop10HdrPnl.Margin = new System.Windows.Forms.Padding(0);
+            this.prop10HdrPnl.Name = "prop10HdrPnl";
+            this.prop10HdrPnl.Size = new System.Drawing.Size(19, 62);
+            this.prop10HdrPnl.TabIndex = 33;
             // 
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel2.Controls.Add(this.prop25HdrPnl);
-            this.flowLayoutPanel2.Controls.Add(this.prop25MainPnl);
-            this.flowLayoutPanel2.Controls.Add(this.prop26HdrPnl);
-            this.flowLayoutPanel2.Controls.Add(this.prop26MainPnl);
-            this.flowLayoutPanel2.Controls.Add(this.prop27HdrPnl);
-            this.flowLayoutPanel2.Controls.Add(this.prop27MainPnl);
             this.flowLayoutPanel2.Controls.Add(this.prop28HdrPnl);
             this.flowLayoutPanel2.Controls.Add(this.prop28MainPnl);
             this.flowLayoutPanel2.Controls.Add(this.prop29HdrPnl);
@@ -1095,207 +1087,213 @@ namespace MonopolyCR.UI
             this.flowLayoutPanel2.Controls.Add(this.prop31MainPnl);
             this.flowLayoutPanel2.Controls.Add(this.prop32HdrPnl);
             this.flowLayoutPanel2.Controls.Add(this.prop32MainPnl);
+            this.flowLayoutPanel2.Controls.Add(this.prop33HdrPnl);
+            this.flowLayoutPanel2.Controls.Add(this.prop33MainPnl);
+            this.flowLayoutPanel2.Controls.Add(this.prop34HdrPnl);
+            this.flowLayoutPanel2.Controls.Add(this.prop34MainPnl);
+            this.flowLayoutPanel2.Controls.Add(this.prop35HdrPnl);
+            this.flowLayoutPanel2.Controls.Add(this.prop35MainPnl);
             this.flowLayoutPanel2.Location = new System.Drawing.Point(580, 81);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(83, 498);
             this.flowLayoutPanel2.TabIndex = 1;
             // 
-            // prop25HdrPnl
-            // 
-            this.prop25HdrPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.prop25HdrPnl.Location = new System.Drawing.Point(0, 0);
-            this.prop25HdrPnl.Margin = new System.Windows.Forms.Padding(0);
-            this.prop25HdrPnl.Name = "prop25HdrPnl";
-            this.prop25HdrPnl.Size = new System.Drawing.Size(19, 62);
-            this.prop25HdrPnl.TabIndex = 18;
-            // 
-            // prop25MainPnl
-            // 
-            this.prop25MainPnl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("prop25MainPnl.BackgroundImage")));
-            this.prop25MainPnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.prop25MainPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.prop25MainPnl.Location = new System.Drawing.Point(19, 0);
-            this.prop25MainPnl.Margin = new System.Windows.Forms.Padding(0);
-            this.prop25MainPnl.Name = "prop25MainPnl";
-            this.prop25MainPnl.Size = new System.Drawing.Size(62, 62);
-            this.prop25MainPnl.TabIndex = 19;
-            // 
-            // prop26HdrPnl
-            // 
-            this.prop26HdrPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.prop26HdrPnl.Location = new System.Drawing.Point(0, 62);
-            this.prop26HdrPnl.Margin = new System.Windows.Forms.Padding(0);
-            this.prop26HdrPnl.Name = "prop26HdrPnl";
-            this.prop26HdrPnl.Size = new System.Drawing.Size(19, 62);
-            this.prop26HdrPnl.TabIndex = 20;
-            // 
-            // prop26MainPnl
-            // 
-            this.prop26MainPnl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("prop26MainPnl.BackgroundImage")));
-            this.prop26MainPnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.prop26MainPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.prop26MainPnl.Location = new System.Drawing.Point(19, 62);
-            this.prop26MainPnl.Margin = new System.Windows.Forms.Padding(0);
-            this.prop26MainPnl.Name = "prop26MainPnl";
-            this.prop26MainPnl.Size = new System.Drawing.Size(62, 62);
-            this.prop26MainPnl.TabIndex = 21;
-            // 
-            // prop27HdrPnl
-            // 
-            this.prop27HdrPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.prop27HdrPnl.Location = new System.Drawing.Point(0, 124);
-            this.prop27HdrPnl.Margin = new System.Windows.Forms.Padding(0);
-            this.prop27HdrPnl.Name = "prop27HdrPnl";
-            this.prop27HdrPnl.Size = new System.Drawing.Size(19, 62);
-            this.prop27HdrPnl.TabIndex = 22;
-            // 
-            // prop27MainPnl
-            // 
-            this.prop27MainPnl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("prop27MainPnl.BackgroundImage")));
-            this.prop27MainPnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.prop27MainPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.prop27MainPnl.Location = new System.Drawing.Point(19, 124);
-            this.prop27MainPnl.Margin = new System.Windows.Forms.Padding(0);
-            this.prop27MainPnl.Name = "prop27MainPnl";
-            this.prop27MainPnl.Size = new System.Drawing.Size(62, 62);
-            this.prop27MainPnl.TabIndex = 23;
-            // 
             // prop28HdrPnl
             // 
             this.prop28HdrPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.prop28HdrPnl.Location = new System.Drawing.Point(0, 186);
+            this.prop28HdrPnl.Location = new System.Drawing.Point(0, 0);
             this.prop28HdrPnl.Margin = new System.Windows.Forms.Padding(0);
             this.prop28HdrPnl.Name = "prop28HdrPnl";
             this.prop28HdrPnl.Size = new System.Drawing.Size(19, 62);
-            this.prop28HdrPnl.TabIndex = 24;
+            this.prop28HdrPnl.TabIndex = 18;
             // 
             // prop28MainPnl
             // 
             this.prop28MainPnl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("prop28MainPnl.BackgroundImage")));
             this.prop28MainPnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.prop28MainPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.prop28MainPnl.Location = new System.Drawing.Point(19, 186);
+            this.prop28MainPnl.Location = new System.Drawing.Point(19, 0);
             this.prop28MainPnl.Margin = new System.Windows.Forms.Padding(0);
             this.prop28MainPnl.Name = "prop28MainPnl";
             this.prop28MainPnl.Size = new System.Drawing.Size(62, 62);
-            this.prop28MainPnl.TabIndex = 25;
+            this.prop28MainPnl.TabIndex = 19;
             // 
             // prop29HdrPnl
             // 
             this.prop29HdrPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.prop29HdrPnl.Location = new System.Drawing.Point(0, 248);
+            this.prop29HdrPnl.Location = new System.Drawing.Point(0, 62);
             this.prop29HdrPnl.Margin = new System.Windows.Forms.Padding(0);
             this.prop29HdrPnl.Name = "prop29HdrPnl";
             this.prop29HdrPnl.Size = new System.Drawing.Size(19, 62);
-            this.prop29HdrPnl.TabIndex = 26;
+            this.prop29HdrPnl.TabIndex = 20;
             // 
             // prop29MainPnl
             // 
             this.prop29MainPnl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("prop29MainPnl.BackgroundImage")));
             this.prop29MainPnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.prop29MainPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.prop29MainPnl.Location = new System.Drawing.Point(19, 248);
+            this.prop29MainPnl.Location = new System.Drawing.Point(19, 62);
             this.prop29MainPnl.Margin = new System.Windows.Forms.Padding(0);
             this.prop29MainPnl.Name = "prop29MainPnl";
             this.prop29MainPnl.Size = new System.Drawing.Size(62, 62);
-            this.prop29MainPnl.TabIndex = 27;
+            this.prop29MainPnl.TabIndex = 21;
             // 
             // prop30HdrPnl
             // 
             this.prop30HdrPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.prop30HdrPnl.Location = new System.Drawing.Point(0, 310);
+            this.prop30HdrPnl.Location = new System.Drawing.Point(0, 124);
             this.prop30HdrPnl.Margin = new System.Windows.Forms.Padding(0);
             this.prop30HdrPnl.Name = "prop30HdrPnl";
             this.prop30HdrPnl.Size = new System.Drawing.Size(19, 62);
-            this.prop30HdrPnl.TabIndex = 28;
+            this.prop30HdrPnl.TabIndex = 22;
             // 
             // prop30MainPnl
             // 
-            this.prop30MainPnl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("prop30MainPnl.BackgroundImage")));
+            this.prop30MainPnl.BackgroundImage = global::MonopolyCR.Recursos.cartago;
             this.prop30MainPnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.prop30MainPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.prop30MainPnl.Location = new System.Drawing.Point(19, 310);
+            this.prop30MainPnl.Location = new System.Drawing.Point(19, 124);
             this.prop30MainPnl.Margin = new System.Windows.Forms.Padding(0);
             this.prop30MainPnl.Name = "prop30MainPnl";
             this.prop30MainPnl.Size = new System.Drawing.Size(62, 62);
-            this.prop30MainPnl.TabIndex = 29;
+            this.prop30MainPnl.TabIndex = 23;
             // 
             // prop31HdrPnl
             // 
             this.prop31HdrPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.prop31HdrPnl.Location = new System.Drawing.Point(0, 372);
+            this.prop31HdrPnl.Location = new System.Drawing.Point(0, 186);
             this.prop31HdrPnl.Margin = new System.Windows.Forms.Padding(0);
             this.prop31HdrPnl.Name = "prop31HdrPnl";
             this.prop31HdrPnl.Size = new System.Drawing.Size(19, 62);
-            this.prop31HdrPnl.TabIndex = 30;
+            this.prop31HdrPnl.TabIndex = 24;
             // 
             // prop31MainPnl
             // 
             this.prop31MainPnl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("prop31MainPnl.BackgroundImage")));
             this.prop31MainPnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.prop31MainPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.prop31MainPnl.Location = new System.Drawing.Point(19, 372);
+            this.prop31MainPnl.Location = new System.Drawing.Point(19, 186);
             this.prop31MainPnl.Margin = new System.Windows.Forms.Padding(0);
             this.prop31MainPnl.Name = "prop31MainPnl";
             this.prop31MainPnl.Size = new System.Drawing.Size(62, 62);
-            this.prop31MainPnl.TabIndex = 31;
+            this.prop31MainPnl.TabIndex = 25;
             // 
             // prop32HdrPnl
             // 
             this.prop32HdrPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.prop32HdrPnl.Location = new System.Drawing.Point(0, 434);
+            this.prop32HdrPnl.Location = new System.Drawing.Point(0, 248);
             this.prop32HdrPnl.Margin = new System.Windows.Forms.Padding(0);
             this.prop32HdrPnl.Name = "prop32HdrPnl";
             this.prop32HdrPnl.Size = new System.Drawing.Size(19, 62);
-            this.prop32HdrPnl.TabIndex = 32;
-            this.prop32HdrPnl.Paint += new System.Windows.Forms.PaintEventHandler(this.Prop32HdrPnlPaint);
+            this.prop32HdrPnl.TabIndex = 26;
             // 
             // prop32MainPnl
             // 
             this.prop32MainPnl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("prop32MainPnl.BackgroundImage")));
             this.prop32MainPnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.prop32MainPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.prop32MainPnl.Location = new System.Drawing.Point(19, 434);
+            this.prop32MainPnl.Location = new System.Drawing.Point(19, 248);
             this.prop32MainPnl.Margin = new System.Windows.Forms.Padding(0);
             this.prop32MainPnl.Name = "prop32MainPnl";
             this.prop32MainPnl.Size = new System.Drawing.Size(62, 62);
-            this.prop32MainPnl.TabIndex = 33;
+            this.prop32MainPnl.TabIndex = 27;
+            // 
+            // prop33HdrPnl
+            // 
+            this.prop33HdrPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.prop33HdrPnl.Location = new System.Drawing.Point(0, 310);
+            this.prop33HdrPnl.Margin = new System.Windows.Forms.Padding(0);
+            this.prop33HdrPnl.Name = "prop33HdrPnl";
+            this.prop33HdrPnl.Size = new System.Drawing.Size(19, 62);
+            this.prop33HdrPnl.TabIndex = 28;
+            // 
+            // prop33MainPnl
+            // 
+            this.prop33MainPnl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("prop33MainPnl.BackgroundImage")));
+            this.prop33MainPnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.prop33MainPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.prop33MainPnl.Location = new System.Drawing.Point(19, 310);
+            this.prop33MainPnl.Margin = new System.Windows.Forms.Padding(0);
+            this.prop33MainPnl.Name = "prop33MainPnl";
+            this.prop33MainPnl.Size = new System.Drawing.Size(62, 62);
+            this.prop33MainPnl.TabIndex = 29;
+            // 
+            // prop34HdrPnl
+            // 
+            this.prop34HdrPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.prop34HdrPnl.Location = new System.Drawing.Point(0, 372);
+            this.prop34HdrPnl.Margin = new System.Windows.Forms.Padding(0);
+            this.prop34HdrPnl.Name = "prop34HdrPnl";
+            this.prop34HdrPnl.Size = new System.Drawing.Size(19, 62);
+            this.prop34HdrPnl.TabIndex = 30;
+            // 
+            // prop34MainPnl
+            // 
+            this.prop34MainPnl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("prop34MainPnl.BackgroundImage")));
+            this.prop34MainPnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.prop34MainPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.prop34MainPnl.Location = new System.Drawing.Point(19, 372);
+            this.prop34MainPnl.Margin = new System.Windows.Forms.Padding(0);
+            this.prop34MainPnl.Name = "prop34MainPnl";
+            this.prop34MainPnl.Size = new System.Drawing.Size(62, 62);
+            this.prop34MainPnl.TabIndex = 31;
+            // 
+            // prop35HdrPnl
+            // 
+            this.prop35HdrPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.prop35HdrPnl.Location = new System.Drawing.Point(0, 434);
+            this.prop35HdrPnl.Margin = new System.Windows.Forms.Padding(0);
+            this.prop35HdrPnl.Name = "prop35HdrPnl";
+            this.prop35HdrPnl.Size = new System.Drawing.Size(19, 62);
+            this.prop35HdrPnl.TabIndex = 32;
+            this.prop35HdrPnl.Paint += new System.Windows.Forms.PaintEventHandler(this.Prop32HdrPnlPaint);
+            // 
+            // prop35MainPnl
+            // 
+            this.prop35MainPnl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("prop35MainPnl.BackgroundImage")));
+            this.prop35MainPnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.prop35MainPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.prop35MainPnl.Location = new System.Drawing.Point(19, 434);
+            this.prop35MainPnl.Margin = new System.Windows.Forms.Padding(0);
+            this.prop35MainPnl.Name = "prop35MainPnl";
+            this.prop35MainPnl.Size = new System.Drawing.Size(62, 62);
+            this.prop35MainPnl.TabIndex = 33;
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel1.Controls.Add(this.prop17MainPnl);
-            this.flowLayoutPanel1.Controls.Add(this.prop18MainPnl);
-            this.flowLayoutPanel1.Controls.Add(this.panel4);
+            this.flowLayoutPanel1.Controls.Add(this.prop19MainPnl);
             this.flowLayoutPanel1.Controls.Add(this.prop20MainPnl);
             this.flowLayoutPanel1.Controls.Add(this.prop21MainPnl);
             this.flowLayoutPanel1.Controls.Add(this.prop22MainPnl);
             this.flowLayoutPanel1.Controls.Add(this.prop23MainPnl);
             this.flowLayoutPanel1.Controls.Add(this.prop24MainPnl);
-            this.flowLayoutPanel1.Controls.Add(this.prop17HdrPnl);
-            this.flowLayoutPanel1.Controls.Add(this.prop18HdrPnl);
+            this.flowLayoutPanel1.Controls.Add(this.prop25MainPnl);
+            this.flowLayoutPanel1.Controls.Add(this.prop26MainPnl);
             this.flowLayoutPanel1.Controls.Add(this.prop19HdrPnl);
             this.flowLayoutPanel1.Controls.Add(this.prop20HdrPnl);
             this.flowLayoutPanel1.Controls.Add(this.prop21HdrPnl);
             this.flowLayoutPanel1.Controls.Add(this.prop22HdrPnl);
             this.flowLayoutPanel1.Controls.Add(this.prop23HdrPnl);
             this.flowLayoutPanel1.Controls.Add(this.prop24HdrPnl);
+            this.flowLayoutPanel1.Controls.Add(this.prop25HdrPnl);
+            this.flowLayoutPanel1.Controls.Add(this.prop26HdrPnl);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(82, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(498, 83);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
-            // prop17MainPnl
+            // prop19MainPnl
             // 
-            this.prop17MainPnl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("prop17MainPnl.BackgroundImage")));
-            this.prop17MainPnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.prop17MainPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.prop17MainPnl.Controls.Add(this.prop1nameLbl);
-            this.prop17MainPnl.Location = new System.Drawing.Point(0, 0);
-            this.prop17MainPnl.Margin = new System.Windows.Forms.Padding(0);
-            this.prop17MainPnl.Name = "prop17MainPnl";
-            this.prop17MainPnl.Size = new System.Drawing.Size(62, 62);
-            this.prop17MainPnl.TabIndex = 0;
+            this.prop19MainPnl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("prop19MainPnl.BackgroundImage")));
+            this.prop19MainPnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.prop19MainPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.prop19MainPnl.Controls.Add(this.prop1nameLbl);
+            this.prop19MainPnl.Location = new System.Drawing.Point(0, 0);
+            this.prop19MainPnl.Margin = new System.Windows.Forms.Padding(0);
+            this.prop19MainPnl.Name = "prop19MainPnl";
+            this.prop19MainPnl.Size = new System.Drawing.Size(62, 62);
+            this.prop19MainPnl.TabIndex = 0;
             // 
             // prop1nameLbl
             // 
@@ -1308,17 +1306,17 @@ namespace MonopolyCR.UI
             this.prop1nameLbl.TabIndex = 0;
             this.prop1nameLbl.Text = "San José";
             // 
-            // prop18MainPnl
+            // prop20MainPnl
             // 
-            this.prop18MainPnl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("prop18MainPnl.BackgroundImage")));
-            this.prop18MainPnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.prop18MainPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.prop18MainPnl.Controls.Add(this.prop2nameLbl);
-            this.prop18MainPnl.Location = new System.Drawing.Point(62, 0);
-            this.prop18MainPnl.Margin = new System.Windows.Forms.Padding(0);
-            this.prop18MainPnl.Name = "prop18MainPnl";
-            this.prop18MainPnl.Size = new System.Drawing.Size(62, 62);
-            this.prop18MainPnl.TabIndex = 1;
+            this.prop20MainPnl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("prop20MainPnl.BackgroundImage")));
+            this.prop20MainPnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.prop20MainPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.prop20MainPnl.Controls.Add(this.prop2nameLbl);
+            this.prop20MainPnl.Location = new System.Drawing.Point(62, 0);
+            this.prop20MainPnl.Margin = new System.Windows.Forms.Padding(0);
+            this.prop20MainPnl.Name = "prop20MainPnl";
+            this.prop20MainPnl.Size = new System.Drawing.Size(62, 62);
+            this.prop20MainPnl.TabIndex = 1;
             // 
             // prop2nameLbl
             // 
@@ -1331,40 +1329,40 @@ namespace MonopolyCR.UI
             this.prop2nameLbl.TabIndex = 1;
             this.prop2nameLbl.Text = "San José";
             // 
-            // panel4
+            // prop21MainPnl
             // 
-            this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
-            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.prop19MainPnl);
-            this.panel4.Location = new System.Drawing.Point(124, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(62, 62);
-            this.panel4.TabIndex = 2;
+            this.prop21MainPnl.BackgroundImage = global::MonopolyCR.Recursos.SanJoseTobias;
+            this.prop21MainPnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.prop21MainPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.prop21MainPnl.Controls.Add(this.prop20nameLbl);
+            this.prop21MainPnl.Location = new System.Drawing.Point(124, 0);
+            this.prop21MainPnl.Margin = new System.Windows.Forms.Padding(0);
+            this.prop21MainPnl.Name = "prop21MainPnl";
+            this.prop21MainPnl.Size = new System.Drawing.Size(62, 62);
+            this.prop21MainPnl.TabIndex = 2;
             // 
-            // prop19MainPnl
+            // prop20nameLbl
             // 
-            this.prop19MainPnl.BackColor = System.Drawing.Color.Transparent;
-            this.prop19MainPnl.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold);
-            this.prop19MainPnl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.prop19MainPnl.Location = new System.Drawing.Point(10, 6);
-            this.prop19MainPnl.Name = "prop19MainPnl";
-            this.prop19MainPnl.Size = new System.Drawing.Size(47, 15);
-            this.prop19MainPnl.TabIndex = 1;
-            this.prop19MainPnl.Text = "San José";
+            this.prop20nameLbl.BackColor = System.Drawing.Color.Transparent;
+            this.prop20nameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold);
+            this.prop20nameLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.prop20nameLbl.Location = new System.Drawing.Point(10, 6);
+            this.prop20nameLbl.Name = "prop20nameLbl";
+            this.prop20nameLbl.Size = new System.Drawing.Size(47, 15);
+            this.prop20nameLbl.TabIndex = 1;
+            this.prop20nameLbl.Text = "San José";
             // 
-            // prop20MainPnl
+            // prop22MainPnl
             // 
-            this.prop20MainPnl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("prop20MainPnl.BackgroundImage")));
-            this.prop20MainPnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.prop20MainPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.prop20MainPnl.Controls.Add(this.prop4nameLbl);
-            this.prop20MainPnl.Location = new System.Drawing.Point(186, 0);
-            this.prop20MainPnl.Margin = new System.Windows.Forms.Padding(0);
-            this.prop20MainPnl.Name = "prop20MainPnl";
-            this.prop20MainPnl.Size = new System.Drawing.Size(62, 62);
-            this.prop20MainPnl.TabIndex = 3;
+            this.prop22MainPnl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("prop22MainPnl.BackgroundImage")));
+            this.prop22MainPnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.prop22MainPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.prop22MainPnl.Controls.Add(this.prop4nameLbl);
+            this.prop22MainPnl.Location = new System.Drawing.Point(186, 0);
+            this.prop22MainPnl.Margin = new System.Windows.Forms.Padding(0);
+            this.prop22MainPnl.Name = "prop22MainPnl";
+            this.prop22MainPnl.Size = new System.Drawing.Size(62, 62);
+            this.prop22MainPnl.TabIndex = 3;
             // 
             // prop4nameLbl
             // 
@@ -1377,121 +1375,121 @@ namespace MonopolyCR.UI
             this.prop4nameLbl.TabIndex = 1;
             this.prop4nameLbl.Text = "San José";
             // 
-            // prop21MainPnl
-            // 
-            this.prop21MainPnl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("prop21MainPnl.BackgroundImage")));
-            this.prop21MainPnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.prop21MainPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.prop21MainPnl.Location = new System.Drawing.Point(248, 0);
-            this.prop21MainPnl.Margin = new System.Windows.Forms.Padding(0);
-            this.prop21MainPnl.Name = "prop21MainPnl";
-            this.prop21MainPnl.Size = new System.Drawing.Size(62, 62);
-            this.prop21MainPnl.TabIndex = 4;
-            // 
-            // prop22MainPnl
-            // 
-            this.prop22MainPnl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("prop22MainPnl.BackgroundImage")));
-            this.prop22MainPnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.prop22MainPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.prop22MainPnl.Location = new System.Drawing.Point(310, 0);
-            this.prop22MainPnl.Margin = new System.Windows.Forms.Padding(0);
-            this.prop22MainPnl.Name = "prop22MainPnl";
-            this.prop22MainPnl.Size = new System.Drawing.Size(62, 62);
-            this.prop22MainPnl.TabIndex = 5;
-            // 
             // prop23MainPnl
             // 
             this.prop23MainPnl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("prop23MainPnl.BackgroundImage")));
             this.prop23MainPnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.prop23MainPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.prop23MainPnl.Location = new System.Drawing.Point(372, 0);
+            this.prop23MainPnl.Location = new System.Drawing.Point(248, 0);
             this.prop23MainPnl.Margin = new System.Windows.Forms.Padding(0);
             this.prop23MainPnl.Name = "prop23MainPnl";
             this.prop23MainPnl.Size = new System.Drawing.Size(62, 62);
-            this.prop23MainPnl.TabIndex = 6;
+            this.prop23MainPnl.TabIndex = 4;
             // 
             // prop24MainPnl
             // 
             this.prop24MainPnl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("prop24MainPnl.BackgroundImage")));
             this.prop24MainPnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.prop24MainPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.prop24MainPnl.Location = new System.Drawing.Point(434, 0);
+            this.prop24MainPnl.Location = new System.Drawing.Point(310, 0);
             this.prop24MainPnl.Margin = new System.Windows.Forms.Padding(0);
             this.prop24MainPnl.Name = "prop24MainPnl";
             this.prop24MainPnl.Size = new System.Drawing.Size(62, 62);
-            this.prop24MainPnl.TabIndex = 7;
+            this.prop24MainPnl.TabIndex = 5;
             // 
-            // prop17HdrPnl
+            // prop25MainPnl
             // 
-            this.prop17HdrPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.prop17HdrPnl.Location = new System.Drawing.Point(0, 62);
-            this.prop17HdrPnl.Margin = new System.Windows.Forms.Padding(0);
-            this.prop17HdrPnl.Name = "prop17HdrPnl";
-            this.prop17HdrPnl.Size = new System.Drawing.Size(62, 19);
-            this.prop17HdrPnl.TabIndex = 11;
+            this.prop25MainPnl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("prop25MainPnl.BackgroundImage")));
+            this.prop25MainPnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.prop25MainPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.prop25MainPnl.Location = new System.Drawing.Point(372, 0);
+            this.prop25MainPnl.Margin = new System.Windows.Forms.Padding(0);
+            this.prop25MainPnl.Name = "prop25MainPnl";
+            this.prop25MainPnl.Size = new System.Drawing.Size(62, 62);
+            this.prop25MainPnl.TabIndex = 6;
             // 
-            // prop18HdrPnl
+            // prop26MainPnl
             // 
-            this.prop18HdrPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.prop18HdrPnl.Location = new System.Drawing.Point(62, 62);
-            this.prop18HdrPnl.Margin = new System.Windows.Forms.Padding(0);
-            this.prop18HdrPnl.Name = "prop18HdrPnl";
-            this.prop18HdrPnl.Size = new System.Drawing.Size(62, 19);
-            this.prop18HdrPnl.TabIndex = 12;
+            this.prop26MainPnl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("prop26MainPnl.BackgroundImage")));
+            this.prop26MainPnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.prop26MainPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.prop26MainPnl.Location = new System.Drawing.Point(434, 0);
+            this.prop26MainPnl.Margin = new System.Windows.Forms.Padding(0);
+            this.prop26MainPnl.Name = "prop26MainPnl";
+            this.prop26MainPnl.Size = new System.Drawing.Size(62, 62);
+            this.prop26MainPnl.TabIndex = 7;
             // 
             // prop19HdrPnl
             // 
             this.prop19HdrPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.prop19HdrPnl.Location = new System.Drawing.Point(124, 62);
+            this.prop19HdrPnl.Location = new System.Drawing.Point(0, 62);
             this.prop19HdrPnl.Margin = new System.Windows.Forms.Padding(0);
             this.prop19HdrPnl.Name = "prop19HdrPnl";
             this.prop19HdrPnl.Size = new System.Drawing.Size(62, 19);
-            this.prop19HdrPnl.TabIndex = 13;
+            this.prop19HdrPnl.TabIndex = 11;
             // 
             // prop20HdrPnl
             // 
             this.prop20HdrPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.prop20HdrPnl.Location = new System.Drawing.Point(186, 62);
+            this.prop20HdrPnl.Location = new System.Drawing.Point(62, 62);
             this.prop20HdrPnl.Margin = new System.Windows.Forms.Padding(0);
             this.prop20HdrPnl.Name = "prop20HdrPnl";
             this.prop20HdrPnl.Size = new System.Drawing.Size(62, 19);
-            this.prop20HdrPnl.TabIndex = 14;
+            this.prop20HdrPnl.TabIndex = 12;
             // 
             // prop21HdrPnl
             // 
             this.prop21HdrPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.prop21HdrPnl.Location = new System.Drawing.Point(248, 62);
+            this.prop21HdrPnl.Location = new System.Drawing.Point(124, 62);
             this.prop21HdrPnl.Margin = new System.Windows.Forms.Padding(0);
             this.prop21HdrPnl.Name = "prop21HdrPnl";
             this.prop21HdrPnl.Size = new System.Drawing.Size(62, 19);
-            this.prop21HdrPnl.TabIndex = 15;
+            this.prop21HdrPnl.TabIndex = 13;
             // 
             // prop22HdrPnl
             // 
             this.prop22HdrPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.prop22HdrPnl.Location = new System.Drawing.Point(310, 62);
+            this.prop22HdrPnl.Location = new System.Drawing.Point(186, 62);
             this.prop22HdrPnl.Margin = new System.Windows.Forms.Padding(0);
             this.prop22HdrPnl.Name = "prop22HdrPnl";
             this.prop22HdrPnl.Size = new System.Drawing.Size(62, 19);
-            this.prop22HdrPnl.TabIndex = 16;
+            this.prop22HdrPnl.TabIndex = 14;
             // 
             // prop23HdrPnl
             // 
             this.prop23HdrPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.prop23HdrPnl.Location = new System.Drawing.Point(372, 62);
+            this.prop23HdrPnl.Location = new System.Drawing.Point(248, 62);
             this.prop23HdrPnl.Margin = new System.Windows.Forms.Padding(0);
             this.prop23HdrPnl.Name = "prop23HdrPnl";
             this.prop23HdrPnl.Size = new System.Drawing.Size(62, 19);
-            this.prop23HdrPnl.TabIndex = 17;
+            this.prop23HdrPnl.TabIndex = 15;
             // 
             // prop24HdrPnl
             // 
             this.prop24HdrPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.prop24HdrPnl.Location = new System.Drawing.Point(434, 62);
+            this.prop24HdrPnl.Location = new System.Drawing.Point(310, 62);
             this.prop24HdrPnl.Margin = new System.Windows.Forms.Padding(0);
             this.prop24HdrPnl.Name = "prop24HdrPnl";
             this.prop24HdrPnl.Size = new System.Drawing.Size(62, 19);
-            this.prop24HdrPnl.TabIndex = 10;
+            this.prop24HdrPnl.TabIndex = 16;
+            // 
+            // prop25HdrPnl
+            // 
+            this.prop25HdrPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.prop25HdrPnl.Location = new System.Drawing.Point(372, 62);
+            this.prop25HdrPnl.Margin = new System.Windows.Forms.Padding(0);
+            this.prop25HdrPnl.Name = "prop25HdrPnl";
+            this.prop25HdrPnl.Size = new System.Drawing.Size(62, 19);
+            this.prop25HdrPnl.TabIndex = 17;
+            // 
+            // prop26HdrPnl
+            // 
+            this.prop26HdrPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.prop26HdrPnl.Location = new System.Drawing.Point(434, 62);
+            this.prop26HdrPnl.Margin = new System.Windows.Forms.Padding(0);
+            this.prop26HdrPnl.Name = "prop26HdrPnl";
+            this.prop26HdrPnl.Size = new System.Drawing.Size(62, 19);
+            this.prop26HdrPnl.TabIndex = 10;
             // 
             // fichaPropiedadPnl
             // 
@@ -1667,20 +1665,20 @@ namespace MonopolyCR.UI
             this.tableroPnl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dado2Pbx)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dado1Pbx)).EndInit();
-            this.panel69.ResumeLayout(false);
+            this.prop9MainPnl.ResumeLayout(false);
             this.prop0MainPnl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ficha2Pbx)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ficha1Pbx)).EndInit();
-            this.panel66.ResumeLayout(false);
+            this.prop18MainPnl.ResumeLayout(false);
             this.flowLayoutPanel4.ResumeLayout(false);
             this.flowLayoutPanel3.ResumeLayout(false);
-            this.prop9MainPnl.ResumeLayout(false);
+            this.prop10MainPnl.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
-            this.prop17MainPnl.ResumeLayout(false);
-            this.prop18MainPnl.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
+            this.prop19MainPnl.ResumeLayout(false);
             this.prop20MainPnl.ResumeLayout(false);
+            this.prop21MainPnl.ResumeLayout(false);
+            this.prop22MainPnl.ResumeLayout(false);
             this.fichaPropiedadPnl.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
