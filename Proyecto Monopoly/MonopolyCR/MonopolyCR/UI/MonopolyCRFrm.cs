@@ -50,21 +50,7 @@ namespace MonopolyCR.UI
             CargarPropiedades();
             DefinirTurnoInicial();
         }
-
-        //public void CargarPropiedades()
-        //{
-        //    propiedades = new List<Propiedad>();
-        //    propiedades.Add(new Propiedad { IdPropiedad = 0, Nombre = "Parqueo", ValorCompra = 1000, ValorPeaje = 0, ValorHipoteca = 1000, MainPanel = prop0MainPnl, HeaderPanel = null, ImagenCiudad = null });
-        //    propiedades.Add(new Propiedad { IdPropiedad = 1, Nombre = "San Jose", ValorCompra = 2000, ValorPeaje = 200, ValorHipoteca = 2000, MainPanel = prop1MainPnl, HeaderPanel = prop1HdrPnl, ImagenCiudad = Recursos.sanJose });
-        //    propiedades.Add(new Propiedad { IdPropiedad = 2, Nombre = "Alajuela", ValorCompra = 3000, ValorPeaje = 300, ValorHipoteca = 3000, MainPanel = prop2MainPnl, HeaderPanel = prop2HdrPnl, ImagenCiudad = Recursos.alajuela });
-        //    propiedades.Add(new Propiedad { IdPropiedad = 3, Nombre = "Heredia", ValorCompra = 4000, ValorPeaje = 400, ValorHipoteca = 4000, MainPanel = prop3MainPnl, HeaderPanel = prop3HdrPnl, ImagenCiudad = Recursos.heredia });
-        //    propiedades.Add(new Propiedad { IdPropiedad = 4, Nombre = "Cartago", ValorCompra = 5000, ValorPeaje = 500, ValorHipoteca = 5000, MainPanel = prop4MainPnl, HeaderPanel = prop4HdrPnl, ImagenCiudad = Recursos.cartago });
-        //    propiedades.Add(new Propiedad { IdPropiedad = 5, Nombre = "Guanacaste", ValorCompra = 6000, ValorPeaje = 600, ValorHipoteca = 6000, MainPanel = prop5MainPnl, HeaderPanel = prop5HdrPnl, ImagenCiudad = Recursos.guanacasteLiberia });
-        //    propiedades.Add(new Propiedad { IdPropiedad = 6, Nombre = "Puntarenas", ValorCompra = 7000, ValorPeaje = 700, ValorHipoteca = 7000, MainPanel = prop6MainPnl, HeaderPanel = prop6HdrPnl, ImagenCiudad = Recursos.puntarenas });
-        //    propiedades.Add(new Propiedad { IdPropiedad = 7, Nombre = "Limon", ValorCompra = 8000, ValorPeaje = 800, ValorHipoteca = 8000, MainPanel = prop7MainPnl, HeaderPanel = prop7HdrPnl, ImagenCiudad = Recursos.limonRuta });
-        //    propiedades.Add(new Propiedad { IdPropiedad = 8, Nombre = "Guapiles", ValorCompra = 9000, ValorPeaje = 900, ValorHipoteca = 9000, MainPanel = prop8MainPnl, HeaderPanel = prop8HdrPnl, ImagenCiudad = Recursos.limonTortuguero });
-        //}
-
+              
 
         public void CargarPropiedades()
         {
@@ -79,7 +65,7 @@ namespace MonopolyCR.UI
             propiedades.Add(new Propiedad { IdPropiedad = 7, Nombre = "Braulio Carrillo", ValorCompra = 3500, ValorPeaje = 300, ValorHipoteca = 1700, MainPanel = prop7MainPnl, HeaderPanel = prop7HdrPnl, ImagenCiudad = Recursos.limonRuta });
             propiedades.Add(new Propiedad { IdPropiedad = 8, Nombre = "Aeropuerto Limón", ValorCompra = 4000, ValorPeaje = 400, ValorHipoteca = 2000, MainPanel = prop8MainPnl, HeaderPanel = prop8HdrPnl, ImagenCiudad = Recursos.limonAeropuerto });
 
-            propiedades.Add(new Propiedad { IdPropiedad = 9, Nombre = "Carcel", ValorCompra = 0, ValorPeaje = 0, ValorHipoteca = 0, MainPanel = prop9MainPnl, HeaderPanel = null, ImagenCiudad = null });
+            propiedades.Add(new Propiedad { IdPropiedad = 9, Nombre = "Carcel", ValorCompra = 0, ValorPeaje = 0, ValorHipoteca = 0, MainPanel = prop9MainPnl, HeaderPanel = null, ImagenCiudad = Recursos.jail });
             propiedades.Add(new Propiedad { IdPropiedad = 10, Nombre = "San Rafael", ValorCompra = 2000, ValorPeaje = 200, ValorHipoteca = 1000, MainPanel = prop10MainPnl, HeaderPanel = prop10HdrPnl, ImagenCiudad = Recursos.herediaSanRafael });
             propiedades.Add(new Propiedad { IdPropiedad = 11, Nombre = "Belen", ValorCompra = 4000, ValorPeaje = 400, ValorHipoteca = 2000, MainPanel = prop11MainPnl, HeaderPanel = prop11HdrPnl, ImagenCiudad = Recursos.herediaBelen });
             propiedades.Add(new Propiedad { IdPropiedad = 12, Nombre = "Heredia", ValorCompra = 3000, ValorPeaje = 300, ValorHipoteca = 1500, MainPanel = prop12MainPnl, HeaderPanel = prop12HdrPnl, ImagenCiudad = Recursos.heredia });
@@ -99,15 +85,15 @@ namespace MonopolyCR.UI
             propiedades.Add(new Propiedad { IdPropiedad = 25, Nombre = "La Guacima", ValorCompra = 6000, ValorPeaje = 600, ValorHipoteca = 3000, MainPanel = prop25MainPnl, HeaderPanel = prop25HdrPnl, ImagenCiudad = Recursos.alajuelaGuacima });
             propiedades.Add(new Propiedad { IdPropiedad = 26, Nombre = "Alajuela", ValorCompra = 7000, ValorPeaje = 700, ValorHipoteca = 3500, MainPanel = prop26MainPnl, HeaderPanel = prop26HdrPnl, ImagenCiudad = Recursos.alajuela });
 
-            propiedades.Add(new Propiedad { IdPropiedad = 27, Nombre = "Carcel", ValorCompra = 0, ValorPeaje = 0, ValorHipoteca = 0, MainPanel = prop27MainPnl, HeaderPanel = null, ImagenCiudad = null });
+            propiedades.Add(new Propiedad { IdPropiedad = 27, Nombre = "A la Carcel", ValorCompra = 0, ValorPeaje = 0, ValorHipoteca = 0, MainPanel = prop27MainPnl, HeaderPanel = null, ImagenCiudad = Recursos.imagesDev });
             propiedades.Add(new Propiedad { IdPropiedad = 28, Nombre = "Grecia", ValorCompra = 7000, ValorPeaje = 700, ValorHipoteca = 3500, MainPanel = prop28MainPnl, HeaderPanel = prop28HdrPnl, ImagenCiudad = Recursos.alajuelaGrecia });
-            propiedades.Add(new Propiedad { IdPropiedad = 29, Nombre = "Poás", ValorCompra = 15000, ValorPeaje = 1500, ValorHipoteca = 7500, MainPanel = prop30MainPnl, HeaderPanel = prop29HdrPnl, ImagenCiudad = Recursos.alajuelaPoas });
+            propiedades.Add(new Propiedad { IdPropiedad = 29, Nombre = "Poás", ValorCompra = 15000, ValorPeaje = 1500, ValorHipoteca = 7500, MainPanel = prop29MainPnl, HeaderPanel = prop29HdrPnl, ImagenCiudad = Recursos.alajuelaPoas });
             propiedades.Add(new Propiedad { IdPropiedad = 30, Nombre = "Cartago", ValorCompra = 4000, ValorPeaje = 400, ValorHipoteca = 2000, MainPanel = prop30MainPnl, HeaderPanel = prop30HdrPnl, ImagenCiudad = Recursos.cartago });
             propiedades.Add(new Propiedad { IdPropiedad = 31, Nombre = "Las Ruinas", ValorCompra = 5000, ValorPeaje = 500, ValorHipoteca = 2500, MainPanel = prop31MainPnl, HeaderPanel = prop31HdrPnl, ImagenCiudad = Recursos.cartagoRuina });
             propiedades.Add(new Propiedad { IdPropiedad = 32, Nombre = "SKY", ValorCompra = 15000, ValorPeaje = 1500, ValorHipoteca = 7500, MainPanel = prop32MainPnl, HeaderPanel = prop32HdrPnl, ImagenCiudad = Recursos.compsky });
-            propiedades.Add(new Propiedad { IdPropiedad = 33, Nombre = "El Guarco", ValorCompra = 7000, ValorPeaje = 700, ValorHipoteca = 3500, MainPanel = prop33MainPnl, HeaderPanel = prop30HdrPnl, ImagenCiudad = Recursos.CartagoGuarco });
-            propiedades.Add(new Propiedad { IdPropiedad = 34, Nombre = "El Sanatorio", ValorCompra = 10000, ValorPeaje = 1000, ValorHipoteca = 5000, MainPanel = prop34MainPnl, HeaderPanel = prop31HdrPnl, ImagenCiudad = Recursos.cartagoTren });
-            propiedades.Add(new Propiedad { IdPropiedad = 35, Nombre = "Orosi", ValorCompra = 12000, ValorPeaje = 1200, ValorHipoteca = 6000, MainPanel = prop35MainPnl, HeaderPanel = prop32HdrPnl, ImagenCiudad = Recursos.cartagoOrosi });
+            propiedades.Add(new Propiedad { IdPropiedad = 33, Nombre = "El Guarco", ValorCompra = 7000, ValorPeaje = 700, ValorHipoteca = 3500, MainPanel = prop33MainPnl, HeaderPanel = prop33HdrPnl, ImagenCiudad = Recursos.CartagoGuarco });
+            propiedades.Add(new Propiedad { IdPropiedad = 34, Nombre = "El Sanatorio", ValorCompra = 10000, ValorPeaje = 1000, ValorHipoteca = 5000, MainPanel = prop34MainPnl, HeaderPanel = prop34HdrPnl, ImagenCiudad = Recursos.cartagoTren });
+            propiedades.Add(new Propiedad { IdPropiedad = 35, Nombre = "Orosi", ValorCompra = 12000, ValorPeaje = 1200, ValorHipoteca = 6000, MainPanel = prop35MainPnl, HeaderPanel = prop35HdrPnl, ImagenCiudad = Recursos.cartagoOrosi });
 
         }
 
@@ -175,28 +161,60 @@ namespace MonopolyCR.UI
             var ficha = jugadorEnTurno == 2 ? ficha1Pbx : ficha2Pbx;
             var posicion = ObtenerPosicionActual();
             var sumaDados = dado.SumaDados;
-            //if (sumaDados > 2) sumaDados = 2;
+
+           
+
             if (posActual < sumaDados)
             {
-                PlaySimpleSound(Recursos.sonido_ficha);
-
                 var panelActual = (Panel)propiedades[posicion].MainPanel;
 
                 panelActual.Controls.Remove(ficha);
                 if (posicion + 1 > 35)
+                {
                     posicion = -1;
+                    if(jugadorEnTurno == 1 )
+                        partidaActual.Jugador1.Saldo+=2000;
+                    else partidaActual.Jugador2.Saldo+= 2000;
+                    avanzaPosicionLbl.Text = String.Format("{0} Recibe ₡{1} por pasar por la Salida!", jugadorEnTurno == 1 ? partidaActual.Jugador1.Nombre : partidaActual.Jugador2.Nombre, 2000);
+                    ActualizarEtiquetasdeSaldos();
+                    MostrarMovientoSaldo(2000, Color.Green, jugadorEnTurno == 1 ? operacionesJug1lbl : operacionesJug2lbl, null); 
+                }
                 var panelSgte = (Panel)propiedades[posicion + 1].MainPanel;
                 panelSgte.Controls.Add(ficha);
                 ficha.Location = jugadorEnTurno == 1 ? new Point(17, 5) : new Point(4, 33);
                 EstablecerPosicionActual(posicion + 1);
-                posActual += 1;
+                posActual += 1; PlaySimpleSound(Recursos.sonido_ficha);
             }
             else
             {
                 timerMueveFicha.Stop();
                 var propiedad = propiedades[posicion];
                 propiedadActual = propiedad;
-                if (propiedadActual.IdPropietario == 0) MostrarFichaPropiedad(propiedad);
+
+                if (propiedad.Nombre == "Salida" || propiedad.Nombre == "Parqueo Libre" || propiedad.Nombre == "Carcel")
+                {
+                    jugadorEnTurno = jugadorEnTurno == 1 ? 2 : 1;
+                    AsignarTurno();
+                    return;
+
+                }
+
+                if (propiedad.Nombre == "A la Carcel")
+                {
+                    timerRetrocedeFicha = new System.Windows.Forms.Timer();
+                    timerRetrocedeFicha.Tick += new EventHandler(TimerRetrocedeFicha_Tick);
+                    timerRetrocedeFicha.Interval = 100;
+                    timerRetrocedeFicha.Start();
+
+                    var posicionDestino = propiedades.Single(p => p.Nombre == "Carcel").IdPropiedad;
+                    posicionARetroceder = posicionDestino;
+
+                    avanzaPosicionLbl.Text = String.Format("{0} fue enviado a la carcel. Siempre lo hemos dicho, el poder corrompe!", jugadorEnTurno == 1 ? partidaActual.Jugador1.Nombre : partidaActual.Jugador2.Nombre);
+                    return;
+                }
+           
+                if (propiedadActual.IdPropietario == 0) 
+                    MostrarFichaPropiedad(propiedad);
                 else
                 {
                     if (jugadorEnTurno == 1)
@@ -209,15 +227,51 @@ namespace MonopolyCR.UI
             }
         }
 
+        private void TimerRetrocedeFicha_Tick(object sender, EventArgs e) {
+            RetrocederFicha(posicionARetroceder);
+        }
+
+        int posicionARetroceder;
+        System.Windows.Forms.Timer timerRetrocedeFicha = null;
+        public void RetrocederFicha(int posicionDestino)
+        {
+
+            var ficha = jugadorEnTurno == 2 ? ficha1Pbx : ficha2Pbx;
+            var posicion = ObtenerPosicionActual();
+
+            if (posicion > posicionDestino)
+            {
+                var panelActual = (Panel)propiedades[posicion].MainPanel;
+
+                panelActual.Controls.Remove(ficha);
+
+                var panelSgte = (Panel)propiedades[posicion - 1].MainPanel;
+                panelSgte.Controls.Add(ficha);
+                ficha.Location = jugadorEnTurno == 1 ? new Point(17, 5) : new Point(4, 33);
+                EstablecerPosicionActual(posicion - 1);
+                //posActual += 1; 
+                PlaySimpleSound(Recursos.sonido_ficha);
+            }
+            else
+            {
+                timerRetrocedeFicha.Stop();
+                var propiedad = propiedades[posicion];
+                propiedadActual = propiedad;
+                jugadorEnTurno = jugadorEnTurno == 1 ? 2 : 1;
+                AsignarTurno();
+            }
+        }
+
         private void TimerMueveFicha_Tick(object sender, EventArgs e)
         {
             MoverFicha();
         }
 
-
-
+        
         public void MostrarFichaPropiedad(Propiedad propiedad)
         {
+           
+
             nombrePropiedadLbl.Text = propiedad.Nombre;
             precioCasaLbl.Text = string.Format("₡{0}", propiedad.ValorCompra);
             peajeLbl.Text = string.Format("₡{0}", propiedad.ValorPeaje);
@@ -355,8 +409,6 @@ namespace MonopolyCR.UI
                 MostrarMovientoSaldo(precioProp, Color.Red, null, jugadorEnTurno == 1 ? operacionesJug1lbl : operacionesJug2lbl);
                 var panel = propiedadActual.MainPanel as Panel;
                 panel.BackColor = jugadorEnTurno == 1 ? Color.Orange : Color.LimeGreen;
-
-
             }
 
             fichaPropiedadPnl.Visible = false;
@@ -367,20 +419,28 @@ namespace MonopolyCR.UI
 
         public void PagarPeaje(Jugador jugadorCobra, Jugador jugadorPaga)
         {
-            var valorPeaje = propiedadActual.ValorPeaje;
-            if (valorPeaje > jugadorPaga.Saldo)
-                MessageBox.Show(String.Format("Jugador {0} no tiene dinero para pagar el peaje, debe hipotecar o declararse en banca rota", jugadorPaga.Nombre));
+            if (jugadorPaga.IdJugador == propiedadActual.IdPropietario)
+                avanzaPosicionLbl.Text = String.Format("Bienvenido a {0} {1}, esperamos que disfrute la estadia en su propiedad!",
+                   propiedadActual.Nombre ,jugadorPaga.Nombre );
             else
             {
-                PlaySimpleSound(Recursos.salida_dinero);
-                jugadorPaga.Saldo -= valorPeaje;
-                jugadorCobra.Saldo += valorPeaje;
-                avanzaPosicionLbl.Text = String.Format("{0} paga ₡{1} a {2}, por pasar por {3}!", jugadorPaga.Nombre, valorPeaje, jugadorCobra.Nombre, propiedadActual.Nombre);
-                MostrarMovientoSaldo(valorPeaje, Color.Red, jugadorEnTurno == 1 ? operacionesJug2lbl : operacionesJug1lbl, jugadorEnTurno == 1 ? operacionesJug1lbl : operacionesJug2lbl);
-                ActualizarEtiquetasdeSaldos();
-            }
+                var valorPeaje = propiedadActual.ValorPeaje;
+                if (valorPeaje > jugadorPaga.Saldo)
+                    MessageBox.Show(String.Format("Jugador {0} no tiene dinero para pagar el peaje, debe hipotecar o declararse en banca rota", jugadorPaga.Nombre));
+                else
+                {
+                    PlaySimpleSound(Recursos.salida_dinero);
+                    jugadorPaga.Saldo -= valorPeaje;
+                    jugadorCobra.Saldo += valorPeaje;
+                    avanzaPosicionLbl.Text = String.Format("{0} paga ₡{1} a {2}, por pasar por {3}!", jugadorPaga.Nombre, valorPeaje, jugadorCobra.Nombre, propiedadActual.Nombre);
+                    MostrarMovientoSaldo(valorPeaje, Color.Red, jugadorEnTurno == 1 ? operacionesJug2lbl : operacionesJug1lbl, jugadorEnTurno == 1 ? operacionesJug1lbl : operacionesJug2lbl);
+                    ActualizarEtiquetasdeSaldos();
+                }
 
-            jugadorEnTurno = jugadorEnTurno == 1 ? 2 : 1;
+                jugadorEnTurno = jugadorEnTurno == 1 ? 2 : 1;
+
+            }
+            //jugadorEnTurno = jugadorEnTurno == 1 ? 2 : 1;
             AsignarTurno();
         }
 
@@ -424,6 +484,8 @@ namespace MonopolyCR.UI
             timerOperaciones.Stop();
 
         }
+
+     
 
     }
 }

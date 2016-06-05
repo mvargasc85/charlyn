@@ -193,6 +193,7 @@
     <Content Include="Imagenes\tablero\Imagen1.png" />
     <Content Include="Imagenes\tablero\images.jpg" />
     <Content Include="Imagenes\tablero\imagesDev.png" />
+    <None Include="Imagenes\tablero\jail.jpg" />
     <Content Include="Imagenes\tablero\Jugador1.png" />
     <Content Include="Imagenes\tablero\Jugador2.png" />
     <Content Include="Imagenes\tablero\limonAeropuerto .jpg" />
@@ -216,7 +217,6 @@
     <None Include="Media\compra_propiedad.wav" />
     <Content Include="Media\dados.wav" />
     <None Include="Media\ingreso_dinero.wav" />
-    <Content Include="Media\salidadinero.wav" />
     <None Include="Media\salida_dinero.wav" />
     <Content Include="Media\sonido_ficha.wav" />
   </ItemGroup>

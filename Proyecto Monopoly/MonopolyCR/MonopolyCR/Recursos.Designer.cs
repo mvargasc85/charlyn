@@ -570,6 +570,16 @@ namespace MonopolyCR {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap jail {
+            get {
+                object obj = ResourceManager.GetObject("jail", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Jugador1 {
             get {
                 object obj = ResourceManager.GetObject("Jugador1", resourceCulture);

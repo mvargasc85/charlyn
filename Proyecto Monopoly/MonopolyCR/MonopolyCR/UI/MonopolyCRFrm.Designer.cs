@@ -114,8 +114,7 @@ namespace MonopolyCR.UI
 		private System.Windows.Forms.Label avanzaPosicionLbl;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.Label label8;
 		
@@ -163,18 +162,18 @@ namespace MonopolyCR.UI
             this.operacionesJug1lbl = new System.Windows.Forms.Label();
             this.lanzaJgdr1btn = new System.Windows.Forms.Button();
             this.saldoJug1lbl = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.jugador2gbx = new System.Windows.Forms.GroupBox();
             this.operacionesJug2lbl = new System.Windows.Forms.Label();
             this.lanzaJgdr2btn = new System.Windows.Forms.Button();
             this.saldoJug2lbl = new System.Windows.Forms.Label();
+            this.timerMueveFicha = new System.Windows.Forms.Timer(this.components);
             this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.tableroPnl = new System.Windows.Forms.Panel();
             this.dado2Pbx = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.dado1Pbx = new System.Windows.Forms.PictureBox();
             this.prop9MainPnl = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
             this.prop0MainPnl = new System.Windows.Forms.Panel();
             this.ficha2Pbx = new System.Windows.Forms.PictureBox();
             this.ficha1Pbx = new System.Windows.Forms.PictureBox();
@@ -184,6 +183,7 @@ namespace MonopolyCR.UI
             this.prop18MainPnl = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.prop27MainPnl = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.prop8HdrPnl = new System.Windows.Forms.Panel();
             this.prop7HdrPnl = new System.Windows.Forms.Panel();
@@ -270,18 +270,17 @@ namespace MonopolyCR.UI
             this.label10 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.nombrePropiedadLbl = new System.Windows.Forms.Label();
-            this.timerMueveFicha = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             this.jugador1gbx.SuspendLayout();
             this.jugador2gbx.SuspendLayout();
             this.tableroPnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dado2Pbx)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dado1Pbx)).BeginInit();
-            this.prop9MainPnl.SuspendLayout();
             this.prop0MainPnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ficha2Pbx)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ficha1Pbx)).BeginInit();
             this.prop18MainPnl.SuspendLayout();
+            this.prop27MainPnl.SuspendLayout();
             this.flowLayoutPanel4.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.prop10MainPnl.SuspendLayout();
@@ -473,15 +472,6 @@ namespace MonopolyCR.UI
             this.saldoJug1lbl.Text = "₡0.00";
             this.saldoJug1lbl.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // label8
-            // 
-            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label8.Image = global::MonopolyCR.Recursos.Jugador2;
-            this.label8.Location = new System.Drawing.Point(17, 23);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(59, 59);
-            this.label8.TabIndex = 15;
-            // 
             // jugador2gbx
             // 
             this.jugador2gbx.BackColor = System.Drawing.Color.Transparent;
@@ -529,6 +519,10 @@ namespace MonopolyCR.UI
             this.saldoJug2lbl.TabIndex = 17;
             this.saldoJug2lbl.Text = "₡0.00";
             // 
+            // timerMueveFicha
+            // 
+            this.timerMueveFicha.Tick += new System.EventHandler(this.TimerMueveFicha_Tick);
+            // 
             // label7
             // 
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
@@ -537,6 +531,15 @@ namespace MonopolyCR.UI
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(58, 59);
             this.label7.TabIndex = 15;
+            // 
+            // label8
+            // 
+            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label8.Image = global::MonopolyCR.Recursos.Jugador2;
+            this.label8.Location = new System.Drawing.Point(17, 23);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(59, 59);
+            this.label8.TabIndex = 15;
             // 
             // tableroPnl
             // 
@@ -593,21 +596,12 @@ namespace MonopolyCR.UI
             // 
             // prop9MainPnl
             // 
-            this.prop9MainPnl.Controls.Add(this.label5);
+            this.prop9MainPnl.BackgroundImage = global::MonopolyCR.Recursos.jail;
+            this.prop9MainPnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.prop9MainPnl.Location = new System.Drawing.Point(2, 581);
             this.prop9MainPnl.Name = "prop9MainPnl";
             this.prop9MainPnl.Size = new System.Drawing.Size(79, 79);
             this.prop9MainPnl.TabIndex = 7;
-            // 
-            // label5
-            // 
-            this.label5.BackColor = System.Drawing.Color.DodgerBlue;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(6, 17);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 46);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "A la Carcel!";
             // 
             // prop0MainPnl
             // 
@@ -691,12 +685,24 @@ namespace MonopolyCR.UI
             // 
             // prop27MainPnl
             // 
-            this.prop27MainPnl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("prop27MainPnl.BackgroundImage")));
+            this.prop27MainPnl.BackgroundImage = global::MonopolyCR.Recursos.imagesDev;
             this.prop27MainPnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.prop27MainPnl.Controls.Add(this.label5);
             this.prop27MainPnl.Location = new System.Drawing.Point(582, 1);
             this.prop27MainPnl.Name = "prop27MainPnl";
             this.prop27MainPnl.Size = new System.Drawing.Size(79, 79);
             this.prop27MainPnl.TabIndex = 4;
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.Location = new System.Drawing.Point(4, 55);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(72, 21);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "A la Carcel!";
             // 
             // flowLayoutPanel4
             // 
@@ -1635,10 +1641,6 @@ namespace MonopolyCR.UI
             this.nombrePropiedadLbl.TabIndex = 0;
             this.nombrePropiedadLbl.Text = "nombre propiedad";
             // 
-            // timerMueveFicha
-            // 
-            this.timerMueveFicha.Tick += new System.EventHandler(this.TimerMueveFicha_Tick);
-            // 
             // MonopolyCRFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1667,11 +1669,11 @@ namespace MonopolyCR.UI
             this.tableroPnl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dado2Pbx)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dado1Pbx)).EndInit();
-            this.prop9MainPnl.ResumeLayout(false);
             this.prop0MainPnl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ficha2Pbx)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ficha1Pbx)).EndInit();
             this.prop18MainPnl.ResumeLayout(false);
+            this.prop27MainPnl.ResumeLayout(false);
             this.flowLayoutPanel4.ResumeLayout(false);
             this.flowLayoutPanel3.ResumeLayout(false);
             this.prop10MainPnl.ResumeLayout(false);
@@ -1717,5 +1719,6 @@ namespace MonopolyCR.UI
         private System.Windows.Forms.Label operacionesJug1lbl;
         private System.Windows.Forms.Timer timerMueveFicha;
         private System.Windows.Forms.Label operacionesJug2lbl;
+        private System.Windows.Forms.Label label5;
 }
 }
