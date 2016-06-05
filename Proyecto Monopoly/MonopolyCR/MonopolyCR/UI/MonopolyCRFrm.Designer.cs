@@ -270,6 +270,7 @@ namespace MonopolyCR.UI
             this.label10 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.nombrePropiedadLbl = new System.Windows.Forms.Label();
+            this.finalizarJuegoBtn = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.jugador1gbx.SuspendLayout();
             this.jugador2gbx.SuspendLayout();
@@ -1641,6 +1642,16 @@ namespace MonopolyCR.UI
             this.nombrePropiedadLbl.TabIndex = 0;
             this.nombrePropiedadLbl.Text = "nombre propiedad";
             // 
+            // finalizarJuegoBtn
+            // 
+            this.finalizarJuegoBtn.Location = new System.Drawing.Point(984, 342);
+            this.finalizarJuegoBtn.Name = "finalizarJuegoBtn";
+            this.finalizarJuegoBtn.Size = new System.Drawing.Size(75, 23);
+            this.finalizarJuegoBtn.TabIndex = 18;
+            this.finalizarJuegoBtn.Text = "Finalizar";
+            this.finalizarJuegoBtn.UseVisualStyleBackColor = true;
+            this.finalizarJuegoBtn.Click += new System.EventHandler(this.finalizarJuegoBtn_Click);
+            // 
             // MonopolyCRFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1649,6 +1660,7 @@ namespace MonopolyCR.UI
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1328, 733);
+            this.Controls.Add(this.finalizarJuegoBtn);
             this.Controls.Add(this.jugador2gbx);
             this.Controls.Add(this.jugador1gbx);
             this.Controls.Add(this.avanzaPosicionLbl);
@@ -1720,5 +1732,6 @@ namespace MonopolyCR.UI
         private System.Windows.Forms.Timer timerMueveFicha;
         private System.Windows.Forms.Label operacionesJug2lbl;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button finalizarJuegoBtn;
 }
 }

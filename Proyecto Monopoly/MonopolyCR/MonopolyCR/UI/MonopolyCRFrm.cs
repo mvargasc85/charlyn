@@ -410,7 +410,11 @@ namespace MonopolyCR.UI
                 var panel = propiedadActual.MainPanel as Panel;
                 panel.BackColor = jugadorEnTurno == 1 ? Color.Orange : Color.LimeGreen;
             }
-
+            else
+            {
+                avanzaPosicionLbl.Text = string.Format("{0} no tiene liquidez para comprar, lástima, otra vez será! ", jugador.Nombre);
+            }
+            
             fichaPropiedadPnl.Visible = false;
             jugadorEnTurno = jugadorEnTurno == 1 ? 2 : 1;
             AsignarTurno();
@@ -437,10 +441,10 @@ namespace MonopolyCR.UI
                     ActualizarEtiquetasdeSaldos();
                 }
 
-                jugadorEnTurno = jugadorEnTurno == 1 ? 2 : 1;
+                //jugadorEnTurno = jugadorEnTurno == 1 ? 2 : 1;
 
             }
-            //jugadorEnTurno = jugadorEnTurno == 1 ? 2 : 1;
+            jugadorEnTurno = jugadorEnTurno == 1 ? 2 : 1;
             AsignarTurno();
         }
 
@@ -485,6 +489,25 @@ namespace MonopolyCR.UI
 
         }
 
+        private void finalizarJuegoBtn_Click(object sender, EventArgs e)
+        {
+            finalizarJuego();
+        }
+
+        public void finalizarJuego()
+        {
+            var valorPropiedadesJug1 = propiedades.Where(p => p.IdPropietario == partidaActual.Jugador1.IdJugador).Sum(p=> p.ValorCompra);
+            var valorPropiedadesJug2 = propiedades.Where(p => p.IdPropietario == partidaActual.Jugador2.IdJugador).Sum(p => p.ValorCompra);
+
+            var activosJug1 = partidaActual.Jugador1.Saldo + valorPropiedadesJug1;
+            var activosJug2 = partidaActual.Jugador2.Saldo + valorPropiedadesJug2;
+
+            if (activosJug1 > activosJug2)
+                MessageBox.Show(string.Format("{0} ha ganado la partida: Efectivo: {1}, Valor propiedades:{2}, Total: {3}", partidaActual.Jugador1.Nombre, partidaActual.Jugador1.Saldo, valorPropiedadesJug1, activosJug1));
+            else
+                MessageBox.Show(string.Format("{0} ha ganado la partida: Efectivo: {1}, Valor propiedades:{2}, Total: {3}", partidaActual.Jugador2.Nombre, partidaActual.Jugador2.Saldo, valorPropiedadesJug2, activosJug2));
+
+        }
      
 
     }
