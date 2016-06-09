@@ -22,6 +22,16 @@ namespace MonopolyCR.UI
         Juego juego;
         List<Jugador> jugadores;
         public Partida PartidaActual { get; set; }
+        List<ColorFicha> colores;
+
+        // estructura para cargar valores de los combos de colores
+        public class ColorFicha
+        {
+            public int Id { get; set; }
+            public string Texto { get; set; }
+            public Color NombreColor { get; set; }
+            public Image ImagenFicha { get; set; }
+        }
 
 
         public ConfigurarPartidaForm()
@@ -31,6 +41,17 @@ namespace MonopolyCR.UI
 
             juego = new Juego();
             CargarJugadoresCbx();
+
+            colores = new List<ColorFicha>();
+            colores.Add(new ColorFicha { Id = -1, Texto = "Seleccione..." });
+            colores.Add(new ColorFicha { Id = 1, Texto = "Azul", NombreColor = Color.Blue, ImagenFicha = Recursos.fichaAzul });
+            colores.Add(new ColorFicha { Id = 2, Texto = "Naranja", NombreColor = Color.Orange, ImagenFicha = Recursos.fichaNaranja });
+            colores.Add(new ColorFicha { Id = 3, Texto = "Verde", NombreColor = Color.LimeGreen, ImagenFicha = Recursos.fichaVerde });
+            colores.Add(new ColorFicha { Id = 4, Texto = "Rojo", NombreColor = Color.Red, ImagenFicha = Recursos.fichaRoja });
+            colores.Add(new ColorFicha { Id = 5, Texto = "Morado", NombreColor = Color.Purple, ImagenFicha = Recursos.fichaMorada });
+            colores.Add(new ColorFicha { Id = 6, Texto = "Turqueza", NombreColor = Color.Turquoise, ImagenFicha = Recursos.fichaTurqueza });
+
+            CargarColoresCbx();
         }
 
         private void CargarJugadoresCbx()
@@ -66,6 +87,38 @@ namespace MonopolyCR.UI
             Jugador2Cbx.Enabled = true;
 
         }
+
+        private void CargarColoresCbx()
+        {
+            colorJug1cbx.DisplayMember = "Texto";
+            colorJug1cbx.ValueMember = "Id";
+            colorJug1cbx.DataSource = colores;
+
+            var colores2 = new List<ColorFicha>();
+            colores2.Add(new ColorFicha { Id = -1, Texto = "Seleccione..." });
+
+            colorjug2cbx.DisplayMember = "Texto";
+            colorjug2cbx.ValueMember = "Id";
+            colorjug2cbx.DataSource = colores2;
+
+            colorjug2cbx.Enabled = false;
+        }
+
+
+        private void colorJug1cbx_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var seleccion = Convert.ToInt32(colorJug1cbx.SelectedValue);
+            if (seleccion == 0) return;
+            var colores2 = colores;
+            colores2 = colores2.Where(x => x.Id != seleccion).ToList();
+            colorjug2cbx.DisplayMember = "Texto";
+            colorjug2cbx.ValueMember = "Id";
+            colorjug2cbx.DataSource = colores2;
+            colorjug2cbx.Enabled = true;
+        }
+
+
+
         void LblJugadorClick(object sender, EventArgs e)
         {
 
@@ -93,41 +146,28 @@ namespace MonopolyCR.UI
 
         public void ConfigurarPartida()
         {
-            var jugador1 = (Jugador)Jugador1Cbx.SelectedItem;           
+            var colorJug1 = (ColorFicha)colorJug1cbx.SelectedItem;
+            var jugador1 = (Jugador)Jugador1Cbx.SelectedItem;
             jugador1.Saldo = (int)montoInicialNud.Value;
-            jugador1.Color = ObtenerColorFicha(1);
+            jugador1.Color = colorJug1.NombreColor;
+            jugador1.NombreColor = colorJug1.Texto;
+            jugador1.ImagenFicha = colorJug1.ImagenFicha;
 
+            var colorJug2 = (ColorFicha)colorjug2cbx.SelectedItem;
             var jugador2 = (Jugador)Jugador2Cbx.SelectedItem;
             jugador2.Saldo = (int)montoInicialNud.Value;
-            jugador2.Color = ObtenerColorFicha(2);
+            jugador2.Color = colorJug2.NombreColor;
+            jugador2.NombreColor = colorJug2.Texto;
+            jugador2.ImagenFicha = colorJug2.ImagenFicha;
 
             PartidaActual = new Partida()
             {
                 Nombre = "Partida de prueba",
                 Fecha = DateTime.Now,
                 Jugador1 = jugador1,
-                Jugador2 = jugador2,               
+                Jugador2 = jugador2,
             };
 
-        }
-
-        public string ObtenerColorFicha(int jugador)
-        {
-            if (jugador == 1)
-            {
-                if (radioButton1.Checked)
-                    return "Azul";
-                if (radioButton2.Checked)
-                    return "Amarillo";
-            }
-            else
-            {
-                if (radioButton3.Checked)
-                    return "Rojo";
-                if (radioButton4.Checked)
-                    return "Verde";
-            }
-            return "Morado";
         }
     }
 }

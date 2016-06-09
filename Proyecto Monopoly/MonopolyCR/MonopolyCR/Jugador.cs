@@ -7,6 +7,7 @@
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 using System;
+using System.Drawing;
 
 namespace MonopolyCR
 {
@@ -19,9 +20,11 @@ namespace MonopolyCR
 		public String Nombre { get; set; }
 		public DateTime Fecha { get; set; }
 		public int Puntuacion  { get; set; }
-		public String Color { get; set; }
+		public String NombreColor { get; set; }
         public int PosicionActual { get; set; }
         public double Saldo { get; set; }
+        public Color Color { get; set; }
+        public Image ImagenFicha { get; set; }
 
 	
 		public Jugador()

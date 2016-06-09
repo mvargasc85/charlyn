@@ -75,6 +75,27 @@ namespace MonopolyCR.Datos
             }
         }
 
+
+        //para ejecutar comandos insert,update, delete y devolver el id del script afectado
+        public int ExecuteScalar(String q)
+        {
+            try
+            {
+                openCon();
+                comando = new MySqlCommand(q, conexion);
+               var result = comando.ExecuteScalar() ;
+               return Convert.ToInt32(result);
+            }
+            catch (Exception ex)
+            {
+                return -1;
+            }
+            finally
+            {
+                closeCon();
+            }
+        }
+
         public String InsertarJugador(Jugador jugador)
         {
             var fechaActual = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
@@ -122,7 +143,7 @@ namespace MonopolyCR.Datos
             var jugador = new Jugador();
             jugador.Nombre = Convert.ToString(reader["nombre"]);
             jugador.IdJugador = Convert.ToInt32(reader["idjugador"]);
-            jugador.Color = Convert.ToString(reader["color"]);
+            jugador.NombreColor = Convert.ToString(reader["color"]);
 
             return jugador;
         }
@@ -206,12 +227,41 @@ namespace MonopolyCR.Datos
             }
 
         }
-        public String InsertarPropiedad(Propiedad propiedad)
+        public int InsertarPropiedad(Propiedad propiedad)
         {
             String q = string.Format("INSERT INTO Propiedad (nombre,valorCompra,valorPeaje,propietario) values ('{0}','{1}',{2},'{3}')",
                                      propiedad.Nombre, propiedad.ValorCompra, propiedad.ValorPeaje);
-            return ExecuteQuery(q);
+            return ExecuteScalar(q);
         }
+
+
+        public int InsertarPartida(Partida partida)
+        {
+            var fecha = partida.Fecha.ToString("yyyy-MM-dd HH:mm:ss");
+            String q = string.Format("INSERT INTO Partida (nombrepartida,ganador,fecha) values ('{0}',{1},'{2}')",
+                                     partida.Nombre, partida.Ganador,fecha );
+
+            var result = ExecuteQuery(q);
+            if (result == "0")
+                return UltimoRegistroId("idpartida", "partida");
+            return -1;
+        }
+
+        public int RegistrarPropiedad(int idPropiedad, int idPartida, int idPropietario)
+        {
+            String q = string.Format("INSERT INTO RegistroPropiedad (idjugador,idpropiedad,idpartida) values ('{0}',{1},'{2}')",
+                                   idPropietario, idPropiedad, idPartida);
+            return  int.Parse(ExecuteQuery(q));
+            
+        }
+
+        public int UltimoRegistroId(string campo, string tabla) {
+            String q = string.Format("Select {0} from {1} order by {0} desc Limit 1", campo, tabla);
+            return ExecuteScalar(q);
+        }
+
+
+
 
     }
 }

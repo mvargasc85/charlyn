@@ -218,6 +218,7 @@
     <Content Include="Media\dados.wav" />
     <None Include="Media\ingreso_dinero.wav" />
     <None Include="Media\salida_dinero.wav" />
+    <None Include="Media\fail.wav" />
     <Content Include="Media\sonido_ficha.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

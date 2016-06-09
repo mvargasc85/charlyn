@@ -41,21 +41,22 @@ namespace MonopolyCR
 			
 		
 		}
-		public String RegistrarPropiedad(Propiedad propiedad){
-			try{
-			var result = conexion.InsertarPropiedad(propiedad);
-			if(result=="0")
-				return "Propiedad registrado con exito";
-			else if (result =="-1") {
-				return "Error al registrar la propiedad";
-			}
-			else
-				return "Error al registrar la propiedad. Detalle: " + result;
-			}catch (Exception e){
-				return "Error al registrar la propiedad";
-			}
-			
-		}
+        public String RegistrarPropiedad(Propiedad propiedad)
+        {
+            try
+            {
+                var result = conexion.InsertarPropiedad(propiedad);
+                if (result > -1)
+                    return "Propiedad registrado con exito";
+                else
+                    return "Error al registrar la propiedad";
+            }
+            catch (Exception e)
+            {
+                return "Error al registrar la propiedad";
+            }
+
+        }
 		
 		public String RegistrarJugador(Jugador jugador){
 			try{
@@ -87,5 +88,20 @@ namespace MonopolyCR
         {
             return conexion.ObtenerJugador(jugadorId);
         }
-	}
+
+        public void GuardarPartida(Partida partida)
+        {
+            conexion.InsertarPartida(partida);
+        }
+
+        public void GuardarPartida(Partida partidaActual, List<Propiedad> propiedades)
+        {
+            var idpartida = conexion.InsertarPartida(partidaActual);
+            if(idpartida>-1)
+                foreach (var prop in propiedades)
+                {
+                    conexion.RegistrarPropiedad(prop.IdPropiedad, idpartida, prop.IdPropietario);
+                }
+        }
+    }
 }

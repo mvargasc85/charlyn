@@ -24,10 +24,6 @@ namespace MonopolyCR.UI
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Button btnJugar;
         private System.Windows.Forms.Button button1;
-		private System.Windows.Forms.RadioButton radioButton1;
-		private System.Windows.Forms.RadioButton radioButton2;
-		private System.Windows.Forms.RadioButton radioButton3;
-		private System.Windows.Forms.RadioButton radioButton4;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -60,12 +56,12 @@ namespace MonopolyCR.UI
             this.label4 = new System.Windows.Forms.Label();
             this.btnJugar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.colorJug1cbx = new System.Windows.Forms.ComboBox();
+            this.colorjug2cbx = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.montoInicialNud)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -194,54 +190,10 @@ namespace MonopolyCR.UI
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // radioButton1
-            // 
-            this.radioButton1.ForeColor = System.Drawing.Color.Blue;
-            this.radioButton1.Location = new System.Drawing.Point(438, 60);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(66, 24);
-            this.radioButton1.TabIndex = 12;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Azul";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.ForeColor = System.Drawing.Color.Yellow;
-            this.radioButton2.Location = new System.Drawing.Point(340, 60);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(92, 24);
-            this.radioButton2.TabIndex = 13;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Amarillo";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.ForeColor = System.Drawing.Color.Red;
-            this.radioButton3.Location = new System.Drawing.Point(438, 49);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(76, 24);
-            this.radioButton3.TabIndex = 14;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Rojo";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // radioButton4
-            // 
-            this.radioButton4.ForeColor = System.Drawing.Color.Green;
-            this.radioButton4.Location = new System.Drawing.Point(340, 49);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(104, 24);
-            this.radioButton4.TabIndex = 15;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Verde";
-            this.radioButton4.UseVisualStyleBackColor = true;
-            // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Controls.Add(this.radioButton2);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.colorJug1cbx);
             this.groupBox1.Controls.Add(this.Jugador1Cbx);
             this.groupBox1.Controls.Add(this.lblJugador);
             this.groupBox1.Controls.Add(this.label3);
@@ -254,8 +206,8 @@ namespace MonopolyCR.UI
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.radioButton3);
-            this.groupBox2.Controls.Add(this.radioButton4);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.colorjug2cbx);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.Jugador2Cbx);
             this.groupBox2.Controls.Add(this.label4);
@@ -265,6 +217,49 @@ namespace MonopolyCR.UI
             this.groupBox2.TabIndex = 17;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Segundo Jugador";
+            // 
+            // colorJug1cbx
+            // 
+            this.colorJug1cbx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.colorJug1cbx.FormattingEnabled = true;
+            this.colorJug1cbx.Location = new System.Drawing.Point(340, 60);
+            this.colorJug1cbx.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.colorJug1cbx.Name = "colorJug1cbx";
+            this.colorJug1cbx.Size = new System.Drawing.Size(179, 24);
+            this.colorJug1cbx.TabIndex = 7;
+            this.colorJug1cbx.SelectedIndexChanged += new System.EventHandler(this.colorJug1cbx_SelectedIndexChanged);
+            // 
+            // colorjug2cbx
+            // 
+            this.colorjug2cbx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.colorjug2cbx.FormattingEnabled = true;
+            this.colorjug2cbx.Location = new System.Drawing.Point(340, 50);
+            this.colorjug2cbx.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.colorjug2cbx.Name = "colorjug2cbx";
+            this.colorjug2cbx.Size = new System.Drawing.Size(179, 24);
+            this.colorjug2cbx.TabIndex = 8;
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(179, 18);
+            this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(127, 28);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Nombre";
+            // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(179, 25);
+            this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(127, 28);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Nombre";
             // 
             // ConfigurarPartidaForm
             // 
@@ -292,5 +287,9 @@ namespace MonopolyCR.UI
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox colorJug1cbx;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox colorjug2cbx;
 	}
 }

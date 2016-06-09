@@ -15,6 +15,8 @@ using Microsoft.DirectX;
 using Microsoft.DirectX.DirectSound;
 using System.Threading;
 using System.Linq;
+using System.Resources;
+using System.Reflection;
 
 namespace MonopolyCR.UI
 {
@@ -41,16 +43,24 @@ namespace MonopolyCR.UI
             Penalizacion
         }
 
-        
+
         public MonopolyCRFrm(Partida partida)
         {
-            this.partidaActual = partida;
+            this.partidaActual = partida;      
             juego = new Juego();
             InitializeComponent();
             CargarPropiedades();
+            CargarFichas();
             DefinirTurnoInicial();
         }
-              
+
+        public void CargarFichas()
+        {
+            ficha1Pbx.Image = partidaActual.Jugador1.ImagenFicha;
+            ficha2Pbx.Image = partidaActual.Jugador2.ImagenFicha;
+            jug1imglbl.BackColor = partidaActual.Jugador1.Color;
+            jug2imglbl.BackColor = partidaActual.Jugador2.Color;
+        }
 
         public void CargarPropiedades()
         {
@@ -69,11 +79,11 @@ namespace MonopolyCR.UI
             propiedades.Add(new Propiedad { IdPropiedad = 10, Nombre = "San Rafael", ValorCompra = 2000, ValorPeaje = 200, ValorHipoteca = 1000, MainPanel = prop10MainPnl, HeaderPanel = prop10HdrPnl, ImagenCiudad = Recursos.herediaSanRafael });
             propiedades.Add(new Propiedad { IdPropiedad = 11, Nombre = "Belen", ValorCompra = 4000, ValorPeaje = 400, ValorHipoteca = 2000, MainPanel = prop11MainPnl, HeaderPanel = prop11HdrPnl, ImagenCiudad = Recursos.herediaBelen });
             propiedades.Add(new Propiedad { IdPropiedad = 12, Nombre = "Heredia", ValorCompra = 3000, ValorPeaje = 300, ValorHipoteca = 1500, MainPanel = prop12MainPnl, HeaderPanel = prop12HdrPnl, ImagenCiudad = Recursos.heredia });
-            propiedades.Add(new Propiedad { IdPropiedad = 13, Nombre = "Intel", ValorCompra = 0, ValorPeaje = 0, ValorHipoteca = 0, MainPanel = prop13MainPnl, HeaderPanel = prop13HdrPnl, ImagenCiudad = Recursos.compIce });
+            propiedades.Add(new Propiedad { IdPropiedad = 13, Nombre = "Intel", ValorCompra = 7000, ValorPeaje = 0, ValorHipoteca = 0, MainPanel = prop13MainPnl, HeaderPanel = prop13HdrPnl, ImagenCiudad = Recursos.compIce });
             propiedades.Add(new Propiedad { IdPropiedad = 14, Nombre = "Liberia", ValorCompra = 5000, ValorPeaje = 500, ValorHipoteca = 2500, MainPanel = prop14MainPnl, HeaderPanel = prop14HdrPnl, ImagenCiudad = Recursos.guanacasteLiberia });
             propiedades.Add(new Propiedad { IdPropiedad = 15, Nombre = "Tempisque", ValorCompra = 6000, ValorPeaje = 600, ValorHipoteca = 6000, MainPanel = prop15MainPnl, HeaderPanel = prop15HdrPnl, ImagenCiudad = Recursos.guanacasteTempisque });
             propiedades.Add(new Propiedad { IdPropiedad = 16, Nombre = "Nicoya", ValorCompra = 7000, ValorPeaje = 700, ValorHipoteca = 7000, MainPanel = prop16MainPnl, HeaderPanel = prop16HdrPnl, ImagenCiudad = Recursos.guanacasteNicoya });
-            propiedades.Add(new Propiedad { IdPropiedad = 17, Nombre = "Odube", ValorCompra = 2000, ValorPeaje = 200, ValorHipoteca = 2000, MainPanel = prop17MainPnl, HeaderPanel = prop17HdrPnl, ImagenCiudad = Recursos.guanacasteOduber });
+            propiedades.Add(new Propiedad { IdPropiedad = 17, Nombre = "Aeropuerto D. O", ValorCompra = 2000, ValorPeaje = 200, ValorHipoteca = 2000, MainPanel = prop17MainPnl, HeaderPanel = prop17HdrPnl, ImagenCiudad = Recursos.guanacasteOduber });
 
             propiedades.Add(new Propiedad { IdPropiedad = 18, Nombre = "Parqueo Libre", ValorCompra = 0, ValorPeaje = 0, ValorHipoteca = 0, MainPanel = prop18MainPnl, HeaderPanel = null, ImagenCiudad = null });
             propiedades.Add(new Propiedad { IdPropiedad = 19, Nombre = "San José", ValorCompra = 2000, ValorPeaje = 200, ValorHipoteca = 1000, MainPanel = prop19MainPnl, HeaderPanel = prop19HdrPnl, ImagenCiudad = Recursos.sanJose });
@@ -158,11 +168,11 @@ namespace MonopolyCR.UI
         public void MoverFicha()
         {
 
-            var ficha = jugadorEnTurno == 2 ? ficha1Pbx : ficha2Pbx;
+            var ficha = jugadorEnTurno == 1 ? ficha1Pbx : ficha2Pbx;
             var posicion = ObtenerPosicionActual();
             var sumaDados = dado.SumaDados;
 
-           
+
 
             if (posActual < sumaDados)
             {
@@ -172,12 +182,12 @@ namespace MonopolyCR.UI
                 if (posicion + 1 > 35)
                 {
                     posicion = -1;
-                    if(jugadorEnTurno == 1 )
-                        partidaActual.Jugador1.Saldo+=2000;
-                    else partidaActual.Jugador2.Saldo+= 2000;
+                    if (jugadorEnTurno == 1)
+                        partidaActual.Jugador1.Saldo += 2000;
+                    else partidaActual.Jugador2.Saldo += 2000;
                     avanzaPosicionLbl.Text = String.Format("{0} Recibe ₡{1} por pasar por la Salida!", jugadorEnTurno == 1 ? partidaActual.Jugador1.Nombre : partidaActual.Jugador2.Nombre, 2000);
                     ActualizarEtiquetasdeSaldos();
-                    MostrarMovientoSaldo(2000, Color.Green, jugadorEnTurno == 1 ? operacionesJug1lbl : operacionesJug2lbl, null); 
+                    MostrarMovientoSaldo(2000, Color.Green, jugadorEnTurno == 1 ? operacionesJug1lbl : operacionesJug2lbl, null);
                 }
                 var panelSgte = (Panel)propiedades[posicion + 1].MainPanel;
                 panelSgte.Controls.Add(ficha);
@@ -195,39 +205,42 @@ namespace MonopolyCR.UI
                 {
                     jugadorEnTurno = jugadorEnTurno == 1 ? 2 : 1;
                     AsignarTurno();
-                    return;
-
+                    posActual = 0;
                 }
-
-                if (propiedad.Nombre == "A la Carcel")
-                {
-                    timerRetrocedeFicha = new System.Windows.Forms.Timer();
-                    timerRetrocedeFicha.Tick += new EventHandler(TimerRetrocedeFicha_Tick);
-                    timerRetrocedeFicha.Interval = 100;
-                    timerRetrocedeFicha.Start();
-
-                    var posicionDestino = propiedades.Single(p => p.Nombre == "Carcel").IdPropiedad;
-                    posicionARetroceder = posicionDestino;
-
-                    avanzaPosicionLbl.Text = String.Format("{0} fue enviado a la carcel. Siempre lo hemos dicho, el poder corrompe!", jugadorEnTurno == 1 ? partidaActual.Jugador1.Nombre : partidaActual.Jugador2.Nombre);
-                    return;
-                }
-           
-                if (propiedadActual.IdPropietario == 0) 
-                    MostrarFichaPropiedad(propiedad);
                 else
                 {
-                    if (jugadorEnTurno == 1)
-                        PagarPeaje(partidaActual.Jugador2, partidaActual.Jugador1);
-                    else
-                        PagarPeaje(partidaActual.Jugador1, partidaActual.Jugador2);
-                }
 
-                posActual = 0;
+                    if (propiedad.Nombre == "A la Carcel")
+                    {
+                        timerRetrocedeFicha = new System.Windows.Forms.Timer();
+                        timerRetrocedeFicha.Tick += new EventHandler(TimerRetrocedeFicha_Tick);
+                        timerRetrocedeFicha.Interval = 100;
+                        timerRetrocedeFicha.Start();
+
+                        var posicionDestino = propiedades.Single(p => p.Nombre == "Carcel").IdPropiedad;
+                        posicionARetroceder = posicionDestino;
+
+                        avanzaPosicionLbl.Text = String.Format("{0} fue enviado a la carcel. Siempre lo hemos dicho, el poder corrompe!", jugadorEnTurno == 1 ? partidaActual.Jugador1.Nombre : partidaActual.Jugador2.Nombre);
+                        return;
+                    }
+
+                    if (propiedadActual.IdPropietario == 0)
+                        MostrarFichaPropiedad(propiedad);
+                    else
+                    {
+                        if (jugadorEnTurno == 1)
+                            PagarPeaje(partidaActual.Jugador2, partidaActual.Jugador1);
+                        else
+                            PagarPeaje(partidaActual.Jugador1, partidaActual.Jugador2);
+                    }
+
+                    posActual = 0;
+                }
             }
         }
 
-        private void TimerRetrocedeFicha_Tick(object sender, EventArgs e) {
+        private void TimerRetrocedeFicha_Tick(object sender, EventArgs e)
+        {
             RetrocederFicha(posicionARetroceder);
         }
 
@@ -267,10 +280,10 @@ namespace MonopolyCR.UI
             MoverFicha();
         }
 
-        
+
         public void MostrarFichaPropiedad(Propiedad propiedad)
         {
-           
+
 
             nombrePropiedadLbl.Text = propiedad.Nombre;
             precioCasaLbl.Text = string.Format("₡{0}", propiedad.ValorCompra);
@@ -290,7 +303,7 @@ namespace MonopolyCR.UI
             var ganadorfrm = new GanadorFrm();
             ganadorfrm.Show();
         }
-        
+
         //genera un num aleatorio de 1 a 8, si es par inicia el jugador #1 de lo contrario el #2
         public void DefinirTurnoInicial()
         {
@@ -394,6 +407,12 @@ namespace MonopolyCR.UI
                     ComprarPropiedad(partidaActual.Jugador2);
             }
 
+            if (!QuedanPropiedadesEnVenta())
+            {
+                finalizarJuego();
+            }
+
+
         }
 
         public void ComprarPropiedad(Jugador jugador)
@@ -408,13 +427,14 @@ namespace MonopolyCR.UI
                 avanzaPosicionLbl.Text = String.Format("{0} compra {1} por ₡{2}!", jugador.Nombre, propiedadActual.Nombre, precioProp);
                 MostrarMovientoSaldo(precioProp, Color.Red, null, jugadorEnTurno == 1 ? operacionesJug1lbl : operacionesJug2lbl);
                 var panel = propiedadActual.MainPanel as Panel;
-                panel.BackColor = jugadorEnTurno == 1 ? Color.Orange : Color.LimeGreen;
+                panel.BackColor = jugadorEnTurno == 1 ? partidaActual.Jugador1.Color : partidaActual.Jugador2.Color;
             }
             else
             {
+                PlaySimpleSound(Recursos.fail);
                 avanzaPosicionLbl.Text = string.Format("{0} no tiene liquidez para comprar, lástima, otra vez será! ", jugador.Nombre);
             }
-            
+
             fichaPropiedadPnl.Visible = false;
             jugadorEnTurno = jugadorEnTurno == 1 ? 2 : 1;
             AsignarTurno();
@@ -425,12 +445,16 @@ namespace MonopolyCR.UI
         {
             if (jugadorPaga.IdJugador == propiedadActual.IdPropietario)
                 avanzaPosicionLbl.Text = String.Format("Bienvenido a {0} {1}, esperamos que disfrute la estadia en su propiedad!",
-                   propiedadActual.Nombre ,jugadorPaga.Nombre );
+                   propiedadActual.Nombre, jugadorPaga.Nombre);
             else
             {
                 var valorPeaje = propiedadActual.ValorPeaje;
                 if (valorPeaje > jugadorPaga.Saldo)
-                    MessageBox.Show(String.Format("Jugador {0} no tiene dinero para pagar el peaje, debe hipotecar o declararse en banca rota", jugadorPaga.Nombre));
+                {
+                    PlaySimpleSound(Recursos.fail);
+                    avanzaPosicionLbl.Text = String.Format("Jugador {0} no tiene dinero para pagar el peaje, Se declarara en banca rota", jugadorPaga.Nombre);
+                    finalizarJuego();
+                }
                 else
                 {
                     PlaySimpleSound(Recursos.salida_dinero);
@@ -441,8 +465,6 @@ namespace MonopolyCR.UI
                     ActualizarEtiquetasdeSaldos();
                 }
 
-                //jugadorEnTurno = jugadorEnTurno == 1 ? 2 : 1;
-
             }
             jugadorEnTurno = jugadorEnTurno == 1 ? 2 : 1;
             AsignarTurno();
@@ -452,7 +474,7 @@ namespace MonopolyCR.UI
         {
             saldoJug1lbl.Text = string.Format("₡{0}", partidaActual.Jugador1.Saldo);
             saldoJug2lbl.Text = string.Format("₡{0}", partidaActual.Jugador2.Saldo);
-        }        
+        }
 
         public void MostrarMovientoSaldo(double monto, Color color, Label operacionAcredita, Label operacionDebita)
         {
@@ -494,9 +516,16 @@ namespace MonopolyCR.UI
             finalizarJuego();
         }
 
+        public bool QuedanPropiedadesEnVenta()
+        {
+            //valida si hay al menos una propiedad sin dueño
+            var propEnVenta = propiedades.Any(p => p.IdPropietario == 0);
+            return propEnVenta;
+        }
+
         public void finalizarJuego()
         {
-            var valorPropiedadesJug1 = propiedades.Where(p => p.IdPropietario == partidaActual.Jugador1.IdJugador).Sum(p=> p.ValorCompra);
+            var valorPropiedadesJug1 = propiedades.Where(p => p.IdPropietario == partidaActual.Jugador1.IdJugador).Sum(p => p.ValorCompra);
             var valorPropiedadesJug2 = propiedades.Where(p => p.IdPropietario == partidaActual.Jugador2.IdJugador).Sum(p => p.ValorCompra);
 
             var activosJug1 = partidaActual.Jugador1.Saldo + valorPropiedadesJug1;
@@ -507,8 +536,14 @@ namespace MonopolyCR.UI
             else
                 MessageBox.Show(string.Format("{0} ha ganado la partida: Efectivo: {1}, Valor propiedades:{2}, Total: {3}", partidaActual.Jugador2.Nombre, partidaActual.Jugador2.Saldo, valorPropiedadesJug2, activosJug2));
 
+            SalvarPartida();
         }
-     
+
+        public void SalvarPartida()
+        {
+            var propiedadesASalvar = propiedades.Where(p => p.IdPropietario > 0).ToList();
+            juego.GuardarPartida(partidaActual, propiedadesASalvar);
+        }
 
     }
 }

@@ -116,7 +116,7 @@ namespace MonopolyCR.UI
 		private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
-		private System.Windows.Forms.Label label8;
+		private System.Windows.Forms.Label jug1imglbl;
 		
 		
 		/// <summary>
@@ -162,13 +162,13 @@ namespace MonopolyCR.UI
             this.operacionesJug1lbl = new System.Windows.Forms.Label();
             this.lanzaJgdr1btn = new System.Windows.Forms.Button();
             this.saldoJug1lbl = new System.Windows.Forms.Label();
+            this.jug1imglbl = new System.Windows.Forms.Label();
             this.jugador2gbx = new System.Windows.Forms.GroupBox();
             this.operacionesJug2lbl = new System.Windows.Forms.Label();
             this.lanzaJgdr2btn = new System.Windows.Forms.Button();
             this.saldoJug2lbl = new System.Windows.Forms.Label();
+            this.jug2imglbl = new System.Windows.Forms.Label();
             this.timerMueveFicha = new System.Windows.Forms.Timer(this.components);
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.tableroPnl = new System.Windows.Forms.Panel();
             this.dado2Pbx = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -431,7 +431,7 @@ namespace MonopolyCR.UI
             this.jugador1gbx.Controls.Add(this.operacionesJug1lbl);
             this.jugador1gbx.Controls.Add(this.lanzaJgdr1btn);
             this.jugador1gbx.Controls.Add(this.saldoJug1lbl);
-            this.jugador1gbx.Controls.Add(this.label8);
+            this.jugador1gbx.Controls.Add(this.jug1imglbl);
             this.jugador1gbx.Location = new System.Drawing.Point(747, 42);
             this.jugador1gbx.Name = "jugador1gbx";
             this.jugador1gbx.Size = new System.Drawing.Size(243, 156);
@@ -473,13 +473,22 @@ namespace MonopolyCR.UI
             this.saldoJug1lbl.Text = "₡0.00";
             this.saldoJug1lbl.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
+            // jug1imglbl
+            // 
+            this.jug1imglbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.jug1imglbl.Image = global::MonopolyCR.Recursos.Jugador2;
+            this.jug1imglbl.Location = new System.Drawing.Point(17, 23);
+            this.jug1imglbl.Name = "jug1imglbl";
+            this.jug1imglbl.Size = new System.Drawing.Size(59, 59);
+            this.jug1imglbl.TabIndex = 15;
+            // 
             // jugador2gbx
             // 
             this.jugador2gbx.BackColor = System.Drawing.Color.Transparent;
             this.jugador2gbx.Controls.Add(this.operacionesJug2lbl);
             this.jugador2gbx.Controls.Add(this.lanzaJgdr2btn);
             this.jugador2gbx.Controls.Add(this.saldoJug2lbl);
-            this.jugador2gbx.Controls.Add(this.label7);
+            this.jugador2gbx.Controls.Add(this.jug2imglbl);
             this.jugador2gbx.Location = new System.Drawing.Point(1058, 42);
             this.jugador2gbx.Name = "jugador2gbx";
             this.jugador2gbx.Size = new System.Drawing.Size(243, 156);
@@ -520,27 +529,18 @@ namespace MonopolyCR.UI
             this.saldoJug2lbl.TabIndex = 17;
             this.saldoJug2lbl.Text = "₡0.00";
             // 
+            // jug2imglbl
+            // 
+            this.jug2imglbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.jug2imglbl.Image = global::MonopolyCR.Recursos.Jugador1;
+            this.jug2imglbl.Location = new System.Drawing.Point(23, 24);
+            this.jug2imglbl.Name = "jug2imglbl";
+            this.jug2imglbl.Size = new System.Drawing.Size(58, 59);
+            this.jug2imglbl.TabIndex = 15;
+            // 
             // timerMueveFicha
             // 
             this.timerMueveFicha.Tick += new System.EventHandler(this.TimerMueveFicha_Tick);
-            // 
-            // label7
-            // 
-            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label7.Image = global::MonopolyCR.Recursos.Jugador1;
-            this.label7.Location = new System.Drawing.Point(23, 24);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(58, 59);
-            this.label7.TabIndex = 15;
-            // 
-            // label8
-            // 
-            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label8.Image = global::MonopolyCR.Recursos.Jugador2;
-            this.label8.Location = new System.Drawing.Point(17, 23);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(59, 59);
-            this.label8.TabIndex = 15;
             // 
             // tableroPnl
             // 
@@ -1724,7 +1724,7 @@ namespace MonopolyCR.UI
         private System.Windows.Forms.GroupBox jugador1gbx;
         private System.Windows.Forms.Label saldoJug1lbl;
         private System.Windows.Forms.GroupBox jugador2gbx;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label jug2imglbl;
         private System.Windows.Forms.Button lanzaJgdr1btn;
         private System.Windows.Forms.Button lanzaJgdr2btn;
         private System.Windows.Forms.Label saldoJug2lbl;
