@@ -114,8 +114,8 @@ namespace MonopolyCR
             //guardar informacion historica para su recuperacion
             var jug1 = partidaActual.Jugador1;
             var jug2 = partidaActual.Jugador2;
-            conexion.GuardarHistorialPartida(idpartida, jug1.IdJugador, jug1.Saldo, jug1.PosicionActual);
-            conexion.GuardarHistorialPartida(idpartida, jug2.IdJugador, jug2.Saldo, jug2.PosicionActual);
+            conexion.GuardarHistorialPartida(idpartida, jug1.IdJugador, jug1.Saldo, jug1.PosicionActual,jug1.NombreColor);
+            conexion.GuardarHistorialPartida(idpartida, jug2.IdJugador, jug2.Saldo, jug2.PosicionActual, jug2.NombreColor);
         }
     }
 }
