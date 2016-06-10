@@ -223,6 +223,7 @@
     <None Include="Media\salida_dinero.wav" />
     <None Include="Media\fail.wav" />
     <None Include="Media\epic_fail.wav" />
+    <None Include="Media\fanfarrias.wav" />
     <Content Include="Media\sonido_ficha.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -618,26 +618,63 @@ namespace MonopolyCR.UI
 
         public void finalizarJuego()
         {
+            CargarPantallaGanador();
+        }
+
+
+        public void CargarPantallaGanador()
+        {
             var valorPropiedadesJug1 = propiedades.Where(p => p.IdPropietario == partidaActual.Jugador1.IdJugador).Sum(p => p.ValorCompra);
             var valorPropiedadesJug2 = propiedades.Where(p => p.IdPropietario == partidaActual.Jugador2.IdJugador).Sum(p => p.ValorCompra);
 
             var activosJug1 = partidaActual.Jugador1.Saldo + valorPropiedadesJug1;
             var activosJug2 = partidaActual.Jugador2.Saldo + valorPropiedadesJug2;
-
-            if (activosJug1 > activosJug2)
-                MessageBox.Show(string.Format("{0} ha ganado la partida: Efectivo: {1}, Valor propiedades:{2}, Total: {3}", partidaActual.Jugador1.Nombre, partidaActual.Jugador1.Saldo, valorPropiedadesJug1, activosJug1));
-            else
-                MessageBox.Show(string.Format("{0} ha ganado la partida: Efectivo: {1}, Valor propiedades:{2}, Total: {3}", partidaActual.Jugador2.Nombre, partidaActual.Jugador2.Saldo, valorPropiedadesJug2, activosJug2));
-
             partidaActual.Ganador = activosJug1 > activosJug2 ? partidaActual.Jugador1.IdJugador : partidaActual.Jugador2.IdJugador;
-            SalvarPartida();
+
+
+            var frmGanador = new GanadorFrm();
+            if (activosJug1 > activosJug2)
+            {
+                frmGanador = CargarGanador(frmGanador, partidaActual.Jugador1.Nombre, partidaActual.Jugador1.Saldo, valorPropiedadesJug1, activosJug1);
+                frmGanador = CargarPerdedor(frmGanador, partidaActual.Jugador2.Nombre, partidaActual.Jugador2.Saldo, valorPropiedadesJug2, activosJug2);
+            }
+            else
+            {
+                frmGanador = CargarGanador(frmGanador, partidaActual.Jugador2.Nombre, partidaActual.Jugador2.Saldo, valorPropiedadesJug2, activosJug2);
+                frmGanador = CargarPerdedor(frmGanador, partidaActual.Jugador1.Nombre, partidaActual.Jugador1.Saldo, valorPropiedadesJug1, activosJug1);
+            }
+            frmGanador.InicializarValores();
+            SalvarPartida(false);
+            PlaySimpleSound(Recursos.fanfarrias);
+            if (frmGanador.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                this.Close();
         }
 
-        public void SalvarPartida()
+
+        public GanadorFrm CargarGanador(GanadorFrm frm, string nombre, double efectivo, double valorpropiedades, double total)
+        {
+            frm.NombreGanador = nombre;
+            frm.EfectivoGanador = efectivo;
+            frm.ValorPropiedadesGanador = valorpropiedades;
+            frm.TotalGanador = total;
+            return frm;
+        }
+
+        public GanadorFrm CargarPerdedor(GanadorFrm frm, string nombre, double efectivo, double valorpropiedades, double total)
+        {
+            frm.NombrePerdedor = nombre;
+            frm.EfectivoPerdedor = efectivo;
+            frm.ValorPropiedadesPerdedor = valorpropiedades;
+            frm.TotalPerdedor = total;
+            return frm;
+        }
+
+        public void SalvarPartida(bool notificar)
         {
             var propiedadesASalvar = propiedades.Where(p => p.IdPropietario > 0).ToList();
             juego.GuardarPartida(partidaActual, propiedadesASalvar);
-            MessageBox.Show("Partida guardada exitosamente");
+            if (notificar)
+                MessageBox.Show("Partida guardada exitosamente");
             ResetearTablero();
         }
 
@@ -686,7 +723,7 @@ namespace MonopolyCR.UI
 
         private void guardarPartidaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SalvarPartida();
+            SalvarPartida(true);
             this.Close();
         }
 
@@ -699,6 +736,14 @@ namespace MonopolyCR.UI
             {
                 InicializarJuego(historialfrm.PartidaGuardada);
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            fichaPropiedadPnl.Visible = false;
+            jugadorEnTurno = jugadorEnTurno == 1 ? 2 : 1;
+            AsignarTurno();
+            posActual = 0;
         }
 
     }

@@ -275,7 +275,7 @@ namespace MonopolyCR.Datos
 
         public int GuardarHistorialPartida(int idPartida,int idJugador,double saldo,int posicion,string color)
         {
-            String q = string.Format("INSERT INTO HistoricoPartida (idpartida,idjugador,puntuacion,posicionActual) values ({0},{1},{2},{3},{4})",
+            String q = string.Format("INSERT INTO HistoricoPartida (idpartida,idjugador,puntuacion,posicionActual,color) values ({0},{1},{2},{3},'{4}')",
                 idPartida, idJugador, saldo, posicion, color);
             return int.Parse(ExecuteQuery(q));
 

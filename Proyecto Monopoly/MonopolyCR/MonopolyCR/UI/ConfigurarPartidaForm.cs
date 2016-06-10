@@ -95,7 +95,7 @@ namespace MonopolyCR.UI
             colorJug1cbx.DataSource = colores;
 
             var colores2 = new List<ColorFicha>();
-            colores2.Add(new ColorFicha { Id = -1, Texto = "Seleccione..." });
+            colores2.Add(new ColorFicha { Id = 0, Texto = "Seleccione..." });
 
             colorjug2cbx.DisplayMember = "Texto";
             colorjug2cbx.ValueMember = "Id";
@@ -127,11 +127,13 @@ namespace MonopolyCR.UI
         void BtnJugarClick(object sender, EventArgs e)
         {
             ConfigurarPartida();
-            this.DialogResult = DialogResult.OK;
-            Hide();
-            //this.Dispose();
-            //new MonopolyCRFrm(PartidaActual).Show();
-
+            if (PartidaActual.Jugador1.IdJugador == 0 || PartidaActual.Jugador2.IdJugador == 0 || PartidaActual.Jugador1.NombreColor == "Seleccione..." || PartidaActual.Jugador2.NombreColor == "Seleccione...")
+                MessageBox.Show("Debe seleccionar Nombre y Color de ficha para cada jugador");
+            else
+            {
+                this.DialogResult = DialogResult.OK;
+                Hide();
+            }
         }
         void NumericUpDown1ValueChanged(object sender, EventArgs e)
         {

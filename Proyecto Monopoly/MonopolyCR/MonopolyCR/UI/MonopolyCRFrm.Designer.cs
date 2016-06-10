@@ -158,13 +158,13 @@ namespace MonopolyCR.UI
             this.operacionesJug1lbl = new System.Windows.Forms.Label();
             this.lanzaJgdr1btn = new System.Windows.Forms.Button();
             this.saldoJug1lbl = new System.Windows.Forms.Label();
+            this.jug1imglbl = new System.Windows.Forms.Label();
             this.jugador2gbx = new System.Windows.Forms.GroupBox();
             this.operacionesJug2lbl = new System.Windows.Forms.Label();
             this.lanzaJgdr2btn = new System.Windows.Forms.Button();
             this.saldoJug2lbl = new System.Windows.Forms.Label();
-            this.timerMueveFicha = new System.Windows.Forms.Timer(this.components);
             this.jug2imglbl = new System.Windows.Forms.Label();
-            this.jug1imglbl = new System.Windows.Forms.Label();
+            this.timerMueveFicha = new System.Windows.Forms.Timer(this.components);
             this.tableroPnl = new System.Windows.Forms.Panel();
             this.dado2Pbx = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -361,7 +361,7 @@ namespace MonopolyCR.UI
             this.nuevoJugadorToolStripMenuItem,
             this.historialJugadoresToolStripMenuItem});
             this.jugadorToolStripMenuItem1.Name = "jugadorToolStripMenuItem1";
-            this.jugadorToolStripMenuItem1.Size = new System.Drawing.Size(150, 22);
+            this.jugadorToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.jugadorToolStripMenuItem1.Text = "Jugador";
             // 
             // nuevoJugadorToolStripMenuItem
@@ -381,7 +381,7 @@ namespace MonopolyCR.UI
             // configuraciónToolStripMenuItem
             // 
             this.configuraciónToolStripMenuItem.Name = "configuraciónToolStripMenuItem";
-            this.configuraciónToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.configuraciónToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.configuraciónToolStripMenuItem.Text = "Configuración";
             this.configuraciónToolStripMenuItem.Click += new System.EventHandler(this.ConfiguraciónToolStripMenuItemClick);
             // 
@@ -397,13 +397,13 @@ namespace MonopolyCR.UI
             // comoJugarToolStripMenuItem
             // 
             this.comoJugarToolStripMenuItem.Name = "comoJugarToolStripMenuItem";
-            this.comoJugarToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.comoJugarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.comoJugarToolStripMenuItem.Text = "Como Jugar...";
             // 
             // acerdaDeToolStripMenuItem
             // 
             this.acerdaDeToolStripMenuItem.Name = "acerdaDeToolStripMenuItem";
-            this.acerdaDeToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.acerdaDeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.acerdaDeToolStripMenuItem.Text = "Acerda de...";
             this.acerdaDeToolStripMenuItem.Click += new System.EventHandler(this.AcerdaDeToolStripMenuItemClick);
             // 
@@ -465,6 +465,15 @@ namespace MonopolyCR.UI
             this.saldoJug1lbl.Text = "₡0.00";
             this.saldoJug1lbl.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
+            // jug1imglbl
+            // 
+            this.jug1imglbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.jug1imglbl.Image = global::MonopolyCR.Recursos.Jugador2;
+            this.jug1imglbl.Location = new System.Drawing.Point(17, 23);
+            this.jug1imglbl.Name = "jug1imglbl";
+            this.jug1imglbl.Size = new System.Drawing.Size(59, 59);
+            this.jug1imglbl.TabIndex = 15;
+            // 
             // jugador2gbx
             // 
             this.jugador2gbx.BackColor = System.Drawing.Color.Transparent;
@@ -512,10 +521,6 @@ namespace MonopolyCR.UI
             this.saldoJug2lbl.TabIndex = 17;
             this.saldoJug2lbl.Text = "₡0.00";
             // 
-            // timerMueveFicha
-            // 
-            this.timerMueveFicha.Tick += new System.EventHandler(this.TimerMueveFicha_Tick);
-            // 
             // jug2imglbl
             // 
             this.jug2imglbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
@@ -525,14 +530,9 @@ namespace MonopolyCR.UI
             this.jug2imglbl.Size = new System.Drawing.Size(58, 59);
             this.jug2imglbl.TabIndex = 15;
             // 
-            // jug1imglbl
+            // timerMueveFicha
             // 
-            this.jug1imglbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.jug1imglbl.Image = global::MonopolyCR.Recursos.Jugador2;
-            this.jug1imglbl.Location = new System.Drawing.Point(17, 23);
-            this.jug1imglbl.Name = "jug1imglbl";
-            this.jug1imglbl.Size = new System.Drawing.Size(59, 59);
-            this.jug1imglbl.TabIndex = 15;
+            this.timerMueveFicha.Tick += new System.EventHandler(this.TimerMueveFicha_Tick);
             // 
             // tableroPnl
             // 
@@ -1502,6 +1502,7 @@ namespace MonopolyCR.UI
             this.button3.TabIndex = 1;
             this.button3.Text = "Rechazar";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // precioCasaLbl
             // 

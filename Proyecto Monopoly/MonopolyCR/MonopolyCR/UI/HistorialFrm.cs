@@ -76,8 +76,8 @@ namespace MonopolyCR.UI
             partida.Nombre = partidas[0].NombrePartida;
             partida.Fecha = partidas[0].Fecha;
             var jug1 = partidas[0].Jugador;
-            var jug2 = partidas[1].Jugador;                    
-            
+            var jug2 = partidas[1].Jugador;
+
             partida.Jugador1 = CargarColores(jug1);
             partida.Jugador2 = CargarColores(jug2);
             partida.HistoricoPropiedades = propiedades;
@@ -95,22 +95,22 @@ namespace MonopolyCR.UI
                 jugador.Color = Color.Blue;
                 jugador.ImagenFicha = Recursos.fichaAzul;
             }
-            if (jugador.NombreColor == "Naranja")
+            else if (jugador.NombreColor == "Naranja")
             {
                 jugador.Color = Color.Orange;
                 jugador.ImagenFicha = Recursos.fichaNaranja;
             }
-            if (jugador.NombreColor == "Verde")
+            else if (jugador.NombreColor == "Verde")
             {
                 jugador.Color = Color.LimeGreen;
                 jugador.ImagenFicha = Recursos.fichaVerde;
             }
-            if (jugador.NombreColor == "Rojo")
+            else if (jugador.NombreColor == "Rojo")
             {
                 jugador.Color = Color.Red;
                 jugador.ImagenFicha = Recursos.fichaRoja;
             }
-            if (jugador.NombreColor == "Morado")
+            else if (jugador.NombreColor == "Morado")
             {
                 jugador.Color = Color.Purple;
                 jugador.ImagenFicha = Recursos.fichaMorada;
@@ -122,7 +122,7 @@ namespace MonopolyCR.UI
             }
 
             return jugador;
-            
+
         }
     }
 }
