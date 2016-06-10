@@ -301,6 +301,15 @@ namespace MonopolyCR {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
         /// </summary>
+        internal static System.IO.UnmanagedMemoryStream epic_fail {
+            get {
+                return ResourceManager.GetStream("epic_fail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.IO.UnmanagedMemoryStream similar a System.IO.MemoryStream.
+        /// </summary>
         internal static System.IO.UnmanagedMemoryStream fail {
             get {
                 return ResourceManager.GetStream("fail", resourceCulture);
@@ -729,6 +738,16 @@ namespace MonopolyCR {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap parqueo {
+            get {
+                object obj = ResourceManager.GetObject("parqueo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap poas_volcano {
             get {
                 object obj = ResourceManager.GetObject("poas_volcano", resourceCulture);
@@ -782,6 +801,16 @@ namespace MonopolyCR {
         internal static System.Drawing.Bitmap puntarenasJaco___copia {
             get {
                 object obj = ResourceManager.GetObject("puntarenasJaco___copia", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap salida {
+            get {
+                object obj = ResourceManager.GetObject("salida", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

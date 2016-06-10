@@ -107,14 +107,10 @@ namespace MonopolyCR.UI
 		private System.Windows.Forms.Panel panel68;
 		private System.Windows.Forms.Label prop2nameLbl;
 		private System.Windows.Forms.Label prop20nameLbl;
-		private System.Windows.Forms.Label prop4nameLbl;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label prop4nameLbl;
 		private System.Windows.Forms.PictureBox dado2Pbx;
         private System.Windows.Forms.PictureBox dado1Pbx;
-		private System.Windows.Forms.Label avanzaPosicionLbl;
-		private System.Windows.Forms.Label label4;
-		private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label avanzaPosicionLbl;
         private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.Label jug1imglbl;
 		
@@ -162,13 +158,13 @@ namespace MonopolyCR.UI
             this.operacionesJug1lbl = new System.Windows.Forms.Label();
             this.lanzaJgdr1btn = new System.Windows.Forms.Button();
             this.saldoJug1lbl = new System.Windows.Forms.Label();
-            this.jug1imglbl = new System.Windows.Forms.Label();
             this.jugador2gbx = new System.Windows.Forms.GroupBox();
             this.operacionesJug2lbl = new System.Windows.Forms.Label();
             this.lanzaJgdr2btn = new System.Windows.Forms.Button();
             this.saldoJug2lbl = new System.Windows.Forms.Label();
-            this.jug2imglbl = new System.Windows.Forms.Label();
             this.timerMueveFicha = new System.Windows.Forms.Timer(this.components);
+            this.jug2imglbl = new System.Windows.Forms.Label();
+            this.jug1imglbl = new System.Windows.Forms.Label();
             this.tableroPnl = new System.Windows.Forms.Panel();
             this.dado2Pbx = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -177,11 +173,7 @@ namespace MonopolyCR.UI
             this.prop0MainPnl = new System.Windows.Forms.Panel();
             this.ficha2Pbx = new System.Windows.Forms.PictureBox();
             this.ficha1Pbx = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.prop18MainPnl = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.prop27MainPnl = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
@@ -270,7 +262,6 @@ namespace MonopolyCR.UI
             this.label10 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.nombrePropiedadLbl = new System.Windows.Forms.Label();
-            this.finalizarJuegoBtn = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.jugador1gbx.SuspendLayout();
             this.jugador2gbx.SuspendLayout();
@@ -280,7 +271,6 @@ namespace MonopolyCR.UI
             this.prop0MainPnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ficha2Pbx)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ficha1Pbx)).BeginInit();
-            this.prop18MainPnl.SuspendLayout();
             this.prop27MainPnl.SuspendLayout();
             this.flowLayoutPanel4.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
@@ -324,33 +314,35 @@ namespace MonopolyCR.UI
             // nuevaPartidaToolStripMenuItem
             // 
             this.nuevaPartidaToolStripMenuItem.Name = "nuevaPartidaToolStripMenuItem";
-            this.nuevaPartidaToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.nuevaPartidaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.nuevaPartidaToolStripMenuItem.Text = "Nueva Partida";
             this.nuevaPartidaToolStripMenuItem.Click += new System.EventHandler(this.NuevaPartidaToolStripMenuItemClick);
             // 
             // abrirPartidaToolStripMenuItem
             // 
             this.abrirPartidaToolStripMenuItem.Name = "abrirPartidaToolStripMenuItem";
-            this.abrirPartidaToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.abrirPartidaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.abrirPartidaToolStripMenuItem.Text = "Abrir Partida";
+            this.abrirPartidaToolStripMenuItem.Click += new System.EventHandler(this.abrirPartidaToolStripMenuItem_Click);
             // 
             // guardarPartidaToolStripMenuItem
             // 
             this.guardarPartidaToolStripMenuItem.Name = "guardarPartidaToolStripMenuItem";
-            this.guardarPartidaToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
-            this.guardarPartidaToolStripMenuItem.Text = "Guardar Partida";
+            this.guardarPartidaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.guardarPartidaToolStripMenuItem.Text = "Guardar y Salir";
+            this.guardarPartidaToolStripMenuItem.Click += new System.EventHandler(this.guardarPartidaToolStripMenuItem_Click);
             // 
             // terminarJuegoToolStripMenuItem
             // 
             this.terminarJuegoToolStripMenuItem.Name = "terminarJuegoToolStripMenuItem";
-            this.terminarJuegoToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.terminarJuegoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.terminarJuegoToolStripMenuItem.Text = "Finalizar Juego";
             this.terminarJuegoToolStripMenuItem.Click += new System.EventHandler(this.TerminarJuegoToolStripMenuItemClick);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.SalirToolStripMenuItemClick);
             // 
@@ -473,15 +465,6 @@ namespace MonopolyCR.UI
             this.saldoJug1lbl.Text = "₡0.00";
             this.saldoJug1lbl.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // jug1imglbl
-            // 
-            this.jug1imglbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.jug1imglbl.Image = global::MonopolyCR.Recursos.Jugador2;
-            this.jug1imglbl.Location = new System.Drawing.Point(17, 23);
-            this.jug1imglbl.Name = "jug1imglbl";
-            this.jug1imglbl.Size = new System.Drawing.Size(59, 59);
-            this.jug1imglbl.TabIndex = 15;
-            // 
             // jugador2gbx
             // 
             this.jugador2gbx.BackColor = System.Drawing.Color.Transparent;
@@ -529,6 +512,10 @@ namespace MonopolyCR.UI
             this.saldoJug2lbl.TabIndex = 17;
             this.saldoJug2lbl.Text = "₡0.00";
             // 
+            // timerMueveFicha
+            // 
+            this.timerMueveFicha.Tick += new System.EventHandler(this.TimerMueveFicha_Tick);
+            // 
             // jug2imglbl
             // 
             this.jug2imglbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
@@ -538,9 +525,14 @@ namespace MonopolyCR.UI
             this.jug2imglbl.Size = new System.Drawing.Size(58, 59);
             this.jug2imglbl.TabIndex = 15;
             // 
-            // timerMueveFicha
+            // jug1imglbl
             // 
-            this.timerMueveFicha.Tick += new System.EventHandler(this.TimerMueveFicha_Tick);
+            this.jug1imglbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.jug1imglbl.Image = global::MonopolyCR.Recursos.Jugador2;
+            this.jug1imglbl.Location = new System.Drawing.Point(17, 23);
+            this.jug1imglbl.Name = "jug1imglbl";
+            this.jug1imglbl.Size = new System.Drawing.Size(59, 59);
+            this.jug1imglbl.TabIndex = 15;
             // 
             // tableroPnl
             // 
@@ -606,12 +598,10 @@ namespace MonopolyCR.UI
             // 
             // prop0MainPnl
             // 
-            this.prop0MainPnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.prop0MainPnl.BackgroundImage = global::MonopolyCR.Recursos.salida;
+            this.prop0MainPnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.prop0MainPnl.Controls.Add(this.ficha2Pbx);
             this.prop0MainPnl.Controls.Add(this.ficha1Pbx);
-            this.prop0MainPnl.Controls.Add(this.label4);
-            this.prop0MainPnl.Controls.Add(this.label3);
-            this.prop0MainPnl.Controls.Add(this.label2);
             this.prop0MainPnl.Location = new System.Drawing.Point(583, 580);
             this.prop0MainPnl.Name = "prop0MainPnl";
             this.prop0MainPnl.Size = new System.Drawing.Size(79, 79);
@@ -637,52 +627,15 @@ namespace MonopolyCR.UI
             this.ficha1Pbx.TabIndex = 3;
             this.ficha1Pbx.TabStop = false;
             // 
-            // label4
-            // 
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(9, 48);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 39);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "cada vez que pase por aquí.";
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(16, 25);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 39);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "    Cobre    ₡2.000.000";
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(13, 6);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 72);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Salida";
-            // 
             // prop18MainPnl
             // 
-            this.prop18MainPnl.Controls.Add(this.label1);
+            this.prop18MainPnl.BackgroundImage = global::MonopolyCR.Recursos.parqueo;
+            this.prop18MainPnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.prop18MainPnl.Location = new System.Drawing.Point(2, 1);
             this.prop18MainPnl.Margin = new System.Windows.Forms.Padding(0);
             this.prop18MainPnl.Name = "prop18MainPnl";
             this.prop18MainPnl.Size = new System.Drawing.Size(79, 79);
             this.prop18MainPnl.TabIndex = 5;
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 43);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Parqueo  Gratuito";
             // 
             // prop27MainPnl
             // 
@@ -1308,7 +1261,7 @@ namespace MonopolyCR.UI
             // 
             this.prop1nameLbl.BackColor = System.Drawing.Color.Transparent;
             this.prop1nameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold);
-            this.prop1nameLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.prop1nameLbl.ForeColor = System.Drawing.Color.Orange;
             this.prop1nameLbl.Location = new System.Drawing.Point(10, 6);
             this.prop1nameLbl.Name = "prop1nameLbl";
             this.prop1nameLbl.Size = new System.Drawing.Size(47, 15);
@@ -1331,7 +1284,7 @@ namespace MonopolyCR.UI
             // 
             this.prop2nameLbl.BackColor = System.Drawing.Color.Transparent;
             this.prop2nameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold);
-            this.prop2nameLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.prop2nameLbl.ForeColor = System.Drawing.Color.DarkOrange;
             this.prop2nameLbl.Location = new System.Drawing.Point(10, 6);
             this.prop2nameLbl.Name = "prop2nameLbl";
             this.prop2nameLbl.Size = new System.Drawing.Size(47, 15);
@@ -1354,7 +1307,7 @@ namespace MonopolyCR.UI
             // 
             this.prop20nameLbl.BackColor = System.Drawing.Color.Transparent;
             this.prop20nameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold);
-            this.prop20nameLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.prop20nameLbl.ForeColor = System.Drawing.Color.DarkOrange;
             this.prop20nameLbl.Location = new System.Drawing.Point(10, 6);
             this.prop20nameLbl.Name = "prop20nameLbl";
             this.prop20nameLbl.Size = new System.Drawing.Size(47, 15);
@@ -1377,8 +1330,8 @@ namespace MonopolyCR.UI
             // 
             this.prop4nameLbl.BackColor = System.Drawing.Color.Transparent;
             this.prop4nameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold);
-            this.prop4nameLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.prop4nameLbl.Location = new System.Drawing.Point(3, 6);
+            this.prop4nameLbl.ForeColor = System.Drawing.Color.DarkOrange;
+            this.prop4nameLbl.Location = new System.Drawing.Point(6, 6);
             this.prop4nameLbl.Name = "prop4nameLbl";
             this.prop4nameLbl.Size = new System.Drawing.Size(47, 15);
             this.prop4nameLbl.TabIndex = 1;
@@ -1547,7 +1500,7 @@ namespace MonopolyCR.UI
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 39);
             this.button3.TabIndex = 1;
-            this.button3.Text = "Subastar";
+            this.button3.Text = "Rechazar";
             this.button3.UseVisualStyleBackColor = false;
             // 
             // precioCasaLbl
@@ -1642,16 +1595,6 @@ namespace MonopolyCR.UI
             this.nombrePropiedadLbl.TabIndex = 0;
             this.nombrePropiedadLbl.Text = "nombre propiedad";
             // 
-            // finalizarJuegoBtn
-            // 
-            this.finalizarJuegoBtn.Location = new System.Drawing.Point(984, 342);
-            this.finalizarJuegoBtn.Name = "finalizarJuegoBtn";
-            this.finalizarJuegoBtn.Size = new System.Drawing.Size(75, 23);
-            this.finalizarJuegoBtn.TabIndex = 18;
-            this.finalizarJuegoBtn.Text = "Finalizar";
-            this.finalizarJuegoBtn.UseVisualStyleBackColor = true;
-            this.finalizarJuegoBtn.Click += new System.EventHandler(this.finalizarJuegoBtn_Click);
-            // 
             // MonopolyCRFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1660,7 +1603,6 @@ namespace MonopolyCR.UI
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1328, 733);
-            this.Controls.Add(this.finalizarJuegoBtn);
             this.Controls.Add(this.jugador2gbx);
             this.Controls.Add(this.jugador1gbx);
             this.Controls.Add(this.avanzaPosicionLbl);
@@ -1684,7 +1626,6 @@ namespace MonopolyCR.UI
             this.prop0MainPnl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ficha2Pbx)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ficha1Pbx)).EndInit();
-            this.prop18MainPnl.ResumeLayout(false);
             this.prop27MainPnl.ResumeLayout(false);
             this.flowLayoutPanel4.ResumeLayout(false);
             this.flowLayoutPanel3.ResumeLayout(false);
@@ -1732,6 +1673,5 @@ namespace MonopolyCR.UI
         private System.Windows.Forms.Timer timerMueveFicha;
         private System.Windows.Forms.Label operacionesJug2lbl;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button finalizarJuegoBtn;
 }
 }

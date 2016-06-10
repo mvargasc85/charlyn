@@ -148,28 +148,31 @@ namespace MonopolyCR.Datos
             return jugador;
         }
 
-        public List<Partida> ObtenerHistorial()
+
+
+
+
+        public List<HistoricoPartidas> ObtenerHistorial()
         {
 
-            var partidas = new List<Partida>();
+            var historico = new List<HistoricoPartidas>();
             try
             {
                 openCon();
-                const string query = "select j.nombre,p.fecha,h.puntuacion,p.ganador " +
-                    "from jugador j inner join historicopartida h " +
-                    "on j.idjugador= h.idjugador " +
-                    "inner join partida p " +
-                    "on h.idpartida = p.idpartida";
-
+                const string query = "SELECT p.idpartida, p.nombrepartida,p.fecha,j.idjugador,j.nombre,h.color,h.puntuacion as saldo,p.ganador,h.posicionActual " +
+                "FROM historicopartida h " +
+                "join partida p on h.idpartida = p.idpartida " +
+                "join jugador j on h.idjugador= j.idjugador";
                 comando = new MySqlCommand(query, conexion);
+
                 var reader = comando.ExecuteReader();
 
                 while (reader.Read())
                 {
-                    partidas.Add(ConvertirHistorial(reader));
+                    historico.Add(ConvertirHistorial(reader));
                 }
 
-                return partidas;
+                return historico;
 
             }
             catch (Exception ex)
@@ -185,17 +188,27 @@ namespace MonopolyCR.Datos
 
         }
 
-        private Partida ConvertirHistorial(IDataReader reader)
+        public HistoricoPartidas ConvertirHistorial(IDataReader reader)
         {
+            var jugador = new Jugador();
+            jugador.IdJugador = Convert.ToInt32(reader["idjugador"]);
+            jugador.Nombre = Convert.ToString(reader["nombre"]);
+            jugador.NombreColor = Convert.ToString(reader["color"]);
+            jugador.Saldo = Convert.ToDouble(reader["saldo"]);
+            jugador.PosicionActual = Convert.ToInt32(reader["posicionActual"]);
 
-            var Partidas = new Partida();
-            Partidas.Nombre = Convert.ToString(reader["nombre"]);
-            Partidas.Fecha = Convert.ToDateTime(reader["fecha"]);
-            Partidas.Puntuacion = Convert.ToInt32(reader["puntuacion"]);
-            Partidas.Ganador = Convert.ToInt32(reader["ganador"]);
+            var historico = new HistoricoPartidas();
+            historico.Idpartida = Convert.ToInt32(reader["idpartida"]);
+            historico.NombrePartida = Convert.ToString(reader["nombrepartida"]);
+            historico.Fecha = Convert.ToDateTime(reader["fecha"]);
+            historico.Ganador = Convert.ToInt32(reader["ganador"]);
+            historico.Jugador = jugador;
 
-            return Partidas;
+
+            return historico;
         }
+
+
 
         public Jugador ObtenerJugador(int jugadorId)
         {
@@ -259,6 +272,59 @@ namespace MonopolyCR.Datos
             String q = string.Format("Select {0} from {1} order by {0} desc Limit 1", campo, tabla);
             return ExecuteScalar(q);
         }
+
+        public int GuardarHistorialPartida(int idPartida,int idJugador,double saldo,int posicion,string color)
+        {
+            String q = string.Format("INSERT INTO HistoricoPartida (idpartida,idjugador,puntuacion,posicionActual) values ({0},{1},{2},{3},{4})",
+                idPartida, idJugador, saldo, posicion, color);
+            return int.Parse(ExecuteQuery(q));
+
+        }
+
+
+
+        public List<HistoricoPropiedades> ObtenerHistoricoPropiedades(int idpartida)
+        {
+
+            var historico = new List<HistoricoPropiedades>();
+            try
+            {
+                openCon();
+                string query = string.Format("SELECT p.idpartida, p.idjugador, p.idpropiedad from registropropiedad p where idpartida = {0}", idpartida);
+                comando = new MySqlCommand(query, conexion);
+                
+                var reader = comando.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    historico.Add(ConvertirHistoricoProp(reader));
+                }
+
+                return historico;
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error al obtener historial. Error: " + ex.Message);
+                return null;
+            }
+            finally
+            {
+                closeCon();
+            }
+
+        }
+
+        public HistoricoPropiedades ConvertirHistoricoProp(IDataReader reader)
+        {
+            var historico = new HistoricoPropiedades();
+            historico.Idpartida = Convert.ToInt32(reader["idpartida"]);
+            historico.Idjugador = Convert.ToInt32(reader["idjugador"]);
+            historico.Idpropiedad = Convert.ToInt32(reader["Idpropiedad"]);
+            return historico;
+        }
+
 
 
 

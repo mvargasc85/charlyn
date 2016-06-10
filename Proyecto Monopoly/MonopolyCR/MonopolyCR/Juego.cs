@@ -79,9 +79,14 @@ namespace MonopolyCR
 		
 		}
 		
-		public List<Partida> CargarHistorialList(){
+		public List<HistoricoPartidas> CargarHistorialList(){
 			return conexion.ObtenerHistorial();
 		}
+
+        public List<HistoricoPropiedades> CargarHistoricoPropiedades(int idpartida)
+        {
+            return conexion.ObtenerHistoricoPropiedades(idpartida);
+        }
 
 
         public Jugador ObtenerJugador(int jugadorId)
@@ -96,12 +101,21 @@ namespace MonopolyCR
 
         public void GuardarPartida(Partida partidaActual, List<Propiedad> propiedades)
         {
+            // guardar partida
             var idpartida = conexion.InsertarPartida(partidaActual);
-            if(idpartida>-1)
+
+            //guardar propiedades
+            if (idpartida > -1)
                 foreach (var prop in propiedades)
                 {
                     conexion.RegistrarPropiedad(prop.IdPropiedad, idpartida, prop.IdPropietario);
                 }
+
+            //guardar informacion historica para su recuperacion
+            var jug1 = partidaActual.Jugador1;
+            var jug2 = partidaActual.Jugador2;
+            conexion.GuardarHistorialPartida(idpartida, jug1.IdJugador, jug1.Saldo, jug1.PosicionActual);
+            conexion.GuardarHistorialPartida(idpartida, jug2.IdJugador, jug2.Saldo, jug2.PosicionActual);
         }
     }
 }

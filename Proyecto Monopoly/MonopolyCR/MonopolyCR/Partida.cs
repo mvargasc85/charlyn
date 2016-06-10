@@ -7,6 +7,7 @@
  * Para cambiar esta plantilla use Herramientas | Opciones | Codificación | Editar Encabezados Estándar
  */
 using System;
+using System.Collections.Generic;
 
 namespace MonopolyCR
 {
@@ -22,7 +23,7 @@ namespace MonopolyCR
 		public DateTime Fecha { get; set; }
 		public int Puntuacion  { get; set; }
 		public	int Ganador { get; set; }
-
+        public List<HistoricoPropiedades> HistoricoPropiedades { get; set; }
 
 		public Partida()
 		{
@@ -32,4 +33,12 @@ namespace MonopolyCR
 		
 		
 	}
+
+
+    public class HistoricoPropiedades
+    {
+        public int Idpartida { get; set; }
+        public int Idjugador { get; set; }
+        public int Idpropiedad { get; set; }
+    }
 }

@@ -59,6 +59,7 @@
   <ItemGroup>
     <Compile Include="Dado.cs" />
     <Compile Include="Datos\Conexion.cs" />
+    <Compile Include="HistoricoPartidas.cs" />
     <Compile Include="Juego.cs" />
     <Compile Include="Jugador.cs" />
     <Compile Include="Partida.cs" />
@@ -203,12 +204,14 @@
     <Content Include="Imagenes\tablero\LosSuenosJaco.jpg" />
     <Content Include="Imagenes\tablero\mapa.png" />
     <Content Include="Imagenes\tablero\monopoly-run.png" />
+    <None Include="Imagenes\tablero\parqueo.PNG" />
     <Content Include="Imagenes\tablero\poas_volcano.jpg" />
     <Content Include="Imagenes\tablero\puerto Limon.jpg" />
     <Content Include="Imagenes\tablero\puertoLimon.jpg" />
     <Content Include="Imagenes\tablero\puntarenas.jpg" />
     <None Include="Imagenes\tablero\puntarenasJaco - copia.jpg" />
     <Content Include="Imagenes\tablero\puntarenasJaco.jpg" />
+    <None Include="Imagenes\tablero\salida.PNG" />
     <Content Include="Imagenes\tablero\sanJose.png" />
     <Content Include="Imagenes\tablero\sanJoseSantaAna.jpg" />
     <Content Include="Imagenes\tablero\SanJoseTobias.jpg" />
@@ -219,6 +222,7 @@
     <None Include="Media\ingreso_dinero.wav" />
     <None Include="Media\salida_dinero.wav" />
     <None Include="Media\fail.wav" />
+    <None Include="Media\epic_fail.wav" />
     <Content Include="Media\sonido_ficha.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -34,6 +34,8 @@ namespace MonopolyCR.UI
         Propiedad propiedadActual;
         private System.Windows.Forms.Timer timerLanzaDados, timerOperaciones;
         int giros;
+        int posicionARetroceder;
+        System.Windows.Forms.Timer timerRetrocedeFicha = null;
 
         enum Movimiento
         {
@@ -46,12 +48,48 @@ namespace MonopolyCR.UI
 
         public MonopolyCRFrm(Partida partida)
         {
-            this.partidaActual = partida;      
-            juego = new Juego();
             InitializeComponent();
+            InicializarJuego(partida);
+        }
+
+
+        public void InicializarJuego(Partida partida)
+        {
+            this.partidaActual = partida;
+            juego = new Juego();
             CargarPropiedades();
+            if (partida.Idpartida > 0)
+            {
+                CargarPropiedadesVendidas(partida.HistoricoPropiedades);
+                PrecargarPosiciones(0, partida.Jugador1.PosicionActual, ficha1Pbx, new Point(17, 5));
+                PrecargarPosiciones(0, partida.Jugador2.PosicionActual, ficha2Pbx, new Point(4, 33));
+            }
             CargarFichas();
             DefinirTurnoInicial();
+        }
+
+        public void CargarPropiedadesVendidas(List<HistoricoPropiedades> props)
+        {
+            foreach (var prop in props)
+            {
+                var propiedad = propiedades.Single(p => p.IdPropiedad == prop.Idpropiedad);
+                propiedad.IdPropietario = prop.Idjugador;
+                var panel = (Panel)propiedad.MainPanel;
+                if (prop.Idjugador == partidaActual.Jugador1.IdJugador)                
+                    panel.BackColor = partidaActual.Jugador1.Color;                
+                else
+                    panel.BackColor = partidaActual.Jugador2.Color;
+            }
+
+        }
+
+        public void PrecargarPosiciones(int posIni, int posFinal, PictureBox ficha,Point location)
+        {
+            var panelActual = (Panel)propiedades[posIni].MainPanel;
+            panelActual.Controls.Remove(ficha);
+            var panelSte = (Panel)propiedades[posFinal].MainPanel;
+            panelSte.Controls.Add(ficha);
+            ficha.Location = location;
         }
 
         public void CargarFichas()
@@ -115,14 +153,13 @@ namespace MonopolyCR.UI
 
         void TerminarJuegoToolStripMenuItemClick(object sender, EventArgs e)
         {
-
+            finalizarJuego();
         }
+
         void NuevoJugadorToolStripMenuItemClick(object sender, EventArgs e)
         {
             var registroJugadorFrm = new RegistroJugadorFrm();
-
             registroJugadorFrm.Show();
-
         }
 
         void AcerdaDeToolStripMenuItemClick(object sender, EventArgs e)
@@ -139,7 +176,14 @@ namespace MonopolyCR.UI
 
         void NuevaPartidaToolStripMenuItemClick(object sender, EventArgs e)
         {
+            var configurarPartidaFrm = new ConfigurarPartidaForm();
 
+            if (configurarPartidaFrm.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                var partida = configurarPartidaFrm.PartidaActual;
+                configurarPartidaFrm.Close();
+                this.InicializarJuego(partida);
+            }
         }
         void ConfiguraciónToolStripMenuItemClick(object sender, EventArgs e)
         {
@@ -149,19 +193,23 @@ namespace MonopolyCR.UI
 
             if (configurarPartidafrm.DialogResult == DialogResult.OK)
             {
-                //partidaActual = configurarPartidafrm.PartidaActual;
                 DefinirTurnoInicial();
-
             }
         }
+
         void SalirToolStripMenuItemClick(object sender, EventArgs e)
         {
             this.Close();
         }
         void HistorialJugadoresToolStripMenuItemClick(object sender, EventArgs e)
         {
-            var historialfrm = new HistorialFrm();
-            historialfrm.Show();
+            //var historialfrm = new HistorialFrm();
+            //historialfrm.ShowDialog();
+
+            //if (historialfrm.DialogResult == DialogResult.OK)
+            //{
+            //    InicializarJuego(historialfrm.PartidaGuardada);
+            //}
         }
 
 
@@ -172,28 +220,24 @@ namespace MonopolyCR.UI
             var posicion = ObtenerPosicionActual();
             var sumaDados = dado.SumaDados;
 
-
-
             if (posActual < sumaDados)
             {
                 var panelActual = (Panel)propiedades[posicion].MainPanel;
-
                 panelActual.Controls.Remove(ficha);
+
+                //validar si ya se completo la vuelta para reiniciar la posicion
                 if (posicion + 1 > 35)
                 {
                     posicion = -1;
-                    if (jugadorEnTurno == 1)
-                        partidaActual.Jugador1.Saldo += 2000;
-                    else partidaActual.Jugador2.Saldo += 2000;
-                    avanzaPosicionLbl.Text = String.Format("{0} Recibe ₡{1} por pasar por la Salida!", jugadorEnTurno == 1 ? partidaActual.Jugador1.Nombre : partidaActual.Jugador2.Nombre, 2000);
-                    ActualizarEtiquetasdeSaldos();
-                    MostrarMovientoSaldo(2000, Color.Green, jugadorEnTurno == 1 ? operacionesJug1lbl : operacionesJug2lbl, null);
+                    aplicarRetribucionporSalida();
                 }
+
                 var panelSgte = (Panel)propiedades[posicion + 1].MainPanel;
                 panelSgte.Controls.Add(ficha);
                 ficha.Location = jugadorEnTurno == 1 ? new Point(17, 5) : new Point(4, 33);
                 EstablecerPosicionActual(posicion + 1);
-                posActual += 1; PlaySimpleSound(Recursos.sonido_ficha);
+                posActual += 1; 
+                PlaySimpleSound(Recursos.sonido_ficha);
             }
             else
             {
@@ -201,42 +245,57 @@ namespace MonopolyCR.UI
                 var propiedad = propiedades[posicion];
                 propiedadActual = propiedad;
 
-                if (propiedad.Nombre == "Salida" || propiedad.Nombre == "Parqueo Libre" || propiedad.Nombre == "Carcel")
+
+                if (propiedad.Nombre == "Carcel")
+                {
+                    aplicarSancionporCarcel();
+                    jugadorEnTurno = jugadorEnTurno == 1 ? 2 : 1;
+                    AsignarTurno();
+                    posActual = 0;
+                }
+                else if (propiedad.Nombre == "Parqueo Libre")
+                {
+                    aplicarRetribucionporParqueo();
+                    jugadorEnTurno = jugadorEnTurno == 1 ? 2 : 1;
+                    AsignarTurno();
+                    posActual = 0;
+                }
+                else if (propiedad.Nombre == "Salida")
                 {
                     jugadorEnTurno = jugadorEnTurno == 1 ? 2 : 1;
                     AsignarTurno();
                     posActual = 0;
                 }
-                else
+                else if (propiedad.Nombre == "A la Carcel")
                 {
-
-                    if (propiedad.Nombre == "A la Carcel")
-                    {
-                        timerRetrocedeFicha = new System.Windows.Forms.Timer();
-                        timerRetrocedeFicha.Tick += new EventHandler(TimerRetrocedeFicha_Tick);
-                        timerRetrocedeFicha.Interval = 100;
-                        timerRetrocedeFicha.Start();
-
-                        var posicionDestino = propiedades.Single(p => p.Nombre == "Carcel").IdPropiedad;
-                        posicionARetroceder = posicionDestino;
-
-                        avanzaPosicionLbl.Text = String.Format("{0} fue enviado a la carcel. Siempre lo hemos dicho, el poder corrompe!", jugadorEnTurno == 1 ? partidaActual.Jugador1.Nombre : partidaActual.Jugador2.Nombre);
-                        return;
-                    }
-
-                    if (propiedadActual.IdPropietario == 0)
-                        MostrarFichaPropiedad(propiedad);
-                    else
-                    {
-                        if (jugadorEnTurno == 1)
-                            PagarPeaje(partidaActual.Jugador2, partidaActual.Jugador1);
-                        else
-                            PagarPeaje(partidaActual.Jugador1, partidaActual.Jugador2);
-                    }
-
-                    posActual = 0;
+                    Encarcelar();
                 }
+                else if (propiedadActual.IdPropietario == 0)
+                    MostrarFichaPropiedad(propiedad);
+                else
+                    if (jugadorEnTurno == 1)
+                        PagarPeaje(partidaActual.Jugador2, partidaActual.Jugador1);
+                    else
+                        PagarPeaje(partidaActual.Jugador1, partidaActual.Jugador2);
+
+                posActual = 0;
             }
+        }
+
+        public void Encarcelar()
+        {
+            PlaySimpleSound(Recursos.epic_fail);
+            avanzaPosicionLbl.Text = String.Format("{0} fue enviado a la carcel. Siempre se ha sabido que el exceso de poder corrompe!",
+                jugadorEnTurno == 1 ? partidaActual.Jugador1.Nombre : partidaActual.Jugador2.Nombre);
+
+            timerRetrocedeFicha = new System.Windows.Forms.Timer();
+            timerRetrocedeFicha.Tick += new EventHandler(TimerRetrocedeFicha_Tick);
+            timerRetrocedeFicha.Interval = 100;
+            timerRetrocedeFicha.Start();
+
+            var posicionDestino = propiedades.Single(p => p.Nombre == "Carcel").IdPropiedad;
+            posicionARetroceder = posicionDestino;
+            //posActual = 0;
         }
 
         private void TimerRetrocedeFicha_Tick(object sender, EventArgs e)
@@ -244,12 +303,11 @@ namespace MonopolyCR.UI
             RetrocederFicha(posicionARetroceder);
         }
 
-        int posicionARetroceder;
-        System.Windows.Forms.Timer timerRetrocedeFicha = null;
+        
         public void RetrocederFicha(int posicionDestino)
         {
 
-            var ficha = jugadorEnTurno == 2 ? ficha1Pbx : ficha2Pbx;
+            var ficha = jugadorEnTurno == 1 ? ficha1Pbx : ficha2Pbx;
             var posicion = ObtenerPosicionActual();
 
             if (posicion > posicionDestino)
@@ -270,9 +328,46 @@ namespace MonopolyCR.UI
                 timerRetrocedeFicha.Stop();
                 var propiedad = propiedades[posicion];
                 propiedadActual = propiedad;
+                aplicarSancionporCarcel();     
                 jugadorEnTurno = jugadorEnTurno == 1 ? 2 : 1;
                 AsignarTurno();
             }
+        }
+
+        public void aplicarRetribucionporSalida()
+        {
+            if (jugadorEnTurno == 1)
+                partidaActual.Jugador1.Saldo += 2000;
+            else partidaActual.Jugador2.Saldo += 2000;
+            PlaySimpleSound(Recursos.ingreso_dinero);
+            avanzaPosicionLbl.Text = String.Format("{0} Recibe ₡{1} por pasar por la Salida!",
+                jugadorEnTurno == 1 ? partidaActual.Jugador1.Nombre : partidaActual.Jugador2.Nombre, 2000);
+            ActualizarEtiquetasdeSaldos();
+            MostrarMovientoSaldo(2000, Color.Green, jugadorEnTurno == 1 ? operacionesJug1lbl : operacionesJug2lbl, null);
+        }
+
+        public void aplicarRetribucionporParqueo()
+        {
+            var porcentage = new Random().Next(1, 6);
+            avanzaPosicionLbl.Text = String.Format("{0} has ganado el paquete vacacional, disfruta de un {1}% extra para tus gastos!",
+                jugadorEnTurno == 1 ? partidaActual.Jugador1.Nombre : partidaActual.Jugador2.Nombre, porcentage);
+            if (jugadorEnTurno == 1)
+                partidaActual.Jugador1.Saldo -= (partidaActual.Jugador1.Saldo * porcentage / 100);
+            else
+                partidaActual.Jugador2.Saldo -= (partidaActual.Jugador2.Saldo * porcentage / 100);
+            ActualizarEtiquetasdeSaldos();
+            PlaySimpleSound(Recursos.ingreso_dinero);
+        }
+
+        public void aplicarSancionporCarcel() {
+            avanzaPosicionLbl.Text = String.Format("{0} será penalizado con el 5% de su patrimonio, mejor no caer en la tentación!!", 
+                jugadorEnTurno == 1 ? partidaActual.Jugador1.Nombre : partidaActual.Jugador2.Nombre);
+            if (jugadorEnTurno == 1)
+                partidaActual.Jugador1.Saldo -= (partidaActual.Jugador1.Saldo * 5 / 100);
+            else
+                partidaActual.Jugador2.Saldo -= (partidaActual.Jugador2.Saldo * 5 / 100);
+            ActualizarEtiquetasdeSaldos();
+            PlaySimpleSound(Recursos.salida_dinero); 
         }
 
         private void TimerMueveFicha_Tick(object sender, EventArgs e)
@@ -283,8 +378,6 @@ namespace MonopolyCR.UI
 
         public void MostrarFichaPropiedad(Propiedad propiedad)
         {
-
-
             nombrePropiedadLbl.Text = propiedad.Nombre;
             precioCasaLbl.Text = string.Format("₡{0}", propiedad.ValorCompra);
             peajeLbl.Text = string.Format("₡{0}", propiedad.ValorPeaje);
@@ -373,7 +466,7 @@ namespace MonopolyCR.UI
             else
             {
                 timerLanzaDados.Stop();
-                var posiciones = dado.SumaDados;
+                var posiciones =  dado.SumaDados;
                 avanzaPosicionLbl.Text = String.Format("Jugador {0} ¡Avanza {1} posiones!", jugadorEnTurno == 1 ? partidaActual.Jugador1.Nombre : partidaActual.Jugador2.Nombre, posiciones);
                 IniciarMovimiento();
             }
@@ -383,7 +476,7 @@ namespace MonopolyCR.UI
 
         public void IniciarMovimiento()
         {
-            timerMueveFicha.Interval = 500;
+            timerMueveFicha.Interval = 400;
             timerMueveFicha.Start();
         }
 
@@ -513,7 +606,7 @@ namespace MonopolyCR.UI
 
         private void finalizarJuegoBtn_Click(object sender, EventArgs e)
         {
-            finalizarJuego();
+           
         }
 
         public bool QuedanPropiedadesEnVenta()
@@ -536,6 +629,7 @@ namespace MonopolyCR.UI
             else
                 MessageBox.Show(string.Format("{0} ha ganado la partida: Efectivo: {1}, Valor propiedades:{2}, Total: {3}", partidaActual.Jugador2.Nombre, partidaActual.Jugador2.Saldo, valorPropiedadesJug2, activosJug2));
 
+            partidaActual.Ganador = activosJug1 > activosJug2 ? partidaActual.Jugador1.IdJugador : partidaActual.Jugador2.IdJugador;
             SalvarPartida();
         }
 
@@ -543,6 +637,68 @@ namespace MonopolyCR.UI
         {
             var propiedadesASalvar = propiedades.Where(p => p.IdPropietario > 0).ToList();
             juego.GuardarPartida(partidaActual, propiedadesASalvar);
+            MessageBox.Show("Partida guardada exitosamente");
+            ResetearTablero();
+        }
+
+
+        public void ResetearTablero()
+        {
+
+            partidaActual.Jugador1.Saldo = 0;
+            partidaActual.Jugador2.Saldo = 0;
+            ActualizarEtiquetasdeSaldos();
+
+            jug1imglbl.BackColor = Color.Transparent;
+            jug2imglbl.BackColor = Color.Transparent;
+            jugador1gbx.Text = "Jugador 1";
+            jugador1gbx.Text = "Jugador 2";
+
+            var panelFicha1 = (Panel)propiedades[partidaActual.Jugador1.PosicionActual].MainPanel;
+            var panelFicha2 = (Panel)propiedades[partidaActual.Jugador2.PosicionActual].MainPanel;
+            var panelSalida = (Panel)propiedades[0].MainPanel;
+
+            panelFicha1.Controls.Remove(ficha1Pbx);
+            panelFicha2.Controls.Remove(ficha2Pbx);
+            panelSalida.Controls.Add(ficha1Pbx);
+            panelSalida.Controls.Add(ficha2Pbx);
+            fichaPropiedadPnl.Visible = false;
+
+            var propiedadesConDueno = propiedades.Where(p => p.IdPropietario > 0).ToList();
+            foreach (var prop in propiedadesConDueno)
+            {
+                var panel = (Panel)prop.MainPanel;
+                panel.BackColor = Color.DodgerBlue;
+                prop.IdPropietario = 0;
+            }
+
+
+            propiedades = null;
+            posActual = 0;
+            jugadorEnTurno = 0;
+            propiedadActual = null;
+            timerLanzaDados = null;
+            timerOperaciones = null;
+            giros = 0;
+            partidaActual = null;
+            avanzaPosicionLbl.Text = "Jugador X ¡Avanzas 0 posiciones!";
+        }
+
+        private void guardarPartidaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SalvarPartida();
+            this.Close();
+        }
+
+        private void abrirPartidaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var historialfrm = new HistorialFrm();
+            historialfrm.ShowDialog();
+
+            if (historialfrm.DialogResult == DialogResult.OK)
+            {
+                InicializarJuego(historialfrm.PartidaGuardada);
+            }
         }
 
     }
